@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 6313175012397122882}
-  text: Test
+  text: <b>Hello! it's <i></b>raining</i> a lot today, <b><i>okay? </b>
 --- !u!1 &6313175012397122880
 GameObject:
   m_ObjectHideFlags: 0
