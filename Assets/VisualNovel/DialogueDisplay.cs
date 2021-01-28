@@ -16,7 +16,7 @@ public class DialogueDisplay : MonoBehaviour
     {
         dialogue = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
         nameBox = gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-        StartCoroutine(PrintName());
+        PrintName();
         StartCoroutine(PrintText());
     }
 
@@ -26,18 +26,20 @@ public class DialogueDisplay : MonoBehaviour
         
     }
 
-    IEnumerator PrintName()
+    void PrintName()
     {
         nameBox.text = nameText;
-        yield return new WaitForSeconds(0.2f);
+        return;
     }
 
     IEnumerator PrintText()
     {
         string printedText = "";
 
+        // print letter by letter
         for (int i = 0; i < text.Length; i++)
         {
+            // if within <>, submit all the consecutive <>'s plus next letter
             if (text[i] == '<')
             {
                 while (i+1 < text.Length)
