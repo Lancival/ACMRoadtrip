@@ -5,8 +5,7 @@ using TMPro;
 
 public class DialogueDisplay : MonoBehaviour
 {
-
-	[SerializeField] private TextMeshProUGUI dialogue;
+    [SerializeField] private TextMeshProUGUI dialogue;
     [SerializeField] private TextMeshProUGUI nameBox;
     [SerializeField] private string nameText;
 	[SerializeField] private string text;
@@ -26,17 +25,18 @@ public class DialogueDisplay : MonoBehaviour
         
     }
 
+    // Set name in textbox
     void PrintName()
     {
         nameBox.text = nameText;
         return;
     }
 
+    // Print text letter by letter 
     IEnumerator PrintText()
     {
         string printedText = "";
 
-        // print letter by letter
         for (int i = 0; i < text.Length; i++)
         {
             // if within <>, submit all the consecutive <>'s plus next letter
@@ -60,5 +60,5 @@ public class DialogueDisplay : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
     }
-    
+
 }
