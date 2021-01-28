@@ -7,13 +7,17 @@ public class DialogueDisplay : MonoBehaviour
 {
 
 	[SerializeField] private TextMeshProUGUI dialogue;
+    [SerializeField] private TextMeshProUGUI nameBox;
+    [SerializeField] private string nameText;
 	[SerializeField] private string text;
 
     // Start is called before the first frame update
     void Start()
     {
         dialogue = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
-        StartCoroutine(Print());
+        nameBox = gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        StartCoroutine(PrintName());
+        StartCoroutine(PrintText());
     }
 
     // Update is called once per frame
@@ -22,7 +26,13 @@ public class DialogueDisplay : MonoBehaviour
         
     }
 
-    IEnumerator Print()
+    IEnumerator PrintName()
+    {
+        nameBox.text = nameText;
+        yield return new WaitForSeconds(0.2f);
+    }
+
+    IEnumerator PrintText()
     {
         string printedText = "";
 
@@ -48,4 +58,5 @@ public class DialogueDisplay : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
     }
+    
 }

@@ -50,8 +50,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e56baf50ee5b047d7ae02049d7386e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 6313175012397122882}
-  text: <b>Hello! it's <i></b>raining</i> a lot today, <b><i>okay? </b>
+  dialogue: {fileID: 2430966057515360508}
+  nameBox: {fileID: 2430966057515360508}
+  nameText: Juice
+  text: it's <i></b>raining</i> a lot today, <b><i>okay? </b>
 --- !u!1 &6313175012397122880
 GameObject:
   m_ObjectHideFlags: 0
