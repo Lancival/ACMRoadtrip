@@ -5,6 +5,10 @@ using TMPro;
 
 public class DialogueDisplay : MonoBehaviour
 {
+    public GameObject buttonPrefab;
+    private GameObject button;
+    [SerializeField] private string buttonText; 
+
     [SerializeField] private TextMeshProUGUI dialogue;
     [SerializeField] private TextMeshProUGUI nameBox;
     [SerializeField] private string nameText;
@@ -15,8 +19,14 @@ public class DialogueDisplay : MonoBehaviour
     {
         dialogue = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
         nameBox = gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+
+        // scale font
+        dialogue.fontSize = dialogue.fontSize*Settings.FONT_SCALE;
+        nameBox.fontSize = nameBox.fontSize*Settings.FONT_SCALE;
+
         PrintName();
         StartCoroutine(PrintText());
+        Button();
     }
 
     // Update is called once per frame
@@ -57,8 +67,18 @@ public class DialogueDisplay : MonoBehaviour
 
             printedText += text[i];
             dialogue.text = printedText;
-            yield return new WaitForSeconds(0.2f);
+
+            // sets dialogue speed
+            yield return new WaitForSeconds(Settings.DIALOGUE_SPEED);
         }
+    }
+
+    // Instantiate button at position (160, 100, 0)
+    void Button()
+    {
+        button = Instantiate(buttonPrefab, new Vector3(160, 100, 0), Quaternion.identity);
+        button.transform.SetParent(gameObject.transform);
+        button.GetComponentInChildren<TextMeshProUGUI>().text = buttonText;
     }
 
 }

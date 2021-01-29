@@ -547,29 +547,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010338849}
   m_CullTransparentMesh: 1
---- !u!1 &1923055728 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 566578037229039800, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
-  m_PrefabInstance: {fileID: 6313175012664524729}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1923055729 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5396898862303368133, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
   m_PrefabInstance: {fileID: 6313175012664524729}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1923055731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923055728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aa3a989c08e64448a0be0945eaf8290, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myPrefab: {fileID: 1391073647898482210, guid: a4341631307d24097987081e563cfbf6, type: 3}
 --- !u!1001 &6313175012664524729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -625,6 +607,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5174582889719580199, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
+      propertyPath: buttonText
+      value: click here
+      objectReference: {fileID: 0}
+    - target: {fileID: 5174582889719580199, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
+      propertyPath: buttonPrefab
+      value: 
+      objectReference: {fileID: 1391073647898482210, guid: a4341631307d24097987081e563cfbf6, type: 3}
     - target: {fileID: 6313175012397122883, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
