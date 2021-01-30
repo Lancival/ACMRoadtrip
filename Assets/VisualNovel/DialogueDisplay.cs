@@ -19,11 +19,8 @@ public class DialogueDisplay : MonoBehaviour
     {
         dialogue = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
         nameBox = gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-
-        // scale font
-        dialogue.fontSize = dialogue.fontSize*Settings.FONT_SCALE;
-        nameBox.fontSize = nameBox.fontSize*Settings.FONT_SCALE;
-
+        ScaleFont();
+        
         PrintName();
         StartCoroutine(PrintText());
         Button();
@@ -79,6 +76,13 @@ public class DialogueDisplay : MonoBehaviour
         button = Instantiate(buttonPrefab, new Vector3(160, 100, 0), Quaternion.identity);
         button.transform.SetParent(gameObject.transform);
         button.GetComponentInChildren<TextMeshProUGUI>().text = buttonText;
+    }
+
+    // Scale font
+    void ScaleFont()
+    {
+        dialogue.fontSize = dialogue.fontSize*Settings.FONT_SCALE;
+        nameBox.fontSize = nameBox.fontSize*Settings.FONT_SCALE;
     }
 
 }
