@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d6b08b60ea28440b8191e5b6f663d1, type: 3}
   m_Name: OceanTile
   m_EditorClassIdentifier: 
-  tiles: []
-  name: 
+  tiles:
+  - {fileID: 11400000, guid: 364f7447647671e4fa27d18f200a77fa, type: 2}
+  name: Ocean
