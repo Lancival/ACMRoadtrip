@@ -90,7 +90,7 @@ public class DialogueDisplay : MonoBehaviour
     void UpdateFontSize()
     {
         dialogue.fontSize = DEFAULT_FONT_SIZE * Settings.FONT_SCALE;
-        nameBox.fontSize = DEFAULT_FONT_SIZE * Settings.FONT_SCALE;
+        nameBox.fontSize = DEFAULT_FONT_SIZE * 1.33f * Settings.FONT_SCALE;
     }
 
 }
