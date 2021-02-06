@@ -14,15 +14,20 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private string nameText;
 	[SerializeField] private string text;
 
+    private float DEFAULT_FONT_SIZE;
+
     // Start is called before the first frame update
     void Start()
     {
-        dialogue = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
-        nameBox = gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        //dialogue = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+        //nameBox = gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
 
-        // scale font
-        dialogue.fontSize = dialogue.fontSize*Settings.FONT_SCALE;
-        nameBox.fontSize = nameBox.fontSize*Settings.FONT_SCALE;
+        DEFAULT_FONT_SIZE = dialogue.fontSize;
+
+        // Scale font
+        Settings.FONT_SCALE = 1.0f; // Temporary for testing puposes
+        UpdateFontSize();
+        
 
         PrintName();
         StartCoroutine(PrintText());
@@ -79,6 +84,13 @@ public class DialogueDisplay : MonoBehaviour
         button = Instantiate(buttonPrefab, new Vector3(160, 100, 0), Quaternion.identity);
         button.transform.SetParent(gameObject.transform);
         button.GetComponentInChildren<TextMeshProUGUI>().text = buttonText;
+    }
+
+    // Sets the font size of the dialogue box and name box based on the font scale in Settings
+    void UpdateFontSize()
+    {
+        dialogue.fontSize = DEFAULT_FONT_SIZE * Settings.FONT_SCALE;
+        nameBox.fontSize = DEFAULT_FONT_SIZE * Settings.FONT_SCALE;
     }
 
 }
