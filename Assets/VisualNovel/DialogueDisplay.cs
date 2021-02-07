@@ -118,6 +118,8 @@ public class DialogueDisplay : MonoBehaviour
         TextMeshProUGUI gui = button.GetComponentInChildren<TextMeshProUGUI>();
         gui.text = buttonText;
         gui.fontSize = DEFAULT_FONT_SIZE * Settings.FONT_SCALE;
+
+        button.GetComponent<Fade>().FadeIn();
     }
 
     // Sets the font size of the dialogue box and name box based on the font scale in Settings

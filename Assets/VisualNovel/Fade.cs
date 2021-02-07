@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fade : MonoBehaviour {
 
 	private CanvasGroup uiElement; // Canvas group on the GameObject this script is attached to
-	private static float FADE_DURATION = 0.5f; // Duration of fade effects, in seconds
+	private static float FADE_DURATION = 1f; // Duration of fade effects, in seconds
 
 	// Intialize variable even when inactive at start
 	private void Awake()
