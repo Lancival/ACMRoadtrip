@@ -5,50 +5,67 @@ using TMPro;
 
 public class DialogueDisplay : MonoBehaviour
 {
-    public GameObject buttonPrefab;
-    private GameObject button;
-    [SerializeField] private string buttonText; 
-
+    [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private TextMeshProUGUI dialogue;
     [SerializeField] private TextMeshProUGUI nameBox;
-    [SerializeField] private string nameText;
-	[SerializeField] private string text;
 
-    private float DEFAULT_FONT_SIZE;
+    [SerializeField] private TextAsset file;
+    
+    /*[SerializeField] private string nameText;
+	[SerializeField] private string text;
+	[SerializeField] private string buttonText;*/
+
+    private float DEFAULT_FONT_SIZE;	// Original font size of text
 
     // Start is called before the first frame update
     void Start()
     {
-        //dialogue = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
-        //nameBox = gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+    	// Check that all required parameters have been provided
+    	bool disable = true;
+        if (buttonPrefab == null)
+        	Debug.Log("Missing button prefab. Disabling dialogue.");
+        else if (dialogue == null)
+        	Debug.Log("Missing dialogue box. Disabling dialogue.");
+        else if (nameBox == null)
+        	Debug.Log("Missing name box. Disabling dialogue.");
+        else if (file == null)
+        	Debug.Log("Missing dialogue text file. Disabling dialogue.");
+        else
+        	disable = false;
 
-        DEFAULT_FONT_SIZE = dialogue.fontSize;
+        // If any required parameters are missing, disable this script and its gameObject
+        if (disable)
+        	gameObject.SetActive(false);
 
         // Scale font
-        Settings.FONT_SCALE = 1.0f; // Temporary for testing puposes
+		Settings.FONT_SCALE = 1.0f; // Temporary for testing puposes
+        DEFAULT_FONT_SIZE = dialogue.fontSize;
         UpdateFontSize();
-        
 
-        PrintName();
-        StartCoroutine(PrintText());
-        Button();
+
+        // Parse dialogue
+        List<Dialogue> nodes = Dialogue.Parse(file.text);
+
+        // Display Dialogue
+        PrintName("Name from Node 0");
+        StartCoroutine(PrintText(nodes[0].content));
+        Button("Example Button");
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         
-    }
+    }*/
 
-    // Set name in textbox
-    void PrintName()
+    // Set name in the name box
+    void PrintName(string name)
     {
-        nameBox.text = nameText;
-        return;
+        nameBox.text = name;
     }
 
     // Print text letter by letter 
-    IEnumerator PrintText()
+    IEnumerator PrintText(string text)
     {
         string printedText = "";
 
@@ -78,12 +95,19 @@ public class DialogueDisplay : MonoBehaviour
         }
     }
 
-    // Instantiate button at position (160, 100, 0)
-    void Button()
+    // Instantiate a button as the child of the Options Container
+
+    /* NOTE: Maybe we should consider object pooling for better performance - instead of
+     * instantiating and deleting buttons everytime, we could create buttons and then
+     * reuse them, deactivating them when not in use.
+     */
+    void Button(string buttonText)
     {
-        button = Instantiate(buttonPrefab, new Vector3(160, 100, 0), Quaternion.identity);
-        button.transform.SetParent(gameObject.transform);
-        button.GetComponentInChildren<TextMeshProUGUI>().text = buttonText;
+        GameObject button = Instantiate(buttonPrefab, gameObject.transform.GetChild(1));
+
+        TextMeshProUGUI gui = button.GetComponentInChildren<TextMeshProUGUI>();
+        gui.text = buttonText;
+        gui.fontSize = DEFAULT_FONT_SIZE * Settings.FONT_SCALE;
     }
 
     // Sets the font size of the dialogue box and name box based on the font scale in Settings
