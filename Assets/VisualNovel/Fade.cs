@@ -16,11 +16,11 @@ public class Fade : MonoBehaviour {
 	// Changes the alpha value of the canvas group over time, along with activating/deactivating the group
     private static IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float duration, bool active) {
     	float startTime = Time.time;
-    	float elapsedTime = 0;
+    	float percent = 0;
     	while (true) {
-    		elapsedTime = Time.time - startTime;
-    		if (elapsedTime/duration < 1)
-    			cg.alpha = Mathf.Lerp(start, end, elapsedTime/duration);
+    		percent = (Time.time - startTime) / duration;
+    		if (percent < 1)
+    			cg.alpha = Mathf.Lerp(start, end, percent);
     		else
     		{
     			cg.alpha = 1;
@@ -42,5 +42,15 @@ public class Fade : MonoBehaviour {
     public void FadeOut()
     {
     	StartCoroutine(FadeCanvasGroup(uiElement, 1, 0, FADE_DURATION, false));
+    }
+
+    public void Appear() {
+        gameObject.SetActive(true);
+        uiElement.alpha = 1;
+    }
+
+    public void Disappear() {
+        uiElement.alpha = 0;
+        gameObject.SetActive(false);
     }
 }

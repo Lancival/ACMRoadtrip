@@ -8,6 +8,7 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private TextMeshProUGUI dialogue;
     [SerializeField] private TextMeshProUGUI nameBox;
+    [SerializeField] private GameObject indicator;
 
     [SerializeField] private TextAsset file;
     
@@ -28,6 +29,8 @@ public class DialogueDisplay : MonoBehaviour
         	Debug.Log("Missing dialogue box. Disabling dialogue.");
         else if (nameBox == null)
         	Debug.Log("Missing name box. Disabling dialogue.");
+        else if (indicator == null)
+        	Debug.Log("Missing indicator. Disabling dialogue.");
         else if (file == null)
         	Debug.Log("Missing dialogue text file. Disabling dialogue.");
         else
@@ -35,7 +38,10 @@ public class DialogueDisplay : MonoBehaviour
 
         // If any required parameters are missing, disable this script and its gameObject
         if (disable)
+        {
         	gameObject.SetActive(false);
+        	return;
+        }
 
         // Scale font
 		Settings.FONT_SCALE = 1.0f; // Temporary for testing puposes
@@ -67,6 +73,8 @@ public class DialogueDisplay : MonoBehaviour
     // Print text letter by letter 
     IEnumerator PrintText(string text)
     {
+        indicator.GetComponent<Fade>().FadeOut();
+
         string printedText = "";
 
         for (int i = 0; i < text.Length; i++)
@@ -93,6 +101,8 @@ public class DialogueDisplay : MonoBehaviour
             // sets dialogue speed
             yield return new WaitForSeconds(Settings.DIALOGUE_SPEED);
         }
+
+        indicator.GetComponent<Fade>().FadeIn();
     }
 
     // Instantiate a button as the child of the Options Container
