@@ -21,15 +21,6 @@ public class DialogueDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< HEAD
-        dialogue = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
-        nameBox = gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-        ScaleFont();
-        
-        PrintName();
-        StartCoroutine(PrintText());
-        Button();
-=======
     	// Check that all required parameters have been provided
     	bool disable = true;
         if (buttonPrefab == null)
@@ -65,7 +56,6 @@ public class DialogueDisplay : MonoBehaviour
         PrintName("Name from Node 0");
         StartCoroutine(PrintText(nodes[0].content));
         Button("Example Button");
->>>>>>> 04c672b69dd431e54ab96c5ac57cd49e3ef2e765
     }
 
     // Update is called once per frame
