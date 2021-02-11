@@ -30,7 +30,6 @@ public class Fade : MonoBehaviour {
     		yield return new WaitForEndOfFrame();
     	}
     	cg.transform.gameObject.SetActive(active);
-        coroutine = null;
     }
 
     // Reactivates the uiElement and fades it to full visibilty
@@ -64,9 +63,8 @@ public class Fade : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
-    private void Stop() {
-        if (coroutine != null)
-            StopCoroutine(coroutine);
-        coroutine = null;
+    private void Stop()
+    {
+        StopCoroutine(coroutine);
     }
 }
