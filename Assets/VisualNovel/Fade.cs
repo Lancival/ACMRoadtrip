@@ -36,9 +36,7 @@ public class Fade : MonoBehaviour {
     public void FadeIn()
     {
     	gameObject.SetActive(true);
-        if (coroutine != null)
-            StopCoroutine(coroutine);
-            
+        Stop();
     	coroutine = FadeCanvasGroup(uiElement, 0, 1, FADE_DURATION, true);
         StartCoroutine(coroutine);
     }
@@ -46,20 +44,28 @@ public class Fade : MonoBehaviour {
     // Fades the uiElement to full invisibility and deactivates it
     public void FadeOut()
     {
-        if (coroutine != null)
-            StopCoroutine(coroutine);
-
+        Stop();
     	coroutine = FadeCanvasGroup(uiElement, 1, 0, FADE_DURATION, false);
         StartCoroutine(coroutine);
     }
 
-    public void Appear() {
+    public void Appear()
+    {
+        Stop();
         gameObject.SetActive(true);
         uiElement.alpha = 1;
     }
 
-    public void Disappear() {
+    public void Disappear()
+    {
+        Stop();
         uiElement.alpha = 0;
         gameObject.SetActive(false);
+    }
+
+    private void Stop() {
+        if (coroutine != null)
+            StopCoroutine(coroutine);
+        coroutine = null;
     }
 }
