@@ -65,6 +65,7 @@ public class Fade : MonoBehaviour {
 
     private void Stop()
     {
-        StopCoroutine(coroutine);
+        if (coroutine != null)
+            StopCoroutine(coroutine);
     }
 }
