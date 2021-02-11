@@ -6,6 +6,7 @@ public class Fade : MonoBehaviour {
 
 	private CanvasGroup uiElement; // Canvas group on the GameObject this script is attached to
 	private static float FADE_DURATION = 1f; // Duration of fade effects, in seconds
+    private IEnumerator coroutine = null;
 
 	// Intialize variable even when inactive at start
 	private void Awake()
@@ -35,13 +36,21 @@ public class Fade : MonoBehaviour {
     public void FadeIn()
     {
     	gameObject.SetActive(true);
-    	StartCoroutine(FadeCanvasGroup(uiElement, 0, 1, FADE_DURATION, true));
+        if (coroutine != null)
+            StopCoroutine(coroutine);
+            
+    	coroutine = FadeCanvasGroup(uiElement, 0, 1, FADE_DURATION, true);
+        StartCoroutine(coroutine);
     }
 
     // Fades the uiElement to full invisibility and deactivates it
     public void FadeOut()
     {
-    	StartCoroutine(FadeCanvasGroup(uiElement, 1, 0, FADE_DURATION, false));
+        if (coroutine != null)
+            StopCoroutine(coroutine);
+
+    	coroutine = FadeCanvasGroup(uiElement, 1, 0, FADE_DURATION, false);
+        StartCoroutine(coroutine);
     }
 
     public void Appear() {
