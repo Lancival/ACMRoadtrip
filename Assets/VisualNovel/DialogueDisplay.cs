@@ -17,6 +17,7 @@ public class DialogueDisplay : MonoBehaviour
     
     private bool doneTyping = false;
     private bool stopTyping = false;
+    private bool canClick = true;
     
     /*[SerializeField] private string nameText;
 	[SerializeField] private string text;
@@ -66,28 +67,40 @@ public class DialogueDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // implement delay 
-
-        if (Input.GetMouseButtonUp(0))
+        if (canClick)
         {
-            if (!doneTyping)
+            // left click or space bar or enter/return key
+            if (Input.GetMouseButtonUp(0) || Input.GetKeyDown("space") || Input.GetKeyDown("enter") || Input.GetKeyDown("return"))
             {
-                stopTyping = true;
-                dialogue.text = nodes[index].content;
-                Debug.Log("stop typing");
-            }
-            else if (index >= 0) 
-            {
-                responses = nodes[index].Responses();
-                index = responses[0]-1; // TBEdited later to handle buttons
-                if (index >= 0)
+                if (!doneTyping)
                 {
-                    Debug.Log("incremented, index is now " + (responses[0]-1));
-                    PrintName(nodes[index].speakerID);
-                    StartCoroutine(PrintText(nodes[index].content));
+                    stopTyping = true;
+                    dialogue.text = nodes[index].content;
+                    Debug.Log("stop typing");
+                    StartCoroutine(DelayClick());
+                }
+                else if (index >= 0) 
+                {
+                    responses = nodes[index].Responses();
+                    index = responses[0]-1; // TBEdited later to handle buttons
+                    if (index >= 0)
+                    {
+                        Debug.Log("incremented, index is now " + (responses[0]-1));
+                        PrintName(nodes[index].speakerID);
+                        StartCoroutine(PrintText(nodes[index].content));
+                    }
                 }
             }
         }
+        
+    }
+
+    // Delay click so you can't spam update
+    IEnumerator DelayClick()
+    {
+        canClick = false;
+        yield return new WaitForSeconds(0.2f);
+        canClick = true;
     }
 
     // Set name in the name box
