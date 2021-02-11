@@ -710,6 +710,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6313175012397122882, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
+      propertyPath: m_text
+      value: 'jehfa ajshadk adjakdha js ajdkhadj asdjaasjdk sajkd askjdhas jkdhaskdja
+        skdjas jasd as dajksd asd asjkd asdkas jkdhas kdjasdaskjd sjdhs jkdasjd asjkdas
+        jd alsdjas dskahd askdjh jehfa ajshadk adjakdha js ajdkhadj asdjaasjdk sajkd
+        askjdhas jkdhaskdja skdjas jasd as dajksd asd asjkd asdkas jkdhas kdjasdaskjd
+        sjdhs jkdasjd asjkdas jd alsdjas dskahd askdjh jehfa ajshadk adjakdha js
+        ajdkhadj '
+      objectReference: {fileID: 0}
     - target: {fileID: 6661418317495897144, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

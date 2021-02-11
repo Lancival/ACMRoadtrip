@@ -11,6 +11,12 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private GameObject indicator;
 
     [SerializeField] private TextAsset file;
+    private List<Dialogue> nodes; 
+    private List<int> responses;
+    private int index = 0;
+    
+    private bool doneTyping = false;
+    private bool stopTyping = false;
     
     /*[SerializeField] private string nameText;
 	[SerializeField] private string text;
@@ -48,25 +54,59 @@ public class DialogueDisplay : MonoBehaviour
         DEFAULT_FONT_SIZE = dialogue.fontSize;
         UpdateFontSize();
 
-
         // Parse dialogue
-        List<Dialogue> nodes = Dialogue.Parse(file.text);
+        nodes = Dialogue.Parse(file.text);
 
         // Display Dialogue
-        PrintName("Name from Node 0");
-        StartCoroutine(PrintText(nodes[0].content));
+        PrintName(nodes[index].speakerID);
+        StartCoroutine(PrintText(nodes[index].content));
         Button("Example Button");
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
-        
-    }*/
+        // implement delay 
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (!doneTyping)
+            {
+                stopTyping = true;
+                dialogue.text = nodes[index].content;
+                Debug.Log("stop typing");
+            }
+            else if (index >= 0) 
+            {
+                responses = nodes[index].Responses();
+                index = responses[0]-1; // TBEdited later to handle buttons
+                if (index >= 0)
+                {
+                    Debug.Log("incremented, index is now " + (responses[0]-1));
+                    PrintName(nodes[index].speakerID);
+                    StartCoroutine(PrintText(nodes[index].content));
+                }
+            }
+        }
+    }
 
     // Set name in the name box
-    void PrintName(string name)
+    void PrintName(int sID)
     {
+        string name;
+
+        switch (sID) {
+        case 0:
+            name = "Anna";
+            break;
+        case 1:
+            name = "Bob";
+            break;
+        default:
+            name = "Stranger";
+            break;
+        }
+
         nameBox.text = name;
     }
 
@@ -77,8 +117,16 @@ public class DialogueDisplay : MonoBehaviour
 
         string printedText = "";
 
+        doneTyping = false;
+
         for (int i = 0; i < text.Length; i++)
         {
+            if (stopTyping)
+            {
+                stopTyping = false;
+                break;
+            }
+
             // if within <>, submit all the consecutive <>'s plus next letter
             if (text[i] == '<')
             {
@@ -101,8 +149,11 @@ public class DialogueDisplay : MonoBehaviour
             // sets dialogue speed
             yield return new WaitForSeconds(Settings.DIALOGUE_SPEED);
         }
-
+        doneTyping = true; // should it be before or after fade
+        Debug.Log("done typing");
         indicator.GetComponent<Fade>().FadeIn();
+
+        
     }
 
     // Instantiate a button as the child of the Options Container
