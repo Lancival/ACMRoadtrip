@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fade : MonoBehaviour {
 
 	private CanvasGroup uiElement; // Canvas group on the GameObject this script is attached to
-	private static float FADE_DURATION = 1f; // Duration of fade effects, in seconds
+	[SerializeField] private float fadeDuration = 0.5f; // Duration of fade effects, in seconds
     private IEnumerator coroutine = null;
 
 	// Intialize variable even when inactive at start
@@ -37,7 +37,7 @@ public class Fade : MonoBehaviour {
     {
     	gameObject.SetActive(true);
         Stop();
-    	coroutine = FadeCanvasGroup(uiElement, 0, 1, FADE_DURATION, true);
+    	coroutine = FadeCanvasGroup(uiElement, 0, 1, fadeDuration, true);
         StartCoroutine(coroutine);
     }
 
@@ -45,7 +45,7 @@ public class Fade : MonoBehaviour {
     public void FadeOut()
     {
         Stop();
-    	coroutine = FadeCanvasGroup(uiElement, 1, 0, FADE_DURATION, false);
+    	coroutine = FadeCanvasGroup(uiElement, 1, 0, fadeDuration, false);
         StartCoroutine(coroutine);
     }
 
