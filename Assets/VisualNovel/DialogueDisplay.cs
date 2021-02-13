@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogueDisplay : MonoBehaviour
@@ -12,7 +13,8 @@ public class DialogueDisplay : MonoBehaviour
 
     [SerializeField] private TextAsset file;
     private List<Dialogue> nodes; 
-    private List<int> responses;
+    private List<int> rCurr;
+    private List<int> rNext;
     private int index = 0;
     
     private bool doneTyping = false;
@@ -61,7 +63,6 @@ public class DialogueDisplay : MonoBehaviour
         // Display Dialogue
         PrintName(nodes[index].speakerID);
         StartCoroutine(PrintText(nodes[index].content));
-        Button("Example Button");
     }
 
     // Update is called once per frame
@@ -81,18 +82,24 @@ public class DialogueDisplay : MonoBehaviour
                 }
                 else if (index >= 0) 
                 {
-                    responses = nodes[index].Responses();
-                    index = responses[0]-1; // TBEdited later to handle buttons
-                    if (index >= 0)
+                    rCurr = nodes[index].Responses();
+                    if (rCurr[0] != -1)
                     {
-                        Debug.Log("incremented, index is now " + (responses[0]-1));
+                        rNext = nodes[index+1].Responses();
+                        index = rCurr[0]-1;
+                        Debug.Log("incremented, index is now " + (rCurr[0]-1));
                         PrintName(nodes[index].speakerID);
                         StartCoroutine(PrintText(nodes[index].content));
+                        if (rNext.Count > 1)
+                        {
+                            canClick = false;
+                            for (int i = 0; i < rNext.Count; i++)
+                                Button(nodes[rNext[i]-1].content, nodes[rNext[i]-1].dialogueID);
+                        }
                     }
                 }
             }
         }
-        
     }
 
     // Delay click so you can't spam update
@@ -102,6 +109,16 @@ public class DialogueDisplay : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         canClick = true;
     }
+
+    void TaskOnClick(int dID){
+		Debug.Log ("You have clicked the button!");
+        index = dID-1;
+        canClick = true;
+        foreach(Transform child in transform.GetChild(1))
+        {
+            Destroy(child.gameObject);
+        }
+	}
 
     // Set name in the name box
     void PrintName(int sID)
@@ -165,8 +182,6 @@ public class DialogueDisplay : MonoBehaviour
         doneTyping = true; // should it be before or after fade
         Debug.Log("done typing");
         indicator.GetComponent<Fade>().FadeIn();
-
-        
     }
 
     // Instantiate a button as the child of the Options Container
@@ -175,7 +190,7 @@ public class DialogueDisplay : MonoBehaviour
      * instantiating and deleting buttons everytime, we could create buttons and then
      * reuse them, deactivating them when not in use.
      */
-    void Button(string buttonText)
+    void Button(string buttonText, int dID)
     {
         GameObject button = Instantiate(buttonPrefab, gameObject.transform.GetChild(1));
 
@@ -184,6 +199,9 @@ public class DialogueDisplay : MonoBehaviour
         gui.fontSize = DEFAULT_FONT_SIZE * Settings.FONT_SCALE;
 
         button.GetComponent<Fade>().FadeIn();
+
+        Button btn = button.GetComponent<Button>();
+        btn.onClick.AddListener(delegate {TaskOnClick(dID);});
     }
 
     // Sets the font size of the dialogue box and name box based on the font scale in Settings
