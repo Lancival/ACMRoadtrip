@@ -19,7 +19,7 @@ public class DialogueDisplay : MonoBehaviour
     private bool stopTyping = false;
     private bool canClick = true;
     
-    private const string[] names =
+    private static readonly string[] names =
     {
             "Misaki",   // ID = 0
             "Summer"    // ID = 1
