@@ -21,9 +21,11 @@ public class DialogueDisplay : MonoBehaviour
     private bool stopTyping = false;
     private bool canClick = true;
     
-    /*[SerializeField] private string nameText;
-	[SerializeField] private string text;
-	[SerializeField] private string buttonText;*/
+    private static readonly string[] names =
+    {
+            "Misaki",   // ID = 0
+            "Summer"    // ID = 1
+    };
 
     private float DEFAULT_FONT_SIZE;	// Original font size of text
 
