@@ -72,19 +72,56 @@ public class MapManager : MonoBehaviour
     public Vector3 PlayerMove(Vector2 mousePosition)                // Player Object calls this function
     {
         Vector3Int gridPosition = map.WorldToCell(mousePosition);
-        return map.CellToWorld(gridPosition);
         turn++;
         if (turn >=5)
         {
             MoveStorms();
         }
+        return map.CellToWorld(gridPosition);
     }
 
     private void MoveStorms()
     {
+        Vector3Int intNewPosition;
+        Vector3 newPosition;
         foreach( GameObject i in StormList)
         {
+            int dir = Random.Range(0, 2);
+            if (dir == 1)
+            {
+                int up = Random.Range(0, 2);   /// max is exclusive while min is inclusive for int values
+                if (up == 1)
+                {
+                    intNewPosition = map.WorldToCell(i.transform.position);
+                    intNewPosition.y += up;
+                    i.transform.position = map.CellToWorld(intNewPosition);
 
+                }
+                else
+                {
+                    intNewPosition = map.WorldToCell(i.transform.position);
+                    intNewPosition.y -= 1;
+                    i.transform.position = map.CellToWorld(intNewPosition);
+                }
+            }
+            else
+            {
+                int right = Random.Range(0, 2);
+                if (right == 1)
+                {
+                    intNewPosition = map.WorldToCell(i.transform.position);
+                    intNewPosition.x += right;
+                    i.transform.position = map.CellToWorld(intNewPosition);
+
+                }
+                else
+                {
+                    intNewPosition = map.WorldToCell(i.transform.position);
+                    intNewPosition.x -= 1;
+                    i.transform.position = map.CellToWorld(intNewPosition);
+                }
+            }
+            
         }
     }
 
