@@ -102,6 +102,18 @@ public class DialogueDisplay : MonoBehaviour
                 }
             }
         }
+        else 
+        {
+            if (Input.GetMouseButtonUp(0) || Input.GetKeyDown("space") || Input.GetKeyDown("enter") || Input.GetKeyDown("return"))
+            {
+                if (!doneTyping)
+                {
+                    stopTyping = true;
+                    dialogue.text = nodes[index].content;
+                    Debug.Log("stop typing");
+                }
+            }
+        }
         
     }
 
