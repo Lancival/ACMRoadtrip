@@ -15,3 +15,4 @@ MonoBehaviour:
   tiles:
   - {fileID: 11400000, guid: 364f7447647671e4fa27d18f200a77fa, type: 2}
   name: Ocean
+  direction: none

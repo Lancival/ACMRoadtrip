@@ -73,14 +73,14 @@ public class MapManager : MonoBehaviour
     {
         Vector3Int gridPosition = map.WorldToCell(mousePosition);
         turn++;
-        if (turn >=5)
+        if (turn >=5 && turn % 3 == 2)   ///// Only move storms every third turn after the fifth turn
         {
             MoveStorms();
         }
         return map.CellToWorld(gridPosition);
     }
 
-    private void MoveStorms()
+    private void MoveStorms()                     // Moves all storms in a randome direction, currently it is a filler function that can be changed based on future implementation
     {
         Vector3Int intNewPosition;
         Vector3 newPosition;
@@ -123,6 +123,12 @@ public class MapManager : MonoBehaviour
             }
             
         }
+    }
+
+
+    private bool oceanCurrent(Vector2 playerPosition)
+    {
+        return true;
     }
 
     
