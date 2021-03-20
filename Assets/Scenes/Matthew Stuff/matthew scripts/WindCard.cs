@@ -14,6 +14,11 @@ public class WindCard : Card
     public WindCard(int dir) : base("Wind") {
         direction = dir;
     }
+
+    public void DoWind() {
+        Debug.Log("I am a wind card and I have been played");
+    }
+
     // Start is called before the first frame update
     void Start()
     {

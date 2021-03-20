@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class LighthouseCard : Card
 {
-    public LighthouseCard() : base("Lighthouse") {
-        
+    private GameObject m_player;
+    public LighthouseCard(GameObject player) : base("Lighthouse") {
+        m_player = player;
 
     }
 
+    public void DoLighthouse() {
+        Debug.Log("I am a lighthouse card and I have been played");
+    }
 
 
     // Start is called before the first frame update

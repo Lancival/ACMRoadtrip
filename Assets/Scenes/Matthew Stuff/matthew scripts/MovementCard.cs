@@ -52,6 +52,9 @@ public class MovementCard : Card
         setName(s);
     }
 
+    public void DoMovementCardThing() {
+        Debug.Log("I am a movement card and I have been played");
+    }
 
     // Start is called before the first frame update
     void Start()

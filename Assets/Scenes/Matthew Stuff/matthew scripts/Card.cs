@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card
+public class Card : MonoBehaviour
 {
     private string name;
     private int powerAttached; //should be changed to an object of type of power rather than int, each int maybe denotes a certain power?
     private bool hasAPower;
+    private int level;
 
     public Card() {
         name = "card";
         powerAttached = 0;
         hasAPower = false;
+        level = 1;
     }
 
     public Card(string cardName) {
@@ -33,5 +35,14 @@ public class Card
         else {
             Debug.Log("this card already has a power attached");
         }
+    }
+
+    public void nextLevel() {
+        level++;
+    }
+
+
+    public void SayClicked() {
+        Debug.Log("Card Clicked");
     }
 }

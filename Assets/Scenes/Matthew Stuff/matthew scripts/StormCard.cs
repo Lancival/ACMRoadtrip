@@ -12,6 +12,11 @@ public class StormCard : Card
         yCoord = y;
     }
 
+    public void DoStorm()
+    {
+        Debug.Log("I am a storm card and I have been played");
+    }
+
     public int x() {
         return xCoord;
     }
