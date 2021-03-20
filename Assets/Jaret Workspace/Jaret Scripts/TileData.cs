@@ -15,4 +15,7 @@ public class TileData : ScriptableObject
 
     public string name;
 
+    public string direction;
+
+
 }
