@@ -23,7 +23,7 @@ public class JaretPlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+      /*  if (Input.GetMouseButtonDown(0))
         {
             
             
@@ -32,7 +32,7 @@ public class JaretPlayerMovement : MonoBehaviour
             startMove();
             //movePlayer(targetPosition);
         }
-
+      */
         if (moving)
         {
             driftTimer += Time.deltaTime;
