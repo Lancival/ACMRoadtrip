@@ -7,7 +7,7 @@ public class JaretGameManager : MonoBehaviour
     public GameObject StormPrefab;
 
     public Vector3[] StormList;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class JaretGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 }
