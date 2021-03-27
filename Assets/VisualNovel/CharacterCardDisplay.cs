@@ -31,21 +31,12 @@ public class CharacterCardDisplay : MonoBehaviour
             // the following nested code simulates how I want the screen to act, but the code is not accurate to what we want to do rn
             if (Input.GetKey("right"))
             {
-                // traverse list rightwards
-                index++;
-                if (index > sizeOfList-1)
-                    index = 0;
-                info.text = texts[index];
-                
+                StartCoroutine(TraverseRight());
                 StartCoroutine(DelayClick());
             }
             if (Input.GetKey("left"))
             {
-                // traverse list leftwards
-                index--;
-                if (index < 0)
-                    index = sizeOfList-1;
-                info.text = texts[index];
+                StartCoroutine(TraverseLeft());
                 StartCoroutine(DelayClick());
             }
         }
@@ -57,5 +48,29 @@ public class CharacterCardDisplay : MonoBehaviour
         canClick = false;
         yield return new WaitForSeconds(0.2f);
         canClick = true;
+    }
+
+    IEnumerator TraverseRight()    
+    {
+        gameObject.GetComponent<Fade>().FadeOut();
+        yield return new WaitForSeconds(0.5f);
+        // traverse list rightwards
+        index++;
+        if (index > sizeOfList-1)
+            index = 0;
+        info.text = texts[index];
+        gameObject.GetComponent<Fade>().FadeIn();
+    }
+
+    IEnumerator TraverseLeft()    
+    {
+        gameObject.GetComponent<Fade>().FadeOut();
+        yield return new WaitForSeconds(0.5f);
+        // traverse list leftwards
+        index--;
+        if (index < 0)
+            index = sizeOfList-1;
+        info.text = texts[index];
+        gameObject.GetComponent<Fade>().FadeIn();
     }
 }
