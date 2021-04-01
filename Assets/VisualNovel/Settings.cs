@@ -26,4 +26,16 @@ public static class Settings
 		get {return PlayerPrefs.GetFloat("Scale", 1.0f);} // Returns 1.0 as default font scale
 		set {PlayerPrefs.SetFloat("Scale", value);}
 	}
+
+	// Master Volume, affect all sounds and music
+	public static float MASTER_VOLUME {
+		get {return PlayerPrefs.GetFloat("Master", 1.0f);} // Default of full volume
+		set {PlayerPrefs.SetFloat("Master", value);}
+	}
+
+	// Music Volume
+	public static float MUSIC_VOLUME {
+		get {return PlayerPrefs.GetFloat("Music", 1.0f);} // Default of full volume
+		set {PlayerPrefs.SetFloat("Music", value);}
+	}
 }
