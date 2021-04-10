@@ -9,6 +9,8 @@ public class CharacterCardDisplay : MonoBehaviour
     [SerializeField] private GameObject character;
     [SerializeField] private TextMeshProUGUI info;
 
+    // replace text with the character sprites
+
     private List<string> texts = new List<string>
         { "one", "two", "three" };
 
