@@ -13,12 +13,18 @@ public class CharacterCardDisplay : MonoBehaviour
     [SerializeField] private GameObject chara2;
     private bool canClick = true;
 
+    private Image image1;
+    private Image image2;
+    private Color imageColorToBeUsed = Color.gray;
+
 
     // Start is called before the first frame update
     void Start()
     {
         chara1.SetActive(true);
         chara2.SetActive(false);
+        image1 = chara1.GetComponent<Image>();
+        image2 = chara2.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -30,9 +36,11 @@ public class CharacterCardDisplay : MonoBehaviour
             if (Input.GetKey("right") || Input.GetKey("left")) 
             { Move(); }
 
-            RightArrow.onClick.AddListener(click);
-            LeftArrow.onClick.AddListener(click);
+            RightArrow.onClick.AddListener(Click);
+            LeftArrow.onClick.AddListener(Click);
         }
+
+        charaCard.onClick.AddListener(Talk);
     }
 
     void Move(){
@@ -47,9 +55,18 @@ public class CharacterCardDisplay : MonoBehaviour
         StartCoroutine(DelayClick());
     }
 
-    void click(){
+    void Click(){
         Debug.Log ("You have clicked the button!");
         Move();
+    }
+
+    void Talk(){
+        if (chara1.activeSelf == true){   
+            image1.color = imageColorToBeUsed;
+        }
+        else {
+            image2.color = imageColorToBeUsed;
+        }
     }
 
     // Delay click so you can't spam update
