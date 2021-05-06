@@ -25,6 +25,9 @@ public class CharacterCardDisplay : MonoBehaviour
         chara2.SetActive(false);
         image1 = chara1.GetComponent<Image>();
         image2 = chara2.GetComponent<Image>();
+
+        RightArrow.onClick.AddListener(Click);
+        LeftArrow.onClick.AddListener(Click);
     }
 
     // Update is called once per frame
@@ -35,9 +38,6 @@ public class CharacterCardDisplay : MonoBehaviour
             // the following nested code simulates how I want the screen to act, but the code is not accurate to what we want to do rn
             if (Input.GetKey("right") || Input.GetKey("left")) 
             { Move(); }
-
-            RightArrow.onClick.AddListener(Click);
-            LeftArrow.onClick.AddListener(Click);
         }
 
         charaCard.onClick.AddListener(Talk);
@@ -57,7 +57,8 @@ public class CharacterCardDisplay : MonoBehaviour
 
     void Click(){
         Debug.Log ("You have clicked the button!");
-        Move();
+        if (canClick)
+        	Move();
     }
 
     void Talk(){
