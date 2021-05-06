@@ -16,10 +16,10 @@ public class DialogueDisplay : MonoBehaviour
     private List<int> rCurr;
     private List<int> rNext;
     private int index = 0;
-    
     private bool doneTyping = false;
     private bool stopTyping = false;
     private bool canClick = true;
+    public GameObject dialogueBox; 
     
     private static readonly string[] names =
     {

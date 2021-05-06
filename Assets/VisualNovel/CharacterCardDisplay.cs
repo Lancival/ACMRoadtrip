@@ -40,7 +40,7 @@ public class CharacterCardDisplay : MonoBehaviour
             LeftArrow.onClick.AddListener(Click);
         }
 
-        charaCard.onClick.AddListener(Talk);
+        charaCard.onClick.AddListener(Talk)
     }
 
     void Move(){
