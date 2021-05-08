@@ -40,12 +40,14 @@ public class UpdateSprite : MonoBehaviour
             //i++;
         }
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        spriteRenderer.sprite = cardFace;
     }
 
     // Update is called once per frame
     void Update()
     {
+        spriteRenderer.sprite = cardFace;
+        /*
         List<string> deck = CardGame.GenerateDeckLevel1();
         //int i = 0;
         foreach (string card in deck)
@@ -74,9 +76,10 @@ public class UpdateSprite : MonoBehaviour
         }
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = cardFace;
-        GetMouseClick();
+        //GetMouseClick();
+        */
     }
-
+    /*
     public void WhenClicked() {
         List<string> deck = CardGame.GenerateDeckLevel1();
         if (cardGame.deckPosition < deck.Count)
@@ -100,4 +103,5 @@ public class UpdateSprite : MonoBehaviour
             }
         }
     }
+    */
 }

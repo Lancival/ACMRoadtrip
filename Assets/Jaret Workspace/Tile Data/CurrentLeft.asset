@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3d6b08b60ea28440b8191e5b6f663d1, type: 3}
-  m_Name: UpCurrent
+  m_Name: CurrentLeft
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 11400000, guid: d1d17aff1d535f049882e9f4467115f4, type: 2}
+  - {fileID: 0}
   name: Current
-  direction: Up
+  direction: Left
+  dirInt: 4

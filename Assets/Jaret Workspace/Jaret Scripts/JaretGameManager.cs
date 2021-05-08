@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class JaretGameManager : MonoBehaviour
 {
-    public GameObject StormPrefab;
 
-    public Vector3[] StormList;
+
+    private int Level = 1;
+    private bool[] levelPass = new bool[] { false, false, false, false, false, false };
 
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (Vector3 i in StormList)
-        {
-            Debug.Log("Storm is Coming");
-        }
+        DontDestroyOnLoad(this.gameObject);
+        
     }
 
     // Update is called once per frame

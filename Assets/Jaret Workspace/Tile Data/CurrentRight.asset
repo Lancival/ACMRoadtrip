@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3d6b08b60ea28440b8191e5b6f663d1, type: 3}
-  m_Name: RockTile
+  m_Name: CurrentRight
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 11400000, guid: 9023a00f34f92204c9f0d36b04cd08a3, type: 2}
-  name: Rocks
-  direction: none
-  dirInt: 0
+  - {fileID: 11400000, guid: dcd45cf1ce5d5604ab342255c8e7865b, type: 2}
+  name: Current
+  direction: Right
+  dirInt: 2
