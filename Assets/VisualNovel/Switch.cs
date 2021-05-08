@@ -5,9 +5,9 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject dialogueBox;
-    [SerializeField] private GameObject descriptionContainer;
-    [SerializeField] private GameObject characterContainer;
+    [SerializeField] public GameObject dialogueBox;
+    [SerializeField] public GameObject descriptionContainer;
+    [SerializeField] public GameObject characterContainer;
     void Start()
     {
 
@@ -16,35 +16,23 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("k") )
-        {
-            if (dialogueBox.activeSelf == true)
-            {
-                HideDialogue();
-                ShowSelection();
-            }
-            else
-            {
-                ShowDialogue();
-                HideSelection();
-            }
-        }
+        
     }
 
-    void HideDialogue()
+    public void HideDialogue()
     {
         dialogueBox.GetComponent<Fade>().FadeOut();
     }
-    void ShowDialogue()
+    public void ShowDialogue()
     {
         dialogueBox.GetComponent<Fade>().FadeIn();
     }
-    void HideSelection()
+    public void HideSelection()
     {
         descriptionContainer.GetComponent<Fade>().FadeOut();
         characterContainer.GetComponent<Fade>().FadeOut();
     }
-    void ShowSelection()
+    public void ShowSelection()
     {
         descriptionContainer.GetComponent<Fade>().FadeIn();
         characterContainer.GetComponent<Fade>().FadeIn();

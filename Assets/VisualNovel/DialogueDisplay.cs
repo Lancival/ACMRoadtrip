@@ -10,6 +10,7 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogue;
     [SerializeField] private TextMeshProUGUI nameBox;
     [SerializeField] private GameObject indicator;
+    [SerializeField] Switch screen;
 
     [SerializeField] private TextAsset file;
     private List<Dialogue> nodes; 
@@ -19,7 +20,6 @@ public class DialogueDisplay : MonoBehaviour
     private bool doneTyping = false;
     private bool stopTyping = false;
     private bool canClick = true;
-    public GameObject dialogueBox; 
     
     private static readonly string[] names =
     {
@@ -100,6 +100,12 @@ public class DialogueDisplay : MonoBehaviour
                         }
                     }
                 }
+            }
+            // go to character selection
+            if (Input.GetKeyDown("t"))
+            {
+                screen.HideDialogue();
+                screen.ShowSelection();
             }
         }
         else 

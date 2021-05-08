@@ -11,6 +11,7 @@ public class CharacterCardDisplay : MonoBehaviour
     [SerializeField] private Button LeftArrow;
     [SerializeField] private GameObject chara1;
     [SerializeField] private GameObject chara2;
+    [SerializeField] Switch screen;
     private bool canClick = true;
 
     private Image image1;
@@ -28,6 +29,7 @@ public class CharacterCardDisplay : MonoBehaviour
 
         RightArrow.onClick.AddListener(Click);
         LeftArrow.onClick.AddListener(Click);
+        charaCard.onClick.AddListener(Talk);
     }
 
     // Update is called once per frame
@@ -35,12 +37,9 @@ public class CharacterCardDisplay : MonoBehaviour
     {
         if (canClick)
         {
-            // the following nested code simulates how I want the screen to act, but the code is not accurate to what we want to do rn
             if (Input.GetKey("right") || Input.GetKey("left")) 
             { Move(); }
         }
-
-        charaCard.onClick.AddListener(Talk)
     }
 
     void Move(){
@@ -62,10 +61,14 @@ public class CharacterCardDisplay : MonoBehaviour
     }
 
     void Talk(){
-        if (chara1.activeSelf == true){   
+        if (chara1.activeSelf == true){  
+            screen.ShowDialogue();
+            screen.HideSelection(); 
             image1.color = imageColorToBeUsed;
         }
         else {
+            screen.ShowDialogue();
+            screen.HideSelection(); 
             image2.color = imageColorToBeUsed;
         }
     }
@@ -77,28 +80,4 @@ public class CharacterCardDisplay : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         canClick = true;
     }
-
-    // IEnumerator TraverseRight()    
-    // {
-    //     gameObject.GetComponent<Fade>().FadeOut();
-    //     yield return new WaitForSeconds(0.5f);
-    //     // traverse list rightwards
-    //     index++;
-    //     if (index > sizeOfList-1)
-    //         index = 0;
-    //     character = sprites[index];
-    //     gameObject.GetComponent<Fade>().FadeIn();
-    // }
-
-    // IEnumerator TraverseLeft()    
-    // {
-    //     gameObject.GetComponent<Fade>().FadeOut();
-    //     yield return new WaitForSeconds(0.5f);
-    //     // traverse list leftwards
-    //     index--;
-    //     if (index < 0)
-    //         index = sizeOfList-1;
-    //     character = sprites[index];
-    //     gameObject.GetComponent<Fade>().FadeIn();
-    // }
 }
