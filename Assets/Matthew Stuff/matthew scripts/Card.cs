@@ -8,12 +8,25 @@ public class Card : MonoBehaviour
     private int powerAttached; //should be changed to an object of type of power rather than int, each int maybe denotes a certain power?
     private bool hasAPower;
     private int level;
+    public static List<GameObject> deck = new List<GameObject>();
+    public static int currentLevel = 1;
+    
+
 
     public Card() {
         name = "card";
         powerAttached = 0;
         hasAPower = false;
         level = 1;
+    }
+
+    public void incLevel()
+    {
+        currentLevel++;
+    }
+
+    public void deckClear() {
+        deck.Clear();
     }
 
     public Card(string cardName) {
