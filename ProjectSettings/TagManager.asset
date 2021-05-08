@@ -4,12 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
-  - Card
-=======
   - Storm
   - Rock
->>>>>>> f70d117e94ab3e8423b4f21fa1e2fceaf5841b2d
+  - Island
   layers:
   - Default
   - TransparentFX
@@ -18,13 +15,8 @@ TagManager:
   - Water
   - UI
   - 
-<<<<<<< HEAD
-  - 
-  - 
-=======
   - Storm
   - Rock
->>>>>>> f70d117e94ab3e8423b4f21fa1e2fceaf5841b2d
   - 
   - 
   - 
