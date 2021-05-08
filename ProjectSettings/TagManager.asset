@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Storm
   - Rock
+  - Island
   layers:
   - Default
   - TransparentFX
