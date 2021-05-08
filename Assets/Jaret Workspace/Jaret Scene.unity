@@ -1076,6 +1076,22 @@ PrefabInstance:
       propertyPath: LevelText
       value: 
       objectReference: {fileID: 1881575969}
+    - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
+      propertyPath: MovableStormPosition.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
+      propertyPath: MovableStormPosition.Array.data[0].x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
+      propertyPath: MovableStormPosition.Array.data[2].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
+      propertyPath: MovableStormPosition.Array.data[2].y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6833302671875896037, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: m_RootOrder
       value: 2

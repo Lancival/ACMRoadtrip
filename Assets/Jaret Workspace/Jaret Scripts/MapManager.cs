@@ -11,6 +11,14 @@ using UnityEngine.UI;
 ///                                        map.WorldToCell has what I think are rounding errors at 0 and will lose functionality. There is probably
 ///                                            a better way to fix this, but I fixed it by offsetting the vector I passed into the function by 0.2f.
 ///                                            This should work as long as the tile width is greater than the value used to offset in this case 0.2f
+///                                            
+/// 
+/// 
+///                                 Int direction code:
+///                                     1 = Up
+///                                     2 = Right
+///                                     3 = Down
+///                                     4 = Left
 /// </summary>
 
 public class MapManager : MonoBehaviour
@@ -49,6 +57,7 @@ public class MapManager : MonoBehaviour
 
     private int turn;
     private bool death = false;
+    private bool win = false;
 
 
 
@@ -212,6 +221,12 @@ public class MapManager : MonoBehaviour
             yield break;
         }
 
+        if (!onMapCheck(targetPos))
+        {
+            
+            yield break;
+        }
+
         while (Vector3.Distance(storm.transform.position, targetPos) > 0.05f)
         {
             storm.transform.position = Vector3.Lerp(storm.transform.position, targetPos, smoothing * Time.deltaTime);
@@ -223,6 +238,11 @@ public class MapManager : MonoBehaviour
 
     IEnumerator ChangeLevelUI()
     {
+        if (win)
+        {
+            LevelText.text = "You Win";
+            yield break;
+        }
         if (death)
         {
             LevelText.text = "Game Over";
@@ -274,7 +294,7 @@ public class MapManager : MonoBehaviour
                 }
             default:                              //////////// Not on Current
                 {
-                    Debug.Log("default");
+                    //Debug.Log("default");
                     yield break;
                 }
         }
@@ -299,6 +319,10 @@ public class MapManager : MonoBehaviour
         death = true; 
     }
 
+    public void PlayerWin()
+    {
+        win = true;
+    }
 
 
 
@@ -454,8 +478,33 @@ public class MapManager : MonoBehaviour
         return false;
     }
     
-    
 
+    private bool onMapCheck(Vector3 targetPos)
+    {
 
+        Vector3Int gridPosition = map.WorldToCell(new Vector3(targetPos.x+0.1f, targetPos.y+0.1f,targetPos.z));
+
+        TileBase clickedTile = map.GetTile(gridPosition);
+
+        if (clickedTile == null)
+        {
+            Debug.Log("off map");
+            return false;
+        }
+        Debug.Log("on map");
+        return true;
+        // Debug.Log("At position" + gridPosition + "there is a " + dataFromTiles[clickedTile].name);
+
+    }
+
+    /*public int movePlayer(int firstDir, int secondDir, int thirdDir = 0)
+    {
+        if (firstDir == 1 || firstDir == 3)
+        {
+            return 0;
+        }
+        return 1;
+    }
+    */
 
 }
