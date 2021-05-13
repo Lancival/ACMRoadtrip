@@ -1,8 +1,8 @@
 0;This line of dialogue should be spoken by the first person.;2
 1;This line of dialogue should be spoken by the second person.;3
 2;You find a dollar on the floor;4,5
-0;Pick it up;6
+0;Pick it up!;6
 0;Leave it alone;7
-2;You are now one dollar richer;8
+2;You are now one dollar richer. Isn't that cool?;8
 2;You walk away;8
 0;This is the last line of dialogue;-1

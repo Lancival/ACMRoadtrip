@@ -99,6 +99,11 @@ public class DialogueDisplay : MonoBehaviour
                                 Button(nodes[rNext[i]-1].content, nodes[rNext[i]-1].dialogueID);
                         }
                     }
+                    else if (rCurr[0] == -1)
+                    {
+                        screen.HideDialogue();
+                        screen.ShowSelection(); 
+                    }
                 }
             }
             // go to character selection
@@ -237,6 +242,18 @@ public class DialogueDisplay : MonoBehaviour
     {
         dialogue.fontSize = dialogue.fontSize*Settings.FONT_SCALE;
         nameBox.fontSize = nameBox.fontSize*Settings.FONT_SCALE;
+    }
+
+    // Parse and display dialogue
+    public void parseAndDisplay(TextAsset convo)
+    {
+        index = 0;
+        // Parse dialogue
+        nodes = Dialogue.Parse(convo.text);
+
+        // Display Dialogue
+        PrintName(nodes[index].speakerID);
+        StartCoroutine(PrintText(nodes[index].content));
     }
 
 }

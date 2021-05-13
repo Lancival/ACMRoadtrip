@@ -12,11 +12,16 @@ public class CharacterCardDisplay : MonoBehaviour
     [SerializeField] private GameObject chara1;
     [SerializeField] private GameObject chara2;
     [SerializeField] Switch screen;
+    [SerializeField] DialogueDisplay dialogue;
     private bool canClick = true;
+    private bool canClickChara1 = true;
+    private bool canClickChara2 = true;
 
     private Image image1;
     private Image image2;
     private Color imageColorToBeUsed = Color.gray;
+
+    [SerializeField] private TextAsset[] convos;
 
 
     // Start is called before the first frame update
@@ -43,7 +48,7 @@ public class CharacterCardDisplay : MonoBehaviour
     }
 
     void Move(){
-        if (chara1.activeSelf == true){
+        if (chara1.activeSelf == true) {
             chara1.SetActive(false);
             chara2.SetActive(true);
         }
@@ -61,14 +66,22 @@ public class CharacterCardDisplay : MonoBehaviour
     }
 
     void Talk(){
-        if (chara1.activeSelf == true){  
+        if (chara1.activeSelf == true && canClickChara1){  
             screen.ShowDialogue();
             screen.HideSelection(); 
+            TextAsset convo = convos[0];
+            dialogue.parseAndDisplay(convo);
+
+            canClickChara1 = false;
             image1.color = imageColorToBeUsed;
         }
-        else {
+        else if (chara2.activeSelf == true && canClickChara2) {
             screen.ShowDialogue();
             screen.HideSelection(); 
+            TextAsset convo = convos[1];
+            dialogue.parseAndDisplay(convo);
+
+            canClickChara2 = false;
             image2.color = imageColorToBeUsed;
         }
     }
