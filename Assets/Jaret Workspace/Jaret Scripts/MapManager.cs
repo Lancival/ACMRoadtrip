@@ -497,7 +497,7 @@ public class MapManager : MonoBehaviour
 
     }
 
-    /*public int movePlayer(int firstDir, int secondDir, int thirdDir = 0)
+    public int movePlayerCard(int firstDir, int secondDir, int thirdDir = 0)
     {
         if (firstDir == 1 || firstDir == 3)
         {
@@ -505,6 +505,6 @@ public class MapManager : MonoBehaviour
         }
         return 1;
     }
-    */
+    
 
 }
