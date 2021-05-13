@@ -10,7 +10,7 @@ public class PuzzleObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void Awake()
@@ -21,7 +21,7 @@ public class PuzzleObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void GetTileType()
@@ -36,14 +36,19 @@ public class PuzzleObject : MonoBehaviour
         {
             mapManager.GetComponent<MapManager>().PlayerHit();
         }
-    }
 
-    public void OnCollisionEnter2D(Collision2D other)
-    {
-        Debug.Log("Hit");
-        if (other.gameObject.tag == "Storm")
+        if (other.gameObject.tag == "Island")
         {
-            mapManager.GetComponent<MapManager>().PlayerHit();
+            mapManager.GetComponent<MapManager>().PlayerWin();
         }
     }
+
+    // public void OnCollisionEnter2D(Collision2D other)
+    // {
+    //     Debug.Log("Hit");
+    //     if (other.gameObject.tag == "Storm")
+    //     {
+    //         mapManager.GetComponent<MapManager>().PlayerHit();
+    //     }
+    // }
 }
