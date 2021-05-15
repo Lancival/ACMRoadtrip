@@ -15,7 +15,7 @@
 1;That's the spirit.;10
 1;I don't do those.;17
 0;We're on a tight schedule if we want to make it to the Obon festival on time.;18
-1;We'll be fine. It's almost the end of summer break; this is our time to be spontaneous.;19
+1;We'll be fine. It's almost the end of summer break — this is our time to be spontaneous.;19
 0;Yeah, and I'm ending it single.;20
 1;Meaning you can find a new, sexier, better person.;21,22
 0;I can't stop thinking about Trent.;23
