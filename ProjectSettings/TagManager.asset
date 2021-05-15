@@ -7,6 +7,7 @@ TagManager:
   - Storm
   - Rock
   - Island
+  - GameManager
   layers:
   - Default
   - TransparentFX

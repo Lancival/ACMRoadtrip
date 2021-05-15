@@ -38,11 +38,22 @@ public class MapManager : MonoBehaviour
     private List<GameObject> RockList = new List<GameObject>();
 
     public float smoothing = 2f;
+
+
     public GameObject StormPrefab;
     public GameObject PlayerPrefab;
     public GameObject RockPrefab;
     public GameObject MovableStormPrefab;
+    public GameObject HandPlacementPrefab;
+    public GameObject cardButtonPrefab;
+    
+
+
     private GameObject Player;
+    private GameObject handPlacement;
+    private List<GameObject> cardButtonList = new List<GameObject>();
+
+
     public Text LevelText;
 
 
@@ -58,6 +69,12 @@ public class MapManager : MonoBehaviour
     private int turn;
     private bool death = false;
     private bool win = false;
+    private bool cardPlayed = false;
+    private bool notMyTurn = true;
+
+    private Vector2 targetPosition;
+    private Vector3 worldTargetPosition;
+    private JCard cardInPlay;
 
 
 
@@ -104,9 +121,20 @@ public class MapManager : MonoBehaviour
 
         }
 
+        /////////////////////////////////////////////////////////// Create Hand Object
+        ///
+
+        handPlacement = Instantiate(HandPlacementPrefab);
+
+        for (int i = 0; i < handPlacement.transform.childCount; i++)
+        {
+            cardButtonList.Add(Instantiate(cardButtonPrefab, handPlacement.transform.GetChild(i).transform.position, this.transform.rotation));
+        }
+
 
         ////////////////////////////////////////////// Start Game
-
+        Debug.Log(map.size.x);
+        Debug.Log(map.size.y);
 
             StartCoroutine(LevelOrder());
         
@@ -118,7 +146,7 @@ public class MapManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))                                // This spits out the position of a clicked on tile into console, I used it for debugging, not needed in final
+        /*if(Input.GetMouseButtonDown(0))                                // This spits out the position of a clicked on tile into console, I used it for debugging, not needed in final
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3Int gridPosition = map.WorldToCell(mousePosition);
@@ -128,7 +156,7 @@ public class MapManager : MonoBehaviour
            // Debug.Log("At position" + gridPosition + "there is a " + dataFromTiles[clickedTile].name);
 
 
-        }
+        }*/
     }
 
     IEnumerator LevelOrder()
@@ -143,16 +171,77 @@ public class MapManager : MonoBehaviour
             yield break;
     }
 
+    IEnumerator DrawCards()
+    {
+        yield return StartCoroutine(ChangeLevelUI());
+
+        if (turn == 1)
+        {
+            foreach (GameObject cardButton in cardButtonList)
+            {
+                cardButton.GetComponent<CardButton>().DrawCard();
+                //yield return new WaitForSeconds(0.25f);
+            }
+            
+        }
+        yield break;
+    }
 
 
     IEnumerator MovePlayer()
     {
 
-        yield return StartCoroutine(ChangeLevelUI());
+        yield return StartCoroutine(DrawCards());
+
+        notMyTurn = false;
 
         while(true)
         {
-            if (Input.GetMouseButtonDown(0))
+            ///////////////////////////////////////////////////////////////////////
+            if (cardPlayed)
+            {
+                if (cardInPlay.IsStorm())
+                {
+                    Vector3 stormSpawnLocation = StormSpawn();
+                    StormList.Add( Instantiate( StormPrefab, map.CellToWorld( Vector3Int.FloorToInt(stormSpawnLocation)), this.transform.rotation));
+                    cardPlayed = false;
+                    yield break;
+                }
+
+                worldTargetPosition = map.CellToWorld(  CalculateDirection(  cardInPlay.directionOne, map.WorldToCell(  new Vector2 (  Player.transform.position.x + 0.1f, Player.transform.position.y + 0.1f  )  )  )  );
+
+                while (Vector3.Distance(Player.transform.position, worldTargetPosition) > 0.05f)
+                {
+                    Player.transform.position = Vector3.Lerp(Player.transform.position, worldTargetPosition, (smoothing * 1.5f) * Time.deltaTime);
+
+                    
+                    cardPlayed = false;
+                    yield return null;
+                }
+
+
+                worldTargetPosition = map.CellToWorld(CalculateDirection(cardInPlay.directionTwo, map.WorldToCell(new Vector2(Player.transform.position.x + 0.1f, Player.transform.position.y + 0.1f))));
+
+                while (Vector3.Distance(Player.transform.position, worldTargetPosition) > 0.05f)
+                {
+                    Player.transform.position = Vector3.Lerp(Player.transform.position, worldTargetPosition, (smoothing * 1.5f) * Time.deltaTime);
+
+                    cardPlayed = false;
+                    yield return null;
+                }
+
+
+                cardPlayed = false;
+
+                yield break;
+            }
+
+
+
+            
+
+            ////////////////////////////////////////////////////////////////////////
+           /* if (Input.GetMouseButtonDown(0))
             {
                 Vector2 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector3Int cellTargetPosition = map.WorldToCell(new Vector2 (targetPosition.x + 0.1f, targetPosition.y+0.1f));
@@ -183,10 +272,10 @@ public class MapManager : MonoBehaviour
                 }
 
 
-
+                cardPlayed = false;  // resets the trigger after turn is taken
                 yield break;
             }
-
+            */
             yield return null;
         }
 
@@ -505,6 +594,66 @@ public class MapManager : MonoBehaviour
         }
         return 1;
     }
+
+    public void PlayCard(JCard card)
+    {
+        notMyTurn = true;
+        cardPlayed = true;
+        cardInPlay = card;
+        
+        
+    }
+    
+    private Vector3Int CalculateDirection(int direction, Vector3Int startingPoint)
+    {
+        Vector3Int endPoint = new Vector3Int(startingPoint.x, startingPoint.y, 0);
+
+
+        switch (direction)
+        {
+            case 1:                                //////////// up 
+                {
+                    endPoint.y += 2;
+                    break;
+                }
+            case 2:                                /////////// right 
+                {
+                    endPoint.x += 2;
+                    break;
+                }
+            case 3:                               //////////// down 
+                {
+                    endPoint.y -= 2;
+                    break;
+                }
+            case 4:                                /////////// left 
+                {
+                    endPoint.x -= 2;
+                    break;
+                }
+            default:                              //////////// No Movement
+                {
+                    //Debug.Log("default");
+                     break;
+                }
+        }
+
+        return endPoint;
+    }
+
+    public bool NotMyTurn()
+    {
+        return notMyTurn;
+    }
+
+    private Vector3 StormSpawn()
+    {
+        int xCoord = Random.Range(-1 * ((map.size.x/2) - 1), (map.size.x/2)-1);
+        int yCoord = Random.Range(-1 * ((map.size.y / 2) - 1), (map.size.y / 2) - 1);
+
+        return new Vector3(xCoord, yCoord, 0);
+    }
+
     
 
 }
