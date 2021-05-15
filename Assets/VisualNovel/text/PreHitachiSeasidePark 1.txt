@@ -7,7 +7,7 @@
 1;I can make an exception.;8
 0;I have subpar Japanese skills.;9
 1;A lot of them know English! Even better, they can learn it for you.;10
-0;Have you looked over the itenerary?;16
+0;Have you looked over the itinerary?;16
 1;You're the best he's ever going to get, so I hope so.;12
 0;That's not true.;13
 1;You're pretty and smart and he's...?;14
