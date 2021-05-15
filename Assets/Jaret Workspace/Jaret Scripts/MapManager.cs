@@ -75,6 +75,7 @@ public class MapManager : MonoBehaviour
     private Vector2 targetPosition;
     private Vector3 worldTargetPosition;
     private JCard cardInPlay;
+    private GameObject gameManager;
 
 
 
@@ -133,14 +134,18 @@ public class MapManager : MonoBehaviour
 
 
         ////////////////////////////////////////////// Start Game
-        Debug.Log(map.size.x);
-        Debug.Log(map.size.y);
+        
 
             StartCoroutine(LevelOrder());
         
         
         
 
+    }
+
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager");
     }
 
 
@@ -177,6 +182,7 @@ public class MapManager : MonoBehaviour
 
         if (turn == 1)
         {
+           
             foreach (GameObject cardButton in cardButtonList)
             {
                 cardButton.GetComponent<CardButton>().DrawCard();

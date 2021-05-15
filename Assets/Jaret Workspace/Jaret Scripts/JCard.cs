@@ -9,12 +9,17 @@ public class JCard : ScriptableObject
     public string cardName;
 
     public Sprite artwork;
+    public Sprite UpgradedArtwork;
 
     public int directionOne = 0;
     public int directionTwo = 0;
     public int directionThree = 0;
 
     public bool isStorm = false;
+
+    
+    public bool tutorialCorrect = false;
+    public bool tutorial = false;
 
     public void SetThirdDirection(int thirdDirection)
     {
@@ -29,6 +34,13 @@ public class JCard : ScriptableObject
     public bool IsStorm()
     {
         return isStorm;
+    }
+
+    public void UpgradeMovement()
+    {
+        directionThree = directionOne;
+        artwork = UpgradedArtwork;
+
     }
 
     

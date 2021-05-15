@@ -50,11 +50,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 928dfa05d0317ba4a8d20762bbcbbb13, type: 2}
   - {fileID: 11400000, guid: 957f23251d45d094b82554cd50f0d3a7, type: 2}
   - {fileID: 11400000, guid: 60ad9e79ccff7cc47aebdd6796738f20, type: 2}
+  - {fileID: 11400000, guid: 0d5db61bf1ec6ca4d890185a4c251db8, type: 2}
   smoothing: 2
   StormPrefab: {fileID: 6769382106439000103, guid: 223af3def20b5174d8fa0e66b28db9d1, type: 3}
   PlayerPrefab: {fileID: 5309523533292387105, guid: f1a05b5c6a2cd5b428322b9e995baa8f, type: 3}
   RockPrefab: {fileID: 4447812701179705011, guid: 0d8f707d4a9c6814b9d6985ced6b3a20, type: 3}
   MovableStormPrefab: {fileID: 6769382106439000103, guid: 009a403b6ae98d0489a636867bb92cdf, type: 3}
+  HandPlacementPrefab: {fileID: 1931708449750744503, guid: 0f8757b32a6519844ba7344cec88d13d, type: 3}
+  cardButtonPrefab: {fileID: 5307744269583609350, guid: aced39ba3e8219649ae19320e9aaadfa, type: 3}
   LevelText: {fileID: 0}
   playerSpawn: {x: -3, y: -3, z: 0}
   StormPosition:

@@ -24,6 +24,11 @@ public class CardButton : MonoBehaviour
     {
         if (!mapManager.GetComponent<MapManager>().NotMyTurn())
         {
+            if (currentCard.tutorial && !currentCard.tutorialCorrect)
+            {
+                return;
+            }
+
             mapManager.GetComponent<MapManager>().PlayCard(currentCard);
             Debug.Log("Card Played");
             DrawCard();

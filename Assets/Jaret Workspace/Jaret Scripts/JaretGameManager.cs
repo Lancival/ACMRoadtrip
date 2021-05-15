@@ -23,6 +23,9 @@ public class JaretGameManager : MonoBehaviour
     [SerializeField]
     private List<JCard> Deck;
 
+    private List<JCard> TutorialCorrectDeck;
+    
+
     
 
 
@@ -32,7 +35,7 @@ public class JaretGameManager : MonoBehaviour
     void Awake()
     {
         DiscardDeck = new List<JCard>();
-        
+        TutorialCorrectDeck = new List<JCard>();
         PlayableDeck = new List<JCard>();
         Hand = new List<JCard>();
         Deck = new List<JCard>();
@@ -40,6 +43,11 @@ public class JaretGameManager : MonoBehaviour
         foreach(JCard card in StartingDeck)
         {
             Deck.Add(Object.Instantiate(card));
+        }
+        
+        foreach(JCard card in TutorialDeck)
+        {
+            TutorialCorrectDeck.Add(Object.Instantiate(card));
         }
 
         DontDestroyOnLoad(this.gameObject);
@@ -60,24 +68,40 @@ public class JaretGameManager : MonoBehaviour
 
     private void CreatePlayableDeck()
     {
-        
 
-        
-        int length = Deck.Count;
-        for (int i = 0; i < length; i++)
+        if (Level == 1)
         {
-            PlayableDeck.Add(Deck[Random.Range(0, Deck.Count)]);
-           
-            Deck.Remove(PlayableDeck[i]);
+            
+            int length = TutorialDeck.Count;
+            for (int i = 0; i < length; i++)
+            {
+                TutorialCorrectDeck[i].tutorial = true;
+                if (i == 1 || i==6 || i == 5)
+                {
+                    TutorialCorrectDeck[i].tutorialCorrect = true;
+                }
+                PlayableDeck.Add(TutorialCorrectDeck[i]);
+            }
+        }
+        else
+        {
+            int length = Deck.Count;
+            for (int i = 0; i < length; i++)
+            {
+                PlayableDeck.Add(Deck[Random.Range(0, Deck.Count)]);
+
+                Deck.Remove(PlayableDeck[i]);
+
+            }
+
+            foreach (JCard card in PlayableDeck)   // dont use equal sign, they are just pointing to the same thing.  This loop makes two separate decks that can be edited differently
+            {
+                Deck.Add(card);
+            }
             
         }
-        
-        foreach(JCard card in PlayableDeck)   // dont use equal sign, they are just pointing to the same thing.  This loop makes two separate decks that can be edited differently
-        {
-            Deck.Add(card);
-        }
-        //PlayableDeck.Remove(Deck[0]);  Debug line
-        
+
+
     }
 
     public JCard GetCard(JCard oldCard)
@@ -124,4 +148,8 @@ public class JaretGameManager : MonoBehaviour
         Deck.Add(card);
     }
 
+    public int GetLevel()
+    {
+        return Level;
+    }
 }
