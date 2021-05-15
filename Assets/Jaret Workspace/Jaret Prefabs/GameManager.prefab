@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3221721767424038314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3221721767424038316}
+  - component: {fileID: 3221721767424038315}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3221721767424038316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221721767424038314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3751415, y: 0.22293317, z: -1.9551532}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3221721767424038315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221721767424038314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826a3ee14a58bad4f831db3023510d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingDeck:
+  - {fileID: 11400000, guid: 357e90a74103518428de74a398451f3f, type: 2}
+  - {fileID: 11400000, guid: 609a41f6641885640a5323be54a30c0e, type: 2}
+  - {fileID: 11400000, guid: a5e22e8fbd6bcda4199df93772765224, type: 2}
+  - {fileID: 11400000, guid: c632c5e496f26e541ae1242b6ada8a58, type: 2}
+  TutorialDeck:
+  - {fileID: 11400000, guid: 357e90a74103518428de74a398451f3f, type: 2}
+  - {fileID: 11400000, guid: 609a41f6641885640a5323be54a30c0e, type: 2}
+  - {fileID: 11400000, guid: d63a648cde8d35d4c9198becf7da0f8c, type: 2}
+  - {fileID: 11400000, guid: a5e22e8fbd6bcda4199df93772765224, type: 2}
+  - {fileID: 11400000, guid: 29ed0723f9814fc49b761db9b0ce5a1e, type: 2}
+  - {fileID: 11400000, guid: 29ed0723f9814fc49b761db9b0ce5a1e, type: 2}
+  - {fileID: 11400000, guid: 29ed0723f9814fc49b761db9b0ce5a1e, type: 2}
+  - {fileID: 11400000, guid: 29ed0723f9814fc49b761db9b0ce5a1e, type: 2}
+  - {fileID: 11400000, guid: 29ed0723f9814fc49b761db9b0ce5a1e, type: 2}
+  PlayableDeck: []
+  Hand: []
+  Deck: []
