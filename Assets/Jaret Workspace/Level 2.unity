@@ -1530,6 +1530,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 959923789}
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
+      propertyPath: playerSpawn.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: RockPosition.Array.size
       value: 0
       objectReference: {fileID: 0}

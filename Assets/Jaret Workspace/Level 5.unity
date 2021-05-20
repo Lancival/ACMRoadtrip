@@ -440,6 +440,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 651718047}
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
+      propertyPath: playerSpawn.x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
+      propertyPath: playerSpawn.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: RockPosition.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -521,7 +529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: MovableStormPosition.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: MovableStormPosition.Array.data[0].x
@@ -546,6 +554,14 @@ PrefabInstance:
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: MovableStormPosition.Array.data[2].y
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
+      propertyPath: MovableStormPosition.Array.data[3].x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
+      propertyPath: MovableStormPosition.Array.data[3].y
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6833302671875896037, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: m_RootOrder
