@@ -383,6 +383,8 @@ GameObject:
   - component: {fileID: 625556271}
   - component: {fileID: 625556270}
   - component: {fileID: 625556272}
+  - component: {fileID: 625556274}
+  - component: {fileID: 625556273}
   m_Layer: 5
   m_Name: Best Friend
   m_TagString: Untagged
@@ -466,6 +468,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &625556273
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625556268}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &625556274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625556268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696e836c15e874bcc82e75627a676687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 0.5
 --- !u!1 &860489015
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +740,18 @@ PrefabInstance:
       propertyPath: loader
       value: 
       objectReference: {fileID: 1723057346}
+    - target: {fileID: 5174582889719580199, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
+      propertyPath: images.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5174582889719580199, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
+      propertyPath: images.Array.data[0]
+      value: 
+      objectReference: {fileID: 1897911329}
+    - target: {fileID: 5174582889719580199, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
+      propertyPath: images.Array.data[1]
+      value: 
+      objectReference: {fileID: 625556270}
     - target: {fileID: 5396898862303368133, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1071,6 +1110,8 @@ GameObject:
   - component: {fileID: 1897911330}
   - component: {fileID: 1897911329}
   - component: {fileID: 1897911331}
+  - component: {fileID: 1897911333}
+  - component: {fileID: 1897911332}
   m_Layer: 5
   m_Name: Main Character
   m_TagString: Untagged
@@ -1154,3 +1195,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &1897911332
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897911327}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1897911333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897911327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696e836c15e874bcc82e75627a676687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 0.5

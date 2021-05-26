@@ -12,6 +12,7 @@ public class CharacterCardDisplay : MonoBehaviour
     [SerializeField] private Switch screen;
     [SerializeField] private DialogueDisplay dialogue;
     [SerializeField] private Transform images;          // Transform of gameObject containing children with images of characters
+    [SerializeField] private TextMeshProUGUI nameText;  // Text component for the name of characters
 
     private bool canClick = true;
     private bool[] available;       // Whether each character can be talked to
@@ -115,6 +116,7 @@ public class CharacterCardDisplay : MonoBehaviour
             Transform image = images.GetChild(index);
             image.GetComponent<Fade>().FadeIn();
             image.GetComponent<Image>().color = (available[index] ? Color.white : Color.grey);
+            nameText.text = image.gameObject.name;
         }
         else
             Debug.Log("Error: Attempted to show an out of bounds character.");

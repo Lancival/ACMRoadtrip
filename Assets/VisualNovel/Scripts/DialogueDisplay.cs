@@ -13,8 +13,7 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] Switch screen;
     [SerializeField] SceneLoader loader;
     [SerializeField] private TextAsset file;
-    [SerializeField] private Animator main;
-    [SerializeField] private Animator best;
+    [SerializeField] private Image[] images;
 
     private List<Dialogue> nodes; 
     private List<int> rCurr;
@@ -23,13 +22,6 @@ public class DialogueDisplay : MonoBehaviour
     private bool doneTyping = false;
     private bool stopTyping = false;
     private bool canClick = true;
-    
-    // TODO: Move character name information to Settings!
-    /*private static readonly string[] names =
-    {
-            "Misaki",   // ID = 0
-            "Summer"    // ID = 1
-    };*/
 
     private float DEFAULT_FONT_SIZE;	// Original font size of text
 
@@ -66,6 +58,10 @@ public class DialogueDisplay : MonoBehaviour
         // Parse dialogue
         nodes = Dialogue.Parse(file.text);
 
+        // Display Character Images
+        HideImages();
+        ShowImages();
+
         // Display Dialogue
         PrintName(nodes[index].speakerID);
         UpdateMood(nodes[index].speakerID, nodes[index].mood);
@@ -93,8 +89,11 @@ public class DialogueDisplay : MonoBehaviour
                     if (rCurr[0] != -1)
                     {
                         rNext = nodes[index+1].Responses();
+                        if (nodes[index].speakerID < 18 && images[nodes[index].speakerID])
+                            images[nodes[index].speakerID].color = Color.grey;
                         index = rCurr[0]-1;
                         Debug.Log("incremented, index is now " + (rCurr[0]-1));
+                        PrintName(nodes[index].speakerID);
                         StartCoroutine(PrintText(nodes[index].content));
                         if (rNext.Count > 1)
                         {
@@ -109,6 +108,7 @@ public class DialogueDisplay : MonoBehaviour
                         // If in a multi-dialogue scene, return to character-selection
                         if (screen != null)
                         {
+                            HideImages();
                             screen.HideDialogue();
                             screen.ShowSelection();
                         }
@@ -162,21 +162,10 @@ public class DialogueDisplay : MonoBehaviour
     // TODO: Move character name information to Settings!
     void PrintName(int sID)
     {
-        string name;
+        nameBox.text = Names.NameList[sID];
 
-        switch (sID) {
-        case 0:
-            name = "Misaki";
-            break;
-        case 1:
-            name = "Summer";
-            break;
-        default:
-            name = "Default";
-            break;
-        }
-
-        nameBox.text = name;
+        if (sID < 18 && images[sID])
+            images[sID].color = Color.white;
     }
 
     // Print text letter by letter 
@@ -261,6 +250,8 @@ public class DialogueDisplay : MonoBehaviour
         // Parse dialogue
         file = convo;
         nodes = Dialogue.Parse(convo.text);
+        HideImages();
+        ShowImages();
 
         // Display Dialogue
         PrintName(nodes[index].speakerID);
@@ -272,11 +263,37 @@ public class DialogueDisplay : MonoBehaviour
     {
         if (mood != null)
         {
-            if (speakerID == 0)
-                main.SetTrigger(mood);
-            else if (speakerID == 1)
-                best.SetTrigger(mood);
+            Animator am = images[speakerID].transform.GetComponent<Animator>();
+            if (am)
+                am.SetTrigger(mood);
+            else
+                Debug.Log("Error: Attempted to change mood of speakerID: " + speakerID);
         }
+    }
+
+    void ShowImages()
+    {
+        foreach (Dialogue node in nodes)
+        {
+            if (node.speakerID < images.Length)
+            {
+                Image i = images[node.speakerID];
+                if(i)
+                {
+                    i.transform.GetComponent<Fade>().FadeIn();
+                    i.color = Color.grey;
+                }
+            }
+            else
+                Debug.Log("Error: Attempted to display null image corresponding to speakerID: " + node.speakerID);
+        }
+    }
+
+    void HideImages()
+    {
+        foreach (Image i in images)
+            if (i)
+                i.transform.GetComponent<Fade>().FadeOut();
     }
 
 }
