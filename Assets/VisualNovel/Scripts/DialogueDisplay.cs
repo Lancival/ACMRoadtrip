@@ -11,6 +11,7 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameBox;
     [SerializeField] private GameObject indicator;
     [SerializeField] Switch screen;
+    [SerializeField] SceneLoader loader;
 
     [SerializeField] private TextAsset file;
     private List<Dialogue> nodes; 
@@ -99,15 +100,23 @@ public class DialogueDisplay : MonoBehaviour
                                 Button(nodes[rNext[i]-1].content, nodes[rNext[i]-1].dialogueID);
                         }
                     }
+                    // Reached the end of the dialogue tree
                     else if (rCurr[0] == -1)
                     {
-                        screen.HideDialogue();
-                        screen.ShowSelection(); 
+                        // If in a multi-dialogue scene, return to character-selection
+                        if (screen != null)
+                        {
+                            screen.HideDialogue();
+                            screen.ShowSelection();
+                        }
+                        // Otherwise, move to the next scene
+                        else
+                            loader.LoadNextScene();
                     }
                 }
             }
-            // go to character selection
-            if (Input.GetKeyDown("t"))
+            // Skip to character selection
+            if (Input.GetKeyDown("t") && screen != null)
             {
                 screen.HideDialogue();
                 screen.ShowSelection();
@@ -212,11 +221,6 @@ public class DialogueDisplay : MonoBehaviour
     }
 
     // Instantiate a button as the child of the Options Container
-
-    /* NOTE: Maybe we should consider object pooling for better performance - instead of
-     * instantiating and deleting buttons everytime, we could create buttons and then
-     * reuse them, deactivating them when not in use.
-     */
     void Button(string buttonText, int dID)
     {
         GameObject button = Instantiate(buttonPrefab, gameObject.transform.GetChild(1));
@@ -249,7 +253,9 @@ public class DialogueDisplay : MonoBehaviour
     public void parseAndDisplay(TextAsset convo)
     {
         index = 0;
+
         // Parse dialogue
+        file = convo;
         nodes = Dialogue.Parse(convo.text);
 
         // Display Dialogue

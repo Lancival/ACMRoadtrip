@@ -252,6 +252,8 @@ MonoBehaviour:
   dialogue: {fileID: 6313175012397122882}
   nameBox: {fileID: 2430966057515360508}
   indicator: {fileID: 2021640210965469014}
+  screen: {fileID: 0}
+  loader: {fileID: 0}
   file: {fileID: 0}
 --- !u!114 &9047626451787861069
 MonoBehaviour:
@@ -517,7 +519,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &509342171345617384
 MonoBehaviour:

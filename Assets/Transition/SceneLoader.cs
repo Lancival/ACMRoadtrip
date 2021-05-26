@@ -18,6 +18,7 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private float TRANSITION_DURATION;     // Length of scene transition, in seconds
 
     private Fade fader;							// Fade script component attached to game object
+    private bool loading = false;               // Whether this script is already loading a scene
 
     // Fades out transitional image and fades in audio at the start of a scene.
     void Start()
@@ -71,8 +72,12 @@ public class SceneLoader : MonoBehaviour
 
     // Load the next scene, fading in the transitional image and fading out the audio.
     public void LoadNextScene() {
-        fader.FadeIn();
-        StartCoroutine(Audio.Fade(mixer, "Master Volume", TRANSITION_DURATION, 0));
-        StartCoroutine(LoadSceneAsync(nextScene, TRANSITION_DURATION));
+        if (!loading)
+        {
+            loading = true;
+            fader.FadeIn();
+            StartCoroutine(Audio.Fade(mixer, "Master Volume", TRANSITION_DURATION, 0));
+            StartCoroutine(LoadSceneAsync(nextScene, TRANSITION_DURATION));
+        }
     }
 }
