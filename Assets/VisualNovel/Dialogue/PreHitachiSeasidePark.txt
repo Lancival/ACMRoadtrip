@@ -1,7 +1,7 @@
-0;Sorry this was so last minute. I really thought Trent was going to come.;2
+0;Sorry this was so last minute. I really thought Trent was going to come.;2;Sad
 1;Don't even think about him. This is a girl's trip now.;3,4
-0;You're right. I haven't visited Japan since I was a kid. This is supposed to be fun.;5
-0;... Do you think he's thinking about me?;11
+0;You're right. I haven't visited Japan since I was a kid. This is supposed to be fun.;5;Happy
+0;... Do you think he's thinking about me?;11;Sad
 1;Maybe you'll find a hot Japanese man.;6
 0;I thought you said this was a no boys trip.;7
 1;I can make an exception.;8

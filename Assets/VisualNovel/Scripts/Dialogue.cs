@@ -8,15 +8,17 @@ public class Dialogue {
 	public int speakerID {get; private set;}	// ID # of speaker
 	public string content {get; private set;}	// Dialogue lines
 	private List<int> links;					// ID # or #s of following dialogue nodes
+	public string mood {get; private set;}		// Mood of main character and/or best friend
 
 	private static char separator = ';';		// Character used to separate fields within the text file
 
-	public Dialogue(int dID, int sID, string text, List<int> l)
+	public Dialogue(int dID, int sID, string text, List<int> l, string m = null)
 	{
 		dialogueID = dID;
 		speakerID = sID;
 		content = text;
 		links = l;
+		mood = m;
 	}
 
 	// Returns a list of the ID numbers of the dialogue nodes directly after this one
@@ -36,7 +38,10 @@ public class Dialogue {
 		{
 			string line = lines[i];
 			string[] fields = line.Split(separator);
-			nodes.Add(new Dialogue(i+1, int.Parse(fields[0]), fields[1], new List<int>(Array.ConvertAll(fields[2].Split(','), Convert.ToInt32))));
+			if (fields.Length > 3)
+				nodes.Add(new Dialogue(i+1, int.Parse(fields[0]), fields[1], new List<int>(Array.ConvertAll(fields[2].Split(','), Convert.ToInt32)), fields[3].TrimEnd('\r')));
+			else
+				nodes.Add(new Dialogue(i+1, int.Parse(fields[0]), fields[1], new List<int>(Array.ConvertAll(fields[2].Split(','), Convert.ToInt32))));
 		}
 		return nodes;
 	}

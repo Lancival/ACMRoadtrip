@@ -12,8 +12,10 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private GameObject indicator;
     [SerializeField] Switch screen;
     [SerializeField] SceneLoader loader;
-
     [SerializeField] private TextAsset file;
+    [SerializeField] private Animator main;
+    [SerializeField] private Animator best;
+
     private List<Dialogue> nodes; 
     private List<int> rCurr;
     private List<int> rNext;
@@ -22,11 +24,12 @@ public class DialogueDisplay : MonoBehaviour
     private bool stopTyping = false;
     private bool canClick = true;
     
-    private static readonly string[] names =
+    // TODO: Move character name information to Settings!
+    /*private static readonly string[] names =
     {
             "Misaki",   // ID = 0
             "Summer"    // ID = 1
-    };
+    };*/
 
     private float DEFAULT_FONT_SIZE;	// Original font size of text
 
@@ -65,6 +68,7 @@ public class DialogueDisplay : MonoBehaviour
 
         // Display Dialogue
         PrintName(nodes[index].speakerID);
+        UpdateMood(nodes[index].speakerID, nodes[index].mood);
         StartCoroutine(PrintText(nodes[index].content));
     }
 
@@ -91,7 +95,6 @@ public class DialogueDisplay : MonoBehaviour
                         rNext = nodes[index+1].Responses();
                         index = rCurr[0]-1;
                         Debug.Log("incremented, index is now " + (rCurr[0]-1));
-                        PrintName(nodes[index].speakerID);
                         StartCoroutine(PrintText(nodes[index].content));
                         if (rNext.Count > 1)
                         {
@@ -146,8 +149,8 @@ public class DialogueDisplay : MonoBehaviour
     }
 
     void TaskOnClick(int dID){
-		Debug.Log ("You have clicked the button!");
         index = dID-1;
+        UpdateMood(nodes[index].speakerID, nodes[index].mood);
         canClick = true;
         foreach(Transform child in transform.GetChild(1))
         {
@@ -156,6 +159,7 @@ public class DialogueDisplay : MonoBehaviour
 	}
 
     // Set name in the name box
+    // TODO: Move character name information to Settings!
     void PrintName(int sID)
     {
         string name;
@@ -260,7 +264,19 @@ public class DialogueDisplay : MonoBehaviour
 
         // Display Dialogue
         PrintName(nodes[index].speakerID);
+        UpdateMood(nodes[index].speakerID, nodes[index].mood);
         StartCoroutine(PrintText(nodes[index].content));
+    }
+
+    void UpdateMood(int speakerID, string mood)
+    {
+        if (mood != null)
+        {
+            if (speakerID == 0)
+                main.SetTrigger(mood);
+            else if (speakerID == 1)
+                best.SetTrigger(mood);
+        }
     }
 
 }
