@@ -10,8 +10,8 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogue;
     [SerializeField] private TextMeshProUGUI nameBox;
     [SerializeField] private GameObject indicator;
-    [SerializeField] Switch screen;
-    [SerializeField] SceneLoader loader;
+    [SerializeField] private Switch screen;
+    [SerializeField] private SceneLoader loader;
     [SerializeField] private TextAsset file;
     [SerializeField] private Image[] images;
 
@@ -94,6 +94,7 @@ public class DialogueDisplay : MonoBehaviour
                         index = rCurr[0]-1;
                         Debug.Log("incremented, index is now " + (rCurr[0]-1));
                         PrintName(nodes[index].speakerID);
+                        UpdateMood(nodes[index].speakerID, nodes[index].mood);
                         StartCoroutine(PrintText(nodes[index].content));
                         if (rNext.Count > 1)
                         {
@@ -137,7 +138,6 @@ public class DialogueDisplay : MonoBehaviour
                 }
             }
         }
-        
     }
 
     // Delay click so you can't spam update
@@ -159,7 +159,6 @@ public class DialogueDisplay : MonoBehaviour
 	}
 
     // Set name in the name box
-    // TODO: Move character name information to Settings!
     void PrintName(int sID)
     {
         nameBox.text = Names.NameList[sID];

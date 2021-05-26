@@ -1,9 +1,9 @@
 4;Do you mind taking a picture of us?;2
-0;Er...sure.;3
+0;Er...sure.;3;Sad
 5;I told you she spoke English!;4
 5;Babe, this is the cutest place ever.;5
 4;I know, and I get to spend it with the most beautiful girl.;6
-0;(Please let me get this over with.);7
+0;(Please let me get this over with.);7;Mad
 0;Where do you want the picture taken?;8
 5;How about the bench?;9
 4;Wherever the lady wants.;10
@@ -20,25 +20,25 @@
 5;Did you come here with someone? I can take a photo of you two.;21,22
 0;Ask her to take a photo.;33
 0;Reject the photo.;40
-0;Er...Do you mind...not kissing so I can take the photo?;24
+0;Er...Do you mind...not kissing so I can take the photo?;24;Happy
 5;Ah, sorry! Let's do it now.;25
 18;(She kisses his cheek for the photo.);26
 0;Here you go.;27
-0;(I shouldn't feel dread over other couples.);28
+0;(I shouldn't feel dread over other couples.);28;Sad
 4;We were so happy when we saw you speak English.;29
 5;Yeah, we don't know any Japanese.;30
 4;What brings you here?;31,32
 0;The Obon Festival.;44
 0;I'm trying to forget about some stuff.;50
-0;Summer, come over here. They offered to take our photo.;34
+0;Summer, come over here. They offered to take our photo.;34;Happy
 5;Get ready and...done!;35
 5;You two are so cute.;36
-1;Thank you. Have a good rest of your day.;37
+1;Thank you. Have a good rest of your day.;37;Happy
 4;You too.;38
 1;They were nice.;39
-0;(I'd rather gauge my eyes out than have to feel that single again.);-1
+0;(I'd rather gauge my eyes out than have to feel that single again.);-1;Mad
 0;That's okay. Thanks, you guys.;41
-0;(The very sight of couples only reminds me of what I don't have.);42
+0;(The very sight of couples only reminds me of what I don't have.);42;Sad
 0;(I should start a petition to ban PDA.);43
 0;(This could have been Trent and me...);-1
 5;How fun!;45

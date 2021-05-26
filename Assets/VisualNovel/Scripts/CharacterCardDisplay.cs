@@ -13,11 +13,13 @@ public class CharacterCardDisplay : MonoBehaviour
     [SerializeField] private DialogueDisplay dialogue;
     [SerializeField] private Transform images;          // Transform of gameObject containing children with images of characters
     [SerializeField] private TextMeshProUGUI nameText;  // Text component for the name of characters
+    [SerializeField] private SceneLoader loader;
 
     private bool canClick = true;
     private bool[] available;       // Whether each character can be talked to
 
     private int index;              // Current character being displayed
+    private int finished = 0;
 
     private Color imageColorToBeUsed = Color.gray;
 
@@ -57,6 +59,8 @@ public class CharacterCardDisplay : MonoBehaviour
             else if (Input.GetKey("left")) 
                 MoveRight();
         }
+        if (finished == convos.Length)
+            loader.LoadNextScene();
     }
 
     void MoveLeft()
@@ -132,5 +136,10 @@ public class CharacterCardDisplay : MonoBehaviour
         }
         else
             Debug.Log("Error: Attempted to hide an out of bounds character.");
+    }
+
+    public void IncrementFinished()
+    {
+        finished++;
     }
 }

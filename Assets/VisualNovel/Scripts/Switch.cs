@@ -26,5 +26,6 @@ public class Switch : MonoBehaviour
     {
         descriptionContainer.GetComponent<Fade>().FadeIn();
         characterContainer.GetComponent<Fade>().FadeIn();
+        characterContainer.GetComponent<CharacterCardDisplay>().IncrementFinished();
     }
 }
