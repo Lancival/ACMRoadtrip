@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hitachi Seaside Park.unity
     guid: 39ed143c3f8fe4726baf83e5aedcb7e6
+  - enabled: 1
+    path: Assets/Scenes/Pre-Maid Cafe.unity
+    guid: ffa8a4ec684b8442ea983c6444384555
   m_configObjects: {}
