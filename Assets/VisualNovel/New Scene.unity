@@ -1234,6 +1234,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 775776187}
     - target: {fileID: 6356956935807970761, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 793079052}
+    - target: {fileID: 6356956935807970761, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
       propertyPath: charaCard
       value: 
       objectReference: {fileID: 1721484938}

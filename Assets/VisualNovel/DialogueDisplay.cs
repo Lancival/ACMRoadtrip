@@ -203,7 +203,8 @@ public class DialogueDisplay : MonoBehaviour
             dialogue.text = printedText;
 
             // sets dialogue speed
-            yield return new WaitForSeconds(Settings.DIALOGUE_SPEED);
+            if (Settings.DIALOGUE_SPEED > 0)
+                yield return new WaitForSeconds(Settings.DIALOGUE_SPEED);
         }
         doneTyping = true; // should it be before or after fade
         Debug.Log("done typing");
