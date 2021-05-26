@@ -291,7 +291,7 @@ public class DialogueDisplay : MonoBehaviour
     void HideImages()
     {
         foreach (Image i in images)
-            if (i)
+            if (i && i.gameObject.activeSelf)
                 i.transform.GetComponent<Fade>().FadeOut();
     }
 

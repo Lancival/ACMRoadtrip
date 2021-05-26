@@ -142,4 +142,10 @@ public class CharacterCardDisplay : MonoBehaviour
     {
         finished++;
     }
+
+    public void SetAvailable(int index)
+    {
+        if (index < convos.Length && index >= 0)
+            available[index] = true;
+    }
 }

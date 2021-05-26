@@ -27,7 +27,7 @@
 0;Hello.;28;Happy
 2;Hello. Do you need me to move seats?;29
 0;Um, no. I noticed you and you seem...cool.;30
-2;Thank you;31
+2;Thank you.;31
 0;Do you want to go on a date?;32
 0;(This is the most awkward encounter I've ever had.);33;Mad
 0;(If there were a time the train should crash, now is as good as it's going to get.);34
@@ -107,3 +107,30 @@
 0;But only if you promise to stop being my wing-woman.;108;Happy
 1;Deal.;109
 0;It's just hard right now when...Trent.;59
+1;Tokyo, I am inside you.;60;Happy
+18; (Summer slowly spins in a circle and giggles.);61
+0;Summer...?;62;Happy
+1;I'm having a moment. Let me have this.;63
+0;...;64
+1;Come on, can't you be a little excited?;65,66
+0;I'll be excited once we find somewhere to eat.;67
+0;TOKYO! I AM. INSIDE. YOU.;68
+1;Let's explore and we can pick a place that sounds interesting. It'll be an adventure.;69
+1;That's more like it.;69
+0;I'm obsessed your pink hair. Did you dye it for the trip?;70
+1;Er, no. I've had it for a while.;71
+0;Why didn't you tell me you were going to dye it?;72
+1;I did but you didn't respond. You were on a date with Trent.;73
+0;Oh, sorry.;74;Sad
+1;Oh my god. Is that..?;75
+0;What are you looking at?;76
+1;I found the perfect place for us to eat, but you're going to hate it.;77
+0;I'm starving. I could eat anywhere.;78
+1;There's a maid cafe down the street.;79
+0;No.;80
+1;Yes.;81
+0;Only weird, single men go to those.;82;Mad
+1;And soon, us.;83
+0;That doesn't comfort me.;84
+1;Please, for me?;85
+0;Fine, but you're paying.;-1;Mad

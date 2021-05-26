@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pre-Maid Cafe.unity
     guid: ffa8a4ec684b8442ea983c6444384555
+  - enabled: 1
+    path: Assets/Scenes/Maid Cafe.unity
+    guid: b9ea3ca56698b4bce81c34a281a5ac41
   m_configObjects: {}

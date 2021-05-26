@@ -1,0 +1,45 @@
+6;Welcome to our meido kissa!;2
+0;Er...hi.;3;Happy
+1;Table for two?;4;Happy
+18;(A cute maid escorts us to our table and hands us menus.);5
+0;This is weird.;6
+1;They're so cute. Let me order for us.;7
+1;Can we get two omurice?;8
+6;Yes! Please refer to the menu as you can book activities with us too!;9
+18;(The maid walks away.);10
+1;Look, we can take a polaroid with the maids.;11,12
+0;I'm tired. Can we just eat here?;13
+0;...Okay. They *are* kind of cute.;20
+1;Don't ruin my one chance to take a picture with a cute maid.;14
+0;(If only Trent were here. I wonder what he's up to. Probably with some other girl.);15;Sad
+0;Fine, you win.;16
+1;Come on, don't be a bum. It's just a dinner.;17;Sad
+0;Sorry, I've been in a bad mood.;18
+1;I know, and I get it. But try to enjoy this, okay?;19;Happy
+0;You're right.;25;Happy
+1;See? I know best.;21
+0;If this were in the states, I'd say you should work here.;22;Happy
+1;I don't want gross men ogling at my body.;23
+0;True, but surrounded by cute girls, food...;24
+1;Okay. I see where you're coming from.;25
+18;(The maid approaches our table);26
+6;Together, let's wish for a tasy meal. Repeat after me: oishiku nare, moe moe kyun!;27
+18;(The maid holds up a heart with her hands.);28
+1;What does that mean?;29
+0;It's from the anime K-On. It's a spell to make the food taste better.;30
+18;(The maid hands us two dishes of omurice, both with a cat drawn on it.);31
+1;Thank you.;32
+6;Ready?;33
+6;Oishiku nare—;34
+1;Moe moe—;35
+0;Kyun?;36
+0;(I awkwardly form a heart with my hands as the maids beam on us.);37
+1;I'm officially in my happy place.;38
+0;(The bright lights and colors feel misplaced. Am I allowed to feel happy without Trent in my life?);39;Sad
+1;You're thinking about him again. I can see it on your face.;40,41
+0;Yeah, I am.;42
+0;No, I'm not.;45
+1;Let me know if you want to talk about it, okay?;43
+0;Thanks for being my best friend.;44;Happy
+1;Always.;-1
+1;Uh-huh, sure.;-1

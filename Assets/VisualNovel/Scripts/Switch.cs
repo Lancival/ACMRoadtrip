@@ -9,6 +9,9 @@ public class Switch : MonoBehaviour
     [SerializeField] public GameObject descriptionContainer;
     [SerializeField] public GameObject characterContainer;
 
+    private bool state = true;
+    private bool talked = false;
+
     public void HideDialogue()
     {
         dialogueBox.GetComponent<Fade>().FadeOut();
@@ -21,11 +24,21 @@ public class Switch : MonoBehaviour
     {
         descriptionContainer.GetComponent<Fade>().FadeOut();
         characterContainer.GetComponent<Fade>().FadeOut();
+        state = true;
     }
     public void ShowSelection()
     {
-        descriptionContainer.GetComponent<Fade>().FadeIn();
-        characterContainer.GetComponent<Fade>().FadeIn();
-        characterContainer.GetComponent<CharacterCardDisplay>().IncrementFinished();
+        if (state)
+        {
+            state = false;
+            descriptionContainer.GetComponent<Fade>().FadeIn();
+            characterContainer.GetComponent<Fade>().FadeIn();
+            characterContainer.GetComponent<CharacterCardDisplay>().IncrementFinished();
+            if (!talked)
+            {
+                characterContainer.GetComponent<CharacterCardDisplay>().SetAvailable(1);
+                talked = true;
+            }
+        }
     }
 }
