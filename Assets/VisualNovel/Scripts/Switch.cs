@@ -8,16 +8,6 @@ public class Switch : MonoBehaviour
     [SerializeField] public GameObject dialogueBox;
     [SerializeField] public GameObject descriptionContainer;
     [SerializeField] public GameObject characterContainer;
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void HideDialogue()
     {

@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 330, y: 5}
-  m_SizeDelta: {x: 520, y: 160}
+  m_AnchoredPosition: {x: 478, y: 5}
+  m_SizeDelta: {x: 725, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2901789639967370867
 CanvasRenderer:
@@ -113,7 +113,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 350, y: -134.61539}
-  m_SizeDelta: {x: 770, y: 230}
+  m_SizeDelta: {x: 1250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5114886844437509116
 CanvasRenderer:
@@ -187,8 +187,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 385, y: -150}
-  m_SizeDelta: {x: 600, y: 200}
+  m_AnchoredPosition: {x: 625, y: -150}
+  m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5114886844966178338
 CanvasRenderer:
@@ -218,7 +218,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing eli lorem
+  m_text: The bright flowers sprawl for dozens of feet in front of me, seemingly
+    neverending. All of these couples trying to enjoy the scenery...Who am I kidding?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
   m_sharedMaterial: {fileID: -3582602626707611156, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
@@ -297,10 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5114886845257369903}
   - component: {fileID: 5114886845257369902}
-  - component: {fileID: 5114886845257369897}
-  - component: {fileID: 1818040917}
   - component: {fileID: 2089019645}
-  - component: {fileID: 1886576975972470240}
   m_Layer: 5
   m_Name: Description Container
   m_TagString: Untagged
@@ -323,10 +321,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 400}
-  m_SizeDelta: {x: 900, y: 300}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 332}
+  m_SizeDelta: {x: 700, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &5114886845257369902
 CanvasGroup:
@@ -340,45 +338,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &5114886845257369897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5121907495979660294}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
---- !u!114 &1818040917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5121907495979660294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc7ae5183cade4390a4b66870d9ce2ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: {fileID: 5114886844966178339}
 --- !u!114 &2089019645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,20 +351,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.5
---- !u!114 &1886576975972470240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5121907495979660294}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 2
-  m_VerticalFit: 2
 --- !u!1 &6872982285813493962
 GameObject:
   m_ObjectHideFlags: 0

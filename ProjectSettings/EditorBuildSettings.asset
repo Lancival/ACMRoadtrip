@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pre-Hitachi.unity
     guid: bdf48267d28f345b7ae27ce2c797bf10
+  - enabled: 1
+    path: Assets/Scenes/Hitachi Seaside Park.unity
+    guid: 39ed143c3f8fe4726baf83e5aedcb7e6
   m_configObjects: {}
