@@ -382,6 +382,7 @@ GameObject:
   - component: {fileID: 625556269}
   - component: {fileID: 625556271}
   - component: {fileID: 625556270}
+  - component: {fileID: 625556272}
   m_Layer: 5
   m_Name: Best Friend
   m_TagString: Untagged
@@ -446,6 +447,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625556268}
   m_CullTransparentMesh: 1
+--- !u!95 &625556272
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625556268}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb0ba56d10700499da1bd0c3778755fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &860489015
 GameObject:
   m_ObjectHideFlags: 0
