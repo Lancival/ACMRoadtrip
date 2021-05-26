@@ -86,6 +86,8 @@ GameObject:
   - component: {fileID: 1710533752}
   - component: {fileID: 1710533754}
   - component: {fileID: 1710533753}
+  - component: {fileID: 5012402218019281984}
+  - component: {fileID: 1490022973252380892}
   m_Layer: 5
   m_Name: Chara 1
   m_TagString: Untagged
@@ -150,6 +152,31 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5012402218019281984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710533751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696e836c15e874bcc82e75627a676687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 0.5
+--- !u!225 &1490022973252380892
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710533751}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &253618754202524203
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +739,8 @@ GameObject:
   - component: {fileID: 3496889829838675581}
   - component: {fileID: 8741794331423106186}
   - component: {fileID: 6081325052078575149}
+  - component: {fileID: 5226359085067510988}
+  - component: {fileID: 6443604531217410815}
   m_Layer: 5
   m_Name: Chara 2
   m_TagString: Untagged
@@ -776,6 +805,31 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5226359085067510988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435575192473289956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696e836c15e874bcc82e75627a676687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 0.5
+--- !u!225 &6443604531217410815
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435575192473289956}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6472010316593335098
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,13 +883,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f689f62ed7a245f5b003116364a5b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charaCard: {fileID: 0}
+  charaCard: {fileID: 7941993960799484772}
   RightArrow: {fileID: 6359974192023098777}
   LeftArrow: {fileID: 7292005762922394445}
-  chara1: {fileID: 1710533751}
-  chara2: {fileID: 6435575192473289956}
   screen: {fileID: 0}
   dialogue: {fileID: 0}
+  images: {fileID: 482428457245506873}
   convos: []
 --- !u!225 &6616894222369604135
 CanvasGroup:
