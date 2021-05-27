@@ -1687,7 +1687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5779015618938734411, guid: dc33ccd5b46d242d492a91e12294f6ad, type: 3}
       propertyPath: m_text
-      value: Hitachi Park
+      value: Maid Cafe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc33ccd5b46d242d492a91e12294f6ad, type: 3}

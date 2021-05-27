@@ -1,0 +1,41 @@
+1;Can you put her in the hottest outfit you have? I'll pay.;2;Happy
+0;You are not—;3;Mad
+1;I want her to look sexy and trendy.;4
+8;Ah, okay. You want me to pick the outfit?;5
+1;Absolutely.;6
+8;Follow me.;7
+0;I'm going to look ridiculous.;8
+1;I want the outfit to scream I'm-too-hot-for-my-ex-boyfriend.;9
+8;What does your ex-boyfriend like?;10,11
+0;He likes rocker chic.;12
+0;Not me, apparently.;13
+8;Let me see what I can find.;16
+1;Don't listen to her.;14
+8;What style should I put her in?;15
+18;(Summer whispers in the store associate's ears);12
+1;Trust in the process, okay? I let you plan every other day on this trip.;17
+0;Okay, fine.;18
+8;How about this?;19
+1;Let's have her try it on first.;20
+0;I'm right here, you know.;21
+1;I promise you'll look perfect.;22
+18;(I change into my new outfit.);23
+0;I...;24;HappyMakeover
+1;What do you think?;25
+0;I look...;26,27
+0;...amazing;28
+0;...horrible;36
+1;Right?;29
+0;I've never seen myself like this. You were right.;30;Happy
+1;Of course I'm right.;31
+8;Good?;32
+1;It's great. Let's take it to the counter.;33
+0;(I know it's just a change of clothes, but I feel pretty.);34
+0;(I never would've picked something out if I had gone here with Trent.);35
+0;(Maybe this is for the best.);-1
+0;I look like a clown.;37;SadMakeover
+1;Oh, come on. I like it.;38;Sad
+0;No one can see me in this.;39
+1;..For me?;40
+0;Fine, but I'm only wearing this for today.;41
+1;We'll buy this.;-1
