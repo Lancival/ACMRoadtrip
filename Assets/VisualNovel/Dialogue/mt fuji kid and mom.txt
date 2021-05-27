@@ -1,0 +1,23 @@
+10;Where is the bathroom?;2
+1;Take the path on the right and it should be at the end.;3;Happy
+10;Thanks! I'll be back.;4
+11;Are you American too?;5
+1;Yeah, we're from Boston.;6
+11;We're from New York.;7
+1;What brings you two to Japan?;8
+11;This is my graduation gift to my daughter for graduating college. She's about to start a job at Google, and we had a small window for a trip.;9
+1;...Oh, you must be so proud.;10;Sad
+11;Are you a student too?;11
+1;Yeah.;12,13
+0;Intervene and help Summer escape the situation.;14
+0;Do nothing.;18
+0;Hey, Summer, can you take a picture of me over here?;15;Happy
+1;Sure, nice to meet you guys.;16
+11;Nice to meet you too.;17
+1;(whispers) Thanks for saving me.;-1;Happy
+11;Where do you go to school?;19
+1;Boston College.;20
+11;My daughter is close to you guys then. She went to MIT. Maybe you ran into sometime without knowing.;21
+1;Yeah, maybe. Your daughter must be really smart.;22;Sad
+11;She is.;23
+1;I should probably get going. My...friend is looking for me.;-1

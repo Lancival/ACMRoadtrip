@@ -1,0 +1,56 @@
+12;Hey Misaki, it's me. Can we talk?;2
+0;I'm in Japan right now.;3;Sad
+12;I know, sorry for disrupting your trip. I've been thinking a lot about you recently. Do you have time to call?;4
+0;(This was everything I had yearned for the past few months, a second chance to prove myself worthy of love, to reconnect with the first boy who truly made me feel pretty.);5
+0;(A shot at the future I so highly anticipated, one where Trent and I would wake up on Sundays in our underwear and kiss goodnight, one where we would learn, grow, and love together.);6
+0;(But breaking up with someone is a commitment to throwing that future away, that no matter how much I loved him, he decided he could find someone better than I could ever be.);7
+0;(Do I want to give myself another chance at heartbreak?);8
+0;(I...);9,10
+0;Don't call Trent.;11
+0;Call Trent.;39
+0;I don't have time. Sorry.;12
+0;(I can't think about some boy when Summer and I are this tense.);13
+0;Hey, Summer.;14
+1;Hey.;15;Sad
+0;Are you feeling okay?;16
+1;I guess.;17
+0;Do you want to talk about it?;18
+1;Look, I was too hard on you. I'm sorry.;19
+0;I'm sorry too. I know I went MIA when I started dating Trent, and you don't deserve to hear me talk about him all of the time.;20
+1;I guess I've been frustrated about seeing our entire friend group have their futures figured out. I have no idea what I'm going to do.;21
+0;I don't anyone knows what they're doing. If they do, then they're pretending.;22
+1;I don't want us to fight.;23
+0;I don't either. You're my best friend.;24;Happy
+1;I'm sorry too about how negative I've been about Trent. I was invalidating your feelings.;25,26
+0;Tell Summer about Trent's text.;27
+0;Do not tell Summer about Trent's text.;37
+0;Trent texted me, actually.;28
+1;When? What did he say?;29
+0;Just now. I think he wants to get back together.;30
+1;That's good, right;31;Happy
+0;I'm starting to think I'm better off without him.;32
+1;Really?;33
+0;I don't want boys ruining our girls trip any longer. I'm sorry for how much I talked about him. I know it must've dragged the mood down.;34
+1;Don't even worry about it.;35
+0;If Trent really wanted to be with me, he wouldn't have broken up with me. I shouldn't go back to him just because we're both lonely.;36
+1;I'm so proud of you.;-1
+0;I'm sorry for bringing him up in the first place on our girls trip. No more relationship drama from now on, okay?;38
+1;You got it.;-1;Happy
+12;Hi.;40
+0;Hey.;41
+12;I know you're busy, so I promise to be fast. I'm sorry for the way things ended between us. The past couple of weeks, I've been thinking nonstop about you.;42
+0;Right.;43
+12;I regret us breaking up. I was stupid and frustrated, and it was wrong of me. I'm still crazy about you.;44
+0;Really?;45
+12;Of course. Would you be open to maybe talking again?;46,47
+0;Yeah, okay. Maybe.;48
+0;I'm sorry, but I really need to just focus on myself.;52
+12;Thank you for being so understanding.;49
+0;I should go.;50
+12;Right, yeah, sorry again. I'll text you after your trip, okay?;51
+0;Okay.;-1
+12;Can you at least think about it?;53
+0;We're not going to get back together.;54
+12;I'm sorry, Misaki.;55
+0;I should go.;56
+12;Okay...Goodbye.;-1
