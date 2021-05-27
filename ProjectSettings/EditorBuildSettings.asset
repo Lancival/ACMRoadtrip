@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shinto Temple.unity
     guid: a2a7d6cb8d80e4cc6becd0562ad50f2e
+  - enabled: 1
+    path: Assets/Scenes/Pre-Obon.unity
+    guid: 0deac48a013f243f9bf4d695c65223e7
+  - enabled: 1
+    path: Assets/Scenes/Obon Festival.unity
+    guid: 303aae9362038481ea059409d2f95496
   m_configObjects: {}

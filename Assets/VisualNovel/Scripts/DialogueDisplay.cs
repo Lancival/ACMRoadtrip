@@ -94,6 +94,9 @@ public class DialogueDisplay : MonoBehaviour
                     rCurr = nodes[index].Responses();
                     if (rCurr[0] != -1)
                     {
+                        if (nodes[index].speakerID < 18 && images[nodes[index].speakerID])
+                            images[nodes[index].speakerID].color = Color.grey;
+
                         if (rCurr.Count > 1)
                         {
                             canClick = false;
@@ -108,8 +111,6 @@ public class DialogueDisplay : MonoBehaviour
 
                         PrintName(nodes[index].speakerID);
                         UpdateMood(nodes[index].speakerID, nodes[index].mood);
-                        if (nodes[index].speakerID < 18 && images[nodes[index].speakerID])
-                            images[nodes[index].speakerID].color = Color.grey;
 
                         /*rNext = nodes[index+1].Responses();
                         if (nodes[index].speakerID < 18 && images[nodes[index].speakerID])
@@ -157,7 +158,7 @@ public class DialogueDisplay : MonoBehaviour
                 {
                     stopTyping = true;
                     dialogue.text = nodes[index].content;
-                    Debug.Log("stop typing");
+                    //Debug.Log("stop typing");
                 }
             }
         }
@@ -234,7 +235,7 @@ public class DialogueDisplay : MonoBehaviour
                 yield return new WaitForSeconds(Settings.DIALOGUE_SPEED);
         }
         doneTyping = true; // should it be before or after fade
-        Debug.Log("done typing");
+        //Debug.Log("done typing");
         indicator.GetComponent<Fade>().FadeIn();
     }
 
