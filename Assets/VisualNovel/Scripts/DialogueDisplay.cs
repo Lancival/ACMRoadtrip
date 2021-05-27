@@ -69,7 +69,7 @@ public class DialogueDisplay : MonoBehaviour
 
         if (nodes[index].Responses().Count > 1)
             for (int i = 0; i < nodes[index].Responses().Count; i++)
-                        Button(nodes[nodes[index].Responses()[i]].content, nodes[nodes[index].Responses()[i]].dialogueID);
+                Button(nodes[nodes[index].Responses()[i] - 1].content, nodes[nodes[index].Responses()[i] - 1].dialogueID);
     }
 
     // Update is called once per frame
