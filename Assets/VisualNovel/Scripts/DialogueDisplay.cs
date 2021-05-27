@@ -75,7 +75,7 @@ public class DialogueDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canClick)
+        if (canClick && !Settings.PAUSED)
         {
             // left click or space bar or enter/return key
             if (Input.GetMouseButtonUp(0) || Input.GetKeyDown("space") || Input.GetKeyDown("enter") || Input.GetKeyDown("return"))
