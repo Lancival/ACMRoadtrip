@@ -20,7 +20,8 @@ public class CheckBranch : MonoBehaviour
 	        if (dialogue.text == targets[i])
 	        {
 	        	ccd.SetAvailable(index);
-	        	ccd.UpdateConvos(index, files[i]);
+	        	if (files[i] != null)
+	        		ccd.UpdateConvos(index, files[i]);
 	        	Destroy(this);
 	        }
     	}

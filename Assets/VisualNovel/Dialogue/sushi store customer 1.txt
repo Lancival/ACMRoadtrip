@@ -19,7 +19,7 @@
 13;What are you two doing? Scaring away customers?;-1
 0;We just got hired today, so Japan is still new to us. Here is your table.;21
 14;What would you recommend?;22
-1;I always get the California roll everywhere I-;23
+1;I always get the California roll everywhere I—;23
 0;She means omakase. That means the chef decides what you eat.;24
 14;Okay, I guess I'll try that. I'm pretty new to sushi.;25
 0;I'll let the chef know. Enjoy your stay in Japan.;26

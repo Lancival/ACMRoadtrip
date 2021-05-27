@@ -151,7 +151,15 @@ public class CharacterCardDisplay : MonoBehaviour
 
     public void UpdateConvos(int index, TextAsset file)
     {
-        if (index > 0 && index < convos.Length)
+        if (index >= 0 && index < convos.Length)
             convos[index] = file;
+    }
+
+    public bool CheckAvailable(int index)
+    {
+        if (index >= 0 && index < convos.Length)
+            return available[index];
+        else
+            return false;
     }
 }

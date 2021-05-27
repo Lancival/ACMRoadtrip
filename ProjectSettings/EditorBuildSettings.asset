@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sushi Shop.unity
     guid: 2c3c532a8d8084740a5b127847512481
+  - enabled: 1
+    path: Assets/Scenes/Pre-Shinto.unity
+    guid: 396bf6cee24a04d11a495c09ce64b220
   m_configObjects: {}

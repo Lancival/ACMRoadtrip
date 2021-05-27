@@ -18,5 +18,6 @@ public class VolumeUpdate : MonoBehaviour
     public void UpdateVolume(float volume)
     {
     	am.SetFloat("Master Volume", Audio.VolumeToDecibels(volume));
+        Settings.MASTER_VOLUME = volume;
     }
 }
