@@ -17,7 +17,7 @@ public static class Names
 		"Employee",	// ID = 9 (store associate, Akihabara)
 		"Beth",		// ID = 10 (kid, Mt.Fuji)
 		"Mother",	// ID = 11 (mom, Mt.Fuji)
-		"ERROR!!!",	// ID = 12
+		"Trent",	// ID = 12 (repeated)
 		"Chef Gen",	// ID = 13 (sushi owner)
 		"Customer",	// ID = 14 (sushi)
 		"Customer", // ID = 15 (sushi)

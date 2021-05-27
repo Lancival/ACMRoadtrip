@@ -26,7 +26,7 @@
 0;...amazing;28
 0;...horrible;36
 1;Right?;29
-0;I've never seen myself like this. You were right.;30;Happy
+0;I've never seen myself like this. You were right.;30
 1;Of course I'm right.;31
 8;Good?;32
 1;It's great. Let's take it to the counter.;33

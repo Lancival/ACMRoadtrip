@@ -1748,6 +1748,10 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2319272248803379567, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6356956935807970761, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
       propertyPath: loader
       value: 
@@ -1856,6 +1860,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8694938672533817798, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
 --- !u!224 &1141214308 stripped
@@ -1916,8 +1924,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: -90}
-  m_SizeDelta: {x: 3300, y: 900}
+  m_AnchoredPosition: {x: -550, y: -90}
+  m_SizeDelta: {x: 800, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1466810466
 CanvasGroup:
@@ -1983,7 +1991,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 80c9b55f6c1cd4c2fb18a6fbd1a9d642, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5383ada96650643a5bfd9ab14a5de872, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

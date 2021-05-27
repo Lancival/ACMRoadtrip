@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Akihabara Makeover.unity
     guid: 3184da35ac5014013ae016107ba2b9ed
+  - enabled: 1
+    path: Assets/Scenes/Pre-MtFuji.unity
+    guid: 10a6a3fad8b4b436a8a403c730af205c
+  - enabled: 1
+    path: Assets/Scenes/MtFuji.unity
+    guid: 810cbb254e55c4550ab94162a20846ab
   m_configObjects: {}
