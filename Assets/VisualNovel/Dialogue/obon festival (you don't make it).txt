@@ -1,0 +1,18 @@
+1;What-why is it dark out? Where is everyone?;2;SadMakeover
+0;I knew we were going to be too late.;3;SadMakeover
+1;Wasn't the whole point of the trip so we could end up here?;4
+0;Shit.;5
+1;I-I'm sorry;6
+0;It isn't your fault.;7
+1;I know, but you really wanted to come here.;8
+0;Uh, well, we could go on a walk?;9
+0;God, everything's closed, Misaki.;10
+0;The last night of our trip is ruined.;11
+1;At least we're in it together..?;12;HappyMakeover
+0;Yeah. It's been a good trip. Just a bittersweet ending.;13;HappyMakeover
+1;Look, there's actually a soba place open late. It's only a couple of miles from here. Want to go?;14
+0;Let's do it.;15
+0;Summer?;16
+1;Yeah?;17
+0;I'm thankful you're my best friend.;18
+1;I love you, girl.;-1

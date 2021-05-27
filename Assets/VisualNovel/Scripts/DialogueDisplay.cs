@@ -94,7 +94,24 @@ public class DialogueDisplay : MonoBehaviour
                     rCurr = nodes[index].Responses();
                     if (rCurr[0] != -1)
                     {
-                        rNext = nodes[index+1].Responses();
+                        if (rCurr.Count > 1)
+                        {
+                            canClick = false;
+                            for (int i = 0; i < rCurr.Count; i++)
+                                Button(nodes[rCurr[i] - 1].content, nodes[rCurr[i] - 1].dialogueID);
+                        }
+                        else
+                        {
+                            index = rCurr[0] - 1;
+                            StartCoroutine(PrintText(nodes[index].content));
+                        }
+
+                        PrintName(nodes[index].speakerID);
+                        UpdateMood(nodes[index].speakerID, nodes[index].mood);
+                        if (nodes[index].speakerID < 18 && images[nodes[index].speakerID])
+                            images[nodes[index].speakerID].color = Color.grey;
+
+                        /*rNext = nodes[index+1].Responses();
                         if (nodes[index].speakerID < 18 && images[nodes[index].speakerID])
                             images[nodes[index].speakerID].color = Color.grey;
                         index = rCurr[0]-1;
@@ -107,7 +124,7 @@ public class DialogueDisplay : MonoBehaviour
                             canClick = false;
                             for (int i = 0; i < rNext.Count; i++)
                                 Button(nodes[rNext[i]-1].content, nodes[rNext[i]-1].dialogueID);
-                        }
+                        }*/
                     }
                     // Reached the end of the dialogue tree
                     else if (rCurr[0] == -1)
