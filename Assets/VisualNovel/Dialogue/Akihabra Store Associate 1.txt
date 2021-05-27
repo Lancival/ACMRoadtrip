@@ -5,8 +5,8 @@
 1;Absolutely.;6
 8;Follow me.;7
 0;I'm going to look ridiculous.;8
-1;I want the outfit to scream I'm-too-hot-for-my-ex-boyfriend.;9
-8;What does your ex-boyfriend like?;10,11
+1;I want the outfit to scream I'm—too—hot—for—my—ex—boyfriend.;9
+8;What does your ex—boyfriend like?;10,11
 0;He likes rocker chic.;12
 0;Not me, apparently.;13
 8;Let me see what I can find.;16
