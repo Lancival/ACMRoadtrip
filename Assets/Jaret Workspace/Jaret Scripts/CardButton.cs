@@ -9,9 +9,11 @@ public class CardButton : MonoBehaviour
     private GameObject mapManager;
     public SpriteRenderer spriteRenderer;
 
-    private JCard currentCard;
     
-
+    private JCard currentCard;
+    private JCard tempCard;
+    
+    
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
@@ -30,15 +32,16 @@ public class CardButton : MonoBehaviour
             }
 
             mapManager.GetComponent<MapManager>().PlayCard(currentCard);
-            Debug.Log("Card Played");
+            //Debug.Log("Card Played");
             DrawCard();
         }
     }
 
     public void DrawCard()
     {
-        currentCard = gameManager.GetComponent<JaretGameManager>().GetCard(currentCard);
 
+        currentCard = gameManager.GetComponent<JaretGameManager>().GetCard(currentCard);
+        
         if (currentCard == null)
         {
             spriteRenderer.sprite = null;
@@ -46,6 +49,8 @@ public class CardButton : MonoBehaviour
         }    
 
         spriteRenderer.sprite = currentCard.artwork;
+        Destroy(GetComponent<BoxCollider2D>());
+        gameObject.AddComponent<BoxCollider2D>();
     }
 
     public void DebugCardContents()

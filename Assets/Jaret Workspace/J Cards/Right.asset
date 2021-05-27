@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Right
   m_EditorClassIdentifier: 
   cardName: Right
-  artwork: {fileID: 21300000, guid: 6370eb681ec1b894cae66995cdd446ad, type: 3}
+  artwork: {fileID: 21300000, guid: 2f0b4372b9ff2bd479ad435f8f317a01, type: 3}
+  UpgradedArtwork: {fileID: 0}
   directionOne: 2
   directionTwo: 0
   directionThree: 0
+  isStorm: 0
+  isLighthouse: 0
+  isWind: 0
+  tutorialCorrect: 0
+  tutorial: 0

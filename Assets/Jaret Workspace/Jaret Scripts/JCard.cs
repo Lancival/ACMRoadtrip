@@ -16,8 +16,12 @@ public class JCard : ScriptableObject
     public int directionThree = 0;
 
     public bool isStorm = false;
+    public bool isLighthouse = false;
+    public bool isWind = false;
+    public bool isShuffle = false;
+    public bool isClairvoyant = false;
 
-    
+    private bool cutMovement = false;
     public bool tutorialCorrect = false;
     public bool tutorial = false;
 
@@ -41,6 +45,11 @@ public class JCard : ScriptableObject
         directionThree = directionOne;
         artwork = UpgradedArtwork;
 
+    }
+
+    public void ReduceMovement()
+    {
+        cutMovement = true;
     }
 
     

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OceanTile
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 11400000, guid: 364f7447647671e4fa27d18f200a77fa, type: 2}
+  - {fileID: 11400000, guid: d1d17aff1d535f049882e9f4467115f4, type: 2}
   name: Ocean
   direction: none
   dirInt: 0

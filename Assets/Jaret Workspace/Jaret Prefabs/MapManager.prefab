@@ -58,6 +58,7 @@ MonoBehaviour:
   MovableStormPrefab: {fileID: 6769382106439000103, guid: 009a403b6ae98d0489a636867bb92cdf, type: 3}
   HandPlacementPrefab: {fileID: 1931708449750744503, guid: 0f8757b32a6519844ba7344cec88d13d, type: 3}
   cardButtonPrefab: {fileID: 5307744269583609350, guid: aced39ba3e8219649ae19320e9aaadfa, type: 3}
+  clairvoyanceUIPrefab: {fileID: 8193894020699729466, guid: 2ef68e8339779ad41a271b59a2056257, type: 3}
   LevelText: {fileID: 0}
   playerSpawn: {x: -3, y: -3, z: 0}
   StormPosition:

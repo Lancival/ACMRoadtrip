@@ -13,6 +13,9 @@ public class JaretGameManager : MonoBehaviour
 
     public List<JCard> TutorialDeck;
 
+
+    //////////////////////////////////////////////
+    [SerializeField]
     private List<JCard> DiscardDeck;
     [SerializeField]
     private List<JCard> PlayableDeck;
@@ -24,12 +27,14 @@ public class JaretGameManager : MonoBehaviour
     private List<JCard> Deck;
 
     private List<JCard> TutorialCorrectDeck;
+
+    private List<JCard> ShuffleDeck;
     
 
     
 
 
-    //public string[] startingDeck;
+    
 
 
     void Awake()
@@ -39,6 +44,7 @@ public class JaretGameManager : MonoBehaviour
         PlayableDeck = new List<JCard>();
         Hand = new List<JCard>();
         Deck = new List<JCard>();
+        ShuffleDeck = new List<JCard>();
 
         foreach(JCard card in StartingDeck)
         {
@@ -69,7 +75,7 @@ public class JaretGameManager : MonoBehaviour
     private void CreatePlayableDeck()
     {
 
-        if (Level == 1)
+       /* if (Level == 1)
         {
             
             int length = TutorialDeck.Count;
@@ -83,8 +89,8 @@ public class JaretGameManager : MonoBehaviour
                 PlayableDeck.Add(TutorialCorrectDeck[i]);
             }
         }
-        else
-        {
+        else*/
+       // {
             int length = Deck.Count;
             for (int i = 0; i < length; i++)
             {
@@ -99,7 +105,7 @@ public class JaretGameManager : MonoBehaviour
                 Deck.Add(card);
             }
             
-        }
+       // }
 
 
     }
@@ -122,6 +128,9 @@ public class JaretGameManager : MonoBehaviour
         }
         else
         {
+            Hand.Remove(oldCard);
+            DiscardDeck.Add(oldCard);
+
             if (PlayableDeck.Count == 0)
                 return null;
 
@@ -129,7 +138,6 @@ public class JaretGameManager : MonoBehaviour
 
 
             Hand.Add(temp);
-            Hand.Remove(oldCard);
             PlayableDeck.Remove(temp);
             return temp;
         }
@@ -152,4 +160,43 @@ public class JaretGameManager : MonoBehaviour
     {
         return Level;
     }
+
+    public void Shuffle()         // Shuffle Playable Deck
+    {
+        if (ShuffleDeck.Count != 0)
+        {
+            Debug.Log("remove shuffle");
+            for (int i = ShuffleDeck.Count - 1; i > -1; i--)
+            {
+                ShuffleDeck.Remove(ShuffleDeck[i]);
+            }
+        }
+
+        
+        int length = PlayableDeck.Count;
+        for (int i = 0; i < length; i++)
+        {
+            Debug.Log(i);
+            ShuffleDeck.Add(PlayableDeck[Random.Range(0, PlayableDeck.Count)]);
+
+            PlayableDeck.Remove(ShuffleDeck[i]);
+
+        }
+        foreach (JCard card in ShuffleDeck)   // dont use equal sign, they are just pointing to the same thing.  This loop makes two separate decks that can be edited differently
+        {
+            PlayableDeck.Add(card);
+        }
+    }
+
+    public Sprite TopCard(int cardPosition)
+    {
+        return PlayableDeck[cardPosition].artwork;
+    }
+
+    public int DeckLength()
+    {
+        return PlayableDeck.Count;
+    }
+
+
 }
