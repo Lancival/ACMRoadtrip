@@ -1,0 +1,42 @@
+1;Are you ready for your internship?;2;Sad
+0;Yeah, I'll be busy but it should be fine.;3;Happy
+1;Right.;4,5
+0;Is something wrong?;6
+0;What are you going to do for the rest of the summer?;11
+1;It just seems like all of our friends have something lined up, but I don't.;7
+0;I thought you didn't want anything, remember?;8
+1;Yeah, but I don't want to be the only person with nothing.;9
+0;Trust me, fetching coffee for my office isn't going to be fun.;10
+1;You don't get it.;14;Mad
+1;Sit around, watch paint dry.;12
+0;Come on, that's not you at all.;13;Sad
+1;It's whatever.;14
+0;What is it?;15
+1;Do you feel like I'm the stupid friend?;16
+0;What are you talking about? Of course not.;17
+1;You're always onto the next big thing, and I'm just there.;18
+0;That's because I work hard.;19
+1;So I don't work hard?;20,21
+0;You don't really like school.;22
+0;I don't see you putting a lot of effort in.;26
+1;I wish I liked school.;23;Sad
+0;If you want, I could help tutor you.;24
+1;I don't want your help.;25
+0;Okay, fine. What's gotten into you?;28;Mad
+1;You're naturally smarter than me, okay?;27
+0;What's gotten into you?;28;Mad
+1;Honestly Misaki, ever since you started dating Trent, you completely dropped me as a friend. You only invited me to Japan because he broke up with you.;29
+1;Seriously? You could've told me how you felt before flying thousands of miles here.;30
+1;I wanted to go back to us being best friends, but all you've done is sulk about Trent. I get that it's hard, but you haven't even considered how I feel.;31
+0;I can't help that I'm sad over my breakup.;32
+1;I don't want to exist solely to be the replacement to your ex-boyfriend.;33
+0;At least Trent is honest with how he feels about me.;34
+1;So now I'm on the same level as your shitty ex-boyfriend.;35,36
+0;You're the one who said it, not me.;37
+1;What made you even come to this conclusion?;40
+1;So it is how you feel.;38
+0;You think I like that everything reminds me of Trent? You think I like slaving my life away for school?;39
+1;I get that you're having a hard time, but I'm here too, okay?;-1
+1;Because maybe I'm not good at anything and you're going to find someone else and I'll always be reaching for the impossible.;41
+0;Not everything works out for me.;42
+1;Says the one who has her life together.;-1

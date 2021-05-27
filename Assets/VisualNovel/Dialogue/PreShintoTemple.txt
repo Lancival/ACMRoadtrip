@@ -1,0 +1,15 @@
+0;(I just want to feel whole again.);2;Sad
+1;: We only have two more days of our trip. Are you going to miss anything?;3,4;Happy
+0;I like not knowing anyone here.;5
+0;I like that we got to talk again.;7
+0;I can be as ridiculous as I want to and I don't have to answer to a single person. Feels like I can be a new person.;6;Happy
+1;This can be a new start.;9
+1;I miss us.;8
+0;I've always felt at home in Japan. I'm glad I get to show it to you.;9
+1;Are we going to make it to the Obon festival in time?;10
+0;It's going to be close, but I think we can pull it off.;11
+1;Hey, have you still be having that dream?;12
+0;Every. Single. Night. It's been happening nonstop every since my breakup.;13;Sad
+1;After my breakup, I would dream about my ex every night. Maybe this is your version.;14
+0;Maybe...There's the torii up there. Wanna go?;15
+1;Let's do it.;-1

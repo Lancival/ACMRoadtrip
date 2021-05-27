@@ -1,0 +1,47 @@
+1;Our trip is almost over. What was your favorite part?;2,3,4;HappyMakeover
+0;Watching you try to serve Japanese customers at that sushi place.;5;
+0;Buying outfits together in Akihabra;9
+0;Eating at the maid restaurant.;7
+1;Oh come on, your favorite part was seeing me suffer?;6
+0;Well...;10;HappyMakeover
+1;I thought you were miserable the whole time.;8
+0;The whole situation was a little ridiculous but in a good way.;10
+1;I told you we'd look badass.;10
+0;(I looked out the window to see the greenery pass me, the stillness of the countryside.);11
+0;(There is still a part of me that longs for what used to be, but perhaps I can still find joy within myself.);12
+0;Summer?;13
+1;Yeah?;14
+0;Thanks for coming here with me. I love you, girl.;15
+1;Aw, I love you too. I know things don't feel ideal now, but I'll always be there for you.;16
+0;I've always been scared of people saying they were going to be there for me but then aren't. That came true when Trent and I broke up, and I just wanted to say that I appreciate you sticking by me, even when I can be a lot.;17
+1;I...I need to tell you something.;18
+0;What?;19
+1;Promise not to hate me but I have a blind date for you when we get home.;20,21
+0;WHAT?;22
+0;Absolutely not. I'm not going.;24
+1;He's cute for a straight man. You'd think so too.;23
+0;How do you even know him?;26
+1;You just said you loved me, so do this for me, okay?;25
+0;I take it back.;26;Mad
+1;This guy was flyering on campus for his comedy club, and I was like, 'Misaki's next guy should be funny,' 'cause no offense, Trent wasn't particularly hilarious-;27
+0;Seriously?;28
+1;So I decided to show him a picture of you-;29
+0;I'm going to kill you.;30
+1;And he said you were cute!;31
+0;You don't even know him?;32
+1;We got dinner. Platonic, obviously.;33
+0;"Obviously" -- you don't even like men.;34;Happy
+1;He was really nice! But that's all I can say.;35
+1;And you've been keeping this from me?;36
+1;I tried to tell you, but you spent the first half of the trip moping about Trent, so I figured it was bad timing.;37
+0;What does he look like?;38
+1;I can't tell you. It's supposed to be a blind date, silly.;39
+0;But he knows what I look like.;40
+1;I had to convince him to go out with you somehow.;41,42
+0;...You promise he's cute?;43
+0;I don't want to go.;46
+1;I swear on my life and that of my future children.;44
+0;If you insist, then I'll meet your "friend.";45
+1;We need to make sure you're looking in your prime. See, that's why we had to buy you that outfit in Akihabara...;-1
+1;Think about it at least?;47
+0;Fine, but you can't complain when I say no.;-1

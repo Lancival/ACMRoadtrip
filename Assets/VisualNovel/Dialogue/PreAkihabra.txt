@@ -1,0 +1,39 @@
+0;Are you finally going to tell me where we're going?;2;Mad
+1;Absolutely not.;3;Happy
+0;I have no idea what you could possibly plan.;4
+1;Just go in with an open mind.;5
+0;You didn't plan a double date, right?;6
+1;If that were the case, I would not let you out of the hotel looking like that.;7
+0;Sheesh. Point taken.;8
+1;I'm proud of you, Misaki. I felt like we had a true girls night yesterday.;9,10
+0;I barely thought about Trent.;11
+0;I cannot stop thinking about him.;14
+1;I told you he isn't worth your time.;12
+0;I didn't realize how dependent I was on him to feel beautiful.;13;Sad
+1;You've been beautiful this whole time. His lack of validation doesn't change that.;17
+1;Trent is probably back home sulking because he realized he missed out on a bad bitch girlfriend.;15
+0;I don't feel like a bad bitch. I don't think bad bitches sulk over their ex-boyfriend.;16
+1;Men do not define whether or not we are bad bitches.;17
+0;I used to be so spontaneous before Trent. I did summer bucket lists and woke up early just to see the sunrise. I didn't even realize that I lost myself.;18
+1;You can still be all of those things.;19
+0;I guess they feel out of reach.;20
+1;We're always creating new versions of ourselves, as we grow, as we love, as we learn. Your past will always be a part of you, but that's the point, really.;21
+0;He told me we were soulmates. I was pretty skeptical so I said something like, "Well, what if we break up and see other people?" and he was like, "Then we'll be soulmates but with other people.";22
+0;Now I just feel dumb for believing soulmates existed in the first place.;23
+1;Girl, you're allowed to have hope. I feel like everyone our age is way too concerned with how they're coming off rather than being honest.;24,25
+0;But I miss him.;26
+0;But I miss being in a relationship.;28
+1;You don't need his world to still be precious and happy.;27
+0;I hope I get over this before my internship. I don't want to be at work thinking about a stupid boy.;30
+1;Trent is not the one for that, I'm sorry.;29
+0;I hope I get over this before my internship. I don't want to be at work thinking about a stupid boy.;30
+1;You got an internship?;31
+0;Yeah, at a law firm. You have anything?;32
+1;Er, no. I...couldn't get one.;33;Sad
+0;You get to enjoy yourself. I'll be working 40 hour weeks soon.;34
+1;Right.;35
+0;Don't worry, we'll still hang out.;36
+1;I guess.;37
+1;We're here.;38
+0;We're at a mall.;39
+1;That's right -- I'm giving you a Japanese street style makeover.;-1;Happy
