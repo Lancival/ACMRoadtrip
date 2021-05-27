@@ -66,6 +66,10 @@ public class DialogueDisplay : MonoBehaviour
         PrintName(nodes[index].speakerID);
         UpdateMood(nodes[index].speakerID, nodes[index].mood);
         StartCoroutine(PrintText(nodes[index].content));
+
+        if (nodes[index].Responses().Count > 1)
+            for (int i = 0; i < nodes[index].Responses().Count; i++)
+                        Button(nodes[nodes[index].Responses()[i]].content, nodes[nodes[index].Responses()[i]].dialogueID);
     }
 
     // Update is called once per frame
@@ -83,6 +87,8 @@ public class DialogueDisplay : MonoBehaviour
                     Debug.Log("stop typing");
                     StartCoroutine(DelayClick());
                 }
+                else if (index == 0 && nodes[index].Responses().Count > 1)
+                    canClick = false;
                 else if (index >= 0) 
                 {
                     rCurr = nodes[index].Responses();
