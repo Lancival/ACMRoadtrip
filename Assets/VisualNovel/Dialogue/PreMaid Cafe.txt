@@ -81,7 +81,7 @@
 0;Well? What happened?;82
 1;It's okay. He wasn't even that cute.;83;Mad
 0;What did you do?;84
-1;I did what any good best friend does. I wing-womaned you.;85,86
+1;I did what any good best friend does. I wing—womaned you.;85,86
 0;You're the worst.;87
 0;Thank you?;88
 1;Hey! This could've been your true love.;89;Happy
@@ -89,7 +89,7 @@
 0;What happened?;90
 1;I went over to him and asked if he thought you were cute. But then he said he had a girlfriend...;91;Sad
 0;WHAT?;92
-1;Right? I wish boys had signs on them like, I-am-taken, I-am-single, I-am-gay, so we know. Damn shame.;93
+1;Right? I wish boys had signs on them like, I—am—taken, I—am—single, I—am—gay, so we know. Damn shame.;93
 0;Not that, I mean why did you do that?;94
 1;It's not healthy to hold on. You don't actually have to date anyone here, but you can look.;95
 0;How did you even ask him? You don't speak the language.;96
@@ -104,7 +104,7 @@
 0;It was embarrassing when you did it.;105
 1;Dating is an inherently embarrassing process.;106
 0;I don't want to think about anyone else when...Trent.;59;Sad
-0;But only if you promise to stop being my wing-woman.;108;Happy
+0;But only if you promise to stop being my wing—woman.;108;Happy
 1;Deal.;109
 0;It's just hard right now when...Trent.;59
 1;Tokyo, I am inside you.;60;Happy
