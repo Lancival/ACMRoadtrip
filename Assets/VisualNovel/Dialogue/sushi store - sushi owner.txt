@@ -1,0 +1,22 @@
+1;Hi, can we..?;2;Happy
+13;You two are finally here.;3
+1;Huh?;4
+13;Come in the back.;5
+1;Do you know what's going on?;6
+0;No idea but he's telling us to follow him. Maybe there's seating somewhere else?;7;Happy
+18;(The sushi chef hands aprons to Summer and me.);8
+13;You're late. Get these on and you can start.;9
+1;Thank you?;10
+1;What's going on? Is this so we don't make a mess while eating?;11
+0;None of the other customers are wearing this.;12
+1;Why didn't you ask him?;13
+0;I didn't want to be impolite.;14
+1;I guess we can put them on..?;15
+13;Hurry up! There's customers waiting.;16
+0;He said there's customers waiting for us.;17
+1;I thought we were the customers.;18
+0;Sorry, chef, but we are confused.;19;Sad
+13;Don't just stand around. Work!;20
+1;So there is a possibility he thinks we're the waitresses.;21
+0;What do we do?;22
+13;No time for talking! Go, go, go!;-1

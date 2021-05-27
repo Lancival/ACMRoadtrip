@@ -1,0 +1,30 @@
+14;Do you happen to speak English?;2
+0;I speak English.;3;Happy
+14;Can I have be seated for one?;4
+0;Uh...yes? I can try to seat you.;5
+1;And I can assist, I think.;6;Happy
+14;Wow, both of you speak perfect English. In the US, we don't spend that much effort learning languages.;7
+1;We are American.;8
+14;That explains your accent. How long ago did you move to Japan;9
+1;We don't live in Japan.;10
+14;I thought you worked here.;11,12
+0;Tell her the truth.;13
+0;Lie.;20
+0;We're here on vacation and we got hungry. I think the sushi chef got us confused with his employees.;14
+14;You are wearing the uniform.;15
+1;Er, yes. I know it looks weird.;16
+14;Maybe I should go to another restaurant?;17
+1;This place had good reviews. I bet they make suitable sushi...not that I know.;18
+14;I think...I will go somewhere else.;19
+13;What are you two doing? Scaring away customers?;-1
+0;We just got hired today, so Japan is still new to us. Here is your table.;21
+14;What would you recommend?;22
+1;I always get the California roll everywhere I-;23
+0;She means omakase. That means the chef decides what you eat.;24
+14;Okay, I guess I'll try that. I'm pretty new to sushi.;25
+0;I'll let the chef know. Enjoy your stay in Japan.;26
+1;What are you doing?;27
+0;We're already wearing the aprons.;28
+1;I've never worked at a restaurant in my life. Let alone one in Japan where I don't speak the language.;29
+0;Maybe we'll get a meal out of this.;30
+1;And here I thought you were against free labor.;-1

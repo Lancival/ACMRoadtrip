@@ -1,0 +1,21 @@
+15;I don't know English. Can you speak Japanese?;2
+1;Huh?;3,4;Happy
+0;Save Summer.;5
+0;Let Summer suffer.;11
+0;Apologies for that. We hired an American server for our international customers.;6;Happy
+15;I was so confused.;7
+0;Here is our menu.;8
+15;Thanks;9
+1;You literally saved my life.;10
+0;What are friends for, right?;-1
+15;Do you know how to speak Japanese?;12
+1;I'm sorry, I don't know what you're saying, lady. You can sit here.;13
+15;How can you serve at this restaurant without knowing Japanese? ;14
+18;(Summer aggressively points at an empty table.);15
+1;Here is the menu.;16
+15;Is this an English only restaurant?;16
+1;Uh...enjoy.;18
+0;I savored every moment of that.;19
+1;You couldn't have stepped in?;20
+0;I liked seeing you squirm.;21
+1;I hate you.;-1
