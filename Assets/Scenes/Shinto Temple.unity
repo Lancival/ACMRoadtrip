@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 906272616088204392, guid: 866098f1a7d7d40a689d14a3ebac6965, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 906272616088204392, guid: 866098f1a7d7d40a689d14a3ebac6965, type: 3}
       propertyPath: m_LocalPosition.x
@@ -561,12 +561,12 @@ GameObject:
   - component: {fileID: 158061611}
   - component: {fileID: 158061610}
   m_Layer: 5
-  m_Name: Employee
+  m_Name: Summer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &158061609
 RectTransform:
   m_ObjectHideFlags: 0
@@ -583,7 +583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -57}
+  m_AnchoredPosition: {x: 0, y: -15}
   m_SizeDelta: {x: 449, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &158061610
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eec4d50cbd06148da88fff16f008bcd7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5383ada96650643a5bfd9ab14a5de872, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -678,7 +678,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8243006314501192280, guid: 7a3382881f96f475a8e83b9c56370223, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 6e18e3f589cb34d7288ad288dc63b3fa, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9156c04edd6d04be682053270cd4088c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1049,11 +1049,15 @@ PrefabInstance:
     - target: {fileID: 5174582889719580199, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
       propertyPath: images.Array.data[8]
       value: 
-      objectReference: {fileID: 684237194}
+      objectReference: {fileID: 0}
     - target: {fileID: 5174582889719580199, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
       propertyPath: images.Array.data[9]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5174582889719580199, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
+      propertyPath: images.Array.data[16]
+      value: 
+      objectReference: {fileID: 684237194}
     - target: {fileID: 5396898862303368133, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1214,7 +1218,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3966529438673238822, guid: e9b1b5003620443b1af2b4466fbe7c30, type: 3}
       propertyPath: nextScene
-      value: Pre-Mt Fuji
+      value: Pre-Obon
       objectReference: {fileID: 0}
     - target: {fileID: 3966529439441461357, guid: e9b1b5003620443b1af2b4466fbe7c30, type: 3}
       propertyPath: m_Pivot.x
@@ -1226,7 +1230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3966529439441461357, guid: e9b1b5003620443b1af2b4466fbe7c30, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3966529439441461357, guid: e9b1b5003620443b1af2b4466fbe7c30, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1607,8 +1611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: -90}
-  m_SizeDelta: {x: 3300, y: 900}
+  m_AnchoredPosition: {x: -500, y: -90}
+  m_SizeDelta: {x: 800, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &738324541
 CanvasGroup:
@@ -1682,7 +1686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 80c9b55f6c1cd4c2fb18a6fbd1a9d642, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5383ada96650643a5bfd9ab14a5de872, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1802,7 +1806,7 @@ RectTransform:
   m_Children:
   - {fileID: 1248487273}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1879,7 +1883,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1710533751, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
       propertyPath: m_Name
-      value: Employee
+      value: Woman?
       objectReference: {fileID: 0}
     - target: {fileID: 1710533751, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
       propertyPath: m_IsActive
@@ -1892,7 +1896,7 @@ PrefabInstance:
     - target: {fileID: 1710533753, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aff21c7d8dcc44b4586c5f0dfc1b3893, type: 3}
+      objectReference: {fileID: 21300000, guid: 28f5ee92ac6c5484890b183ae93e3cfd, type: 3}
     - target: {fileID: 1710533753, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1920,11 +1924,11 @@ PrefabInstance:
     - target: {fileID: 6356956935807970761, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
       propertyPath: convos.Array.data[0]
       value: 
-      objectReference: {fileID: 4900000, guid: f5b203a106c1548ecbe96cedf9ddd03a, type: 3}
+      objectReference: {fileID: 4900000, guid: f86d7d64f603349f8bf4cc006c6dcfe8, type: 3}
     - target: {fileID: 6356956935807970761, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
       propertyPath: convos.Array.data[1]
       value: 
-      objectReference: {fileID: 4900000, guid: adb5096715e5d4cc4bf5c39eb9231108, type: 3}
+      objectReference: {fileID: 4900000, guid: cbce99ce143804122b0e1f6cdbd0897b, type: 3}
     - target: {fileID: 6472010316593335098, guid: 7ad71dfe486114b1996c8ab3eb97fd58, type: 3}
       propertyPath: m_Name
       value: Character Container
@@ -2063,7 +2067,7 @@ RectTransform:
   - {fileID: 291033784}
   - {fileID: 646786355}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2357,7 +2361,7 @@ RectTransform:
   - {fileID: 1849984265}
   - {fileID: 1483299065}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

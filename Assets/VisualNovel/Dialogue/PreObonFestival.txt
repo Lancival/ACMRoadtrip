@@ -22,7 +22,7 @@
 1;He's cute for a straight man. You'd think so too.;23
 0;How do you even know him?;26
 1;You just said you loved me, so do this for me, okay?;25
-0;I take it back.;26;Mad
+0;I take it back.;26;MadMakeover
 1;This guy was flyering on campus for his comedy club, and I was like, 'Misaki's next guy should be funny,' 'cause no offense, Trent wasn't particularly hilarious—;27
 0;Seriously?;28
 1;So I decided to show him a picture of you—;29
@@ -30,7 +30,7 @@
 1;And he said you were cute!;31
 0;You don't even know him?;32
 1;We got dinner. Platonic, obviously.;33
-0;"Obviously" —— you don't even like men.;34;Happy
+0;"Obviously" —— you don't even like men.;34;HappyMakeover
 1;He was really nice! But that's all I can say.;35
 0;And you've been keeping this from me?;36
 1;I tried to tell you, but you spent the first half of the trip moping about Trent, so I figured it was bad timing.;37

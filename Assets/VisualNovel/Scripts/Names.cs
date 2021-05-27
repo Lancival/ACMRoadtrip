@@ -21,7 +21,7 @@ public static class Names
 		"Chef Gen",	// ID = 13 (sushi owner)
 		"Customer",	// ID = 14 (sushi)
 		"Customer", // ID = 15 (sushi)
-		"Stranger?",// ID = 16 (ghost at Shinto temple)
+		"Woman?",	// ID = 16 (ghost at Shinto temple)
 		"Mrs. Aki",	// ID = 17 street vendor
 		"Narrator",	// ID = 18
 	};

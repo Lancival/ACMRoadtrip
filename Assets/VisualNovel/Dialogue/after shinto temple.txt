@@ -1,0 +1,6 @@
+1;You okay? You've been talking to yourself.;2;Happy
+0;There was a lady right here.;3;Sad
+1;I don't see anyone.;4
+0;She was here a second ago.;5
+1;You've been standing by yourself this whole time.;6
+0;Uh, let's get going. I have no idea what happened.;-1

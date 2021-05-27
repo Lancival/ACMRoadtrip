@@ -27,10 +27,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Akihabara Makeover.unity
     guid: 3184da35ac5014013ae016107ba2b9ed
   - enabled: 1
-    path: Assets/Scenes/Pre-MtFuji.unity
+    path: Assets/Scenes/Pre-Mt Fuji.unity
     guid: 10a6a3fad8b4b436a8a403c730af205c
   - enabled: 1
-    path: Assets/Scenes/MtFuji.unity
+    path: Assets/Scenes/Mt Fuji.unity
     guid: 810cbb254e55c4550ab94162a20846ab
   - enabled: 1
     path: Assets/Scenes/Sushi Shop.unity
@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pre-Shinto.unity
     guid: 396bf6cee24a04d11a495c09ce64b220
+  - enabled: 1
+    path: Assets/Scenes/Shinto Temple.unity
+    guid: a2a7d6cb8d80e4cc6becd0562ad50f2e
   m_configObjects: {}

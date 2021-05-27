@@ -1,0 +1,95 @@
+18;(A pale woman appears right before my eyes.);2
+16;Hello, dear.;3
+0;..Hello? Do you need something?;4;Happy
+16;I want to know what brings you to Japan.;5
+0;I'm visiting with my friend to go to the Obon Festival.;6
+16;Summer?;7
+0;How do you know her name?;8
+16;I know all.;9
+0;Who are you?;10
+16;I'm here to guide you. What do you seek most here?;11,12,13
+0;Friendship.;14
+0;Independence.;42
+0;Rebirth.;69
+16;You must take accountability of your hurt to understand the friendships you already have in your life.;15
+0;Seriously, who are you?;16
+16;You're here for good fortune, no?;17
+0;I mean, yeah, but-;18
+16;I'm here to give you some perspective, dear.;19
+0;...Okay.;20
+16;You want to be loved and appreciated, but you already are. You must allow yourself to feel your reality.;21
+0;Why can't I let the past go then?;22;Sad
+16;Because you don't need to. The past is a part of you, but you don't have to let it define you.;23,24
+0;I'm tired of hating myself.;25
+0;But am I worthy of moving on?;32
+0;I spend all of this energy staring at myself in the mirror, looking at all I've accomplished, and always feeling helpless. Believing in myself means the possibility of disappointing myself.;26
+16;You're in charge of the narrative that failure means disappointing yourself.;27
+0;But-;28
+16;You said you seek friendship, but you don't need to worry. Summer is already here for you. You will soon be there for yourself.;29
+0;How do you even know about my life?;30
+18;(The woman vanishes.);31
+0;(Where did she go?);-1
+16;I cannot decide that for you, but I will ask you this: Do you deserve the affection of a man who only wants you because he is lonely?;33
+0;How do you even know that?;34
+16;Notice how you did not deny the truth of my question.;35
+0;He didn't say that he was lonely...;36;Sad
+16;He told you that you could never get someone better than him. Is that love?;37
+0;I just want someone to love me.;38
+16;Your friends already do. You will soon do so for yourself.;39
+0;How do you even know about my life?;40
+0;(The woman vanishes.);41
+0;(Where did she go?);-1
+16;Loneliness is an inherent part of being human, but you don't have to let it take you over. You have you tell yourself that you are worthy of love and support.;43
+0;But I feel like a burden.;44
+16;Have you ever thought of Summer as a burden? Even when she's grieving?;45
+0;I guess not.;46
+16;Then why are you a burden?;47
+0;Because no one wants to be friends with girl who's always complaining. No one wants to be let down all of the time.;48;Sad
+16;Do you always complain?;49
+0;Feels like it.;50
+16;Independence is about forgiving yourself. Independence is knowing when you need someone to talk to. There is no shame with being human.;51,52
+0;How do I stop relying on others for validation?;53;Sad
+0;But why should I forgive myself?;60
+16;Rejection from those you love will always sting. But your purpose isn't to be a good girlfriend or good daughter or good anything.;54
+16;Once you realize this, you'll know you don't have to comply with who they think you should be.;55
+0;I don't want to let people down.;56;Sad
+16;How are you so sure you will?;57
+0;How do you even know about my life?;58
+18;(The woman vanishes.);59
+0;(Where did she go?);-1
+16;Are there any downsides to forgiving yourself?;61
+0;I don't feel like I deserve it.;62;Sad
+16;Loving yourself is not a matter of deserving it or not. You don't want to rely on someone else for self-acceptance.;63
+0;What should I do then?;64
+16;Tell your shadow, the part of yourself that picks at your stomach in the mirror, that believes you cannot do better than your ex, that she cannot win today.;65
+16;Sometimes, you will fail that battle. But it's about the trying.;66
+0;How do you even know about my life?;67
+18;(The woman vanishes.);68
+0;(Where did she go?);-1
+16;You're never going to become a whole new person.;70
+16;Growing is about acknowledging your past, even the ugly parts, taking in the lessons you've learned, appreciating the small moments of joy, and moving forward.;71
+16;Growing is about accepting that your past is a part of you.;72
+0;But I feel burdened by my past.;73;Sad
+16;That burden is your shadow, the times you call yourself unworthy. Some days, your shadow is going to win. Some days, you're going to fight back.;74
+0;How do I do that?;75
+16;Tell yourself that regardless of all the rejection you've faced, all the people who do not value you, that you are smart, beautiful, radiant, capable. Tell your shadow that you know you are better.;76,77
+0;I'm scared that maybe those things aren't true.;78
+0;Can I really let go of my past?;88;Sad
+16;And why would you think that?;79
+0;If I were all of those things, I wouldn't face the rejection I do now.;80
+16;Is that really true though?;81
+0;I...don't know. Didn't you say you were going to guide me?;82
+16;I can't make you accept yourself, but I can tell you that the way you see yourself stems from what people who don't have your best interest in mind have told you, not the truth.;83
+16;The next time you degrade yourself, try to think about where that feeling comes from.;84
+0;I never thought of it that way.;85
+0;How do you even know about my life?;86
+18;(The woman vanishes.);87
+0;(Where did she go?);-1
+16;I cannot answer that for you, but I will ask this: Is allowing your ex to define how you feel about yourself serving you?;89
+0;No, but...I miss the version of who I used to be before I started dating him.;90;Sad
+16;You can never come back to that version, but that's okay. You know better than to give all of yourself to someone now.;91
+0;I want to be the best version of myself I can be.;92
+16;What does that mean for you? Do you want to change or accept yourself?;93
+0;Hey, wait -- how do you even know this about my life?;94
+18;(The woman vanishes.);95
+0;(Where did she go?);-1
