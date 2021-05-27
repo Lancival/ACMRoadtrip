@@ -13,8 +13,8 @@ public static class Names
 		"Hannah",	// ID = 5 (couple, Hitachi)
 		"Maid C",	// ID = 6 (maid)
 		"Maid A",	// ID = 7 (maid)
-		"Associate",// ID = 8 (store associate, Akihabara)
-		"Associate",// ID = 9 (store associate, Akihabara)
+		"Employee",	// ID = 8 (store associate, Akihabara)
+		"Employee",	// ID = 9 (store associate, Akihabara)
 		"Beth",		// ID = 10 (kid, Mt.Fuji)
 		"Mother",	// ID = 11 (mom, Mt.Fuji)
 		"ERROR!!!",	// ID = 12

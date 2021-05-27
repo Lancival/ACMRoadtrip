@@ -354,7 +354,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3966529438673238822, guid: e9b1b5003620443b1af2b4466fbe7c30, type: 3}
       propertyPath: nextScene
-      value: Title Screen
+      value: Pre-Akihabara
       objectReference: {fileID: 0}
     - target: {fileID: 3966529439441461357, guid: e9b1b5003620443b1af2b4466fbe7c30, type: 3}
       propertyPath: m_Pivot.x
@@ -1687,7 +1687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5779015618938734411, guid: dc33ccd5b46d242d492a91e12294f6ad, type: 3}
       propertyPath: m_text
-      value: Hitachi Park
+      value: Maid Cafe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc33ccd5b46d242d492a91e12294f6ad, type: 3}
