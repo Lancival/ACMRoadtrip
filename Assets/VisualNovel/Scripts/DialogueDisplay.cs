@@ -148,7 +148,10 @@ public class DialogueDisplay : MonoBehaviour
         canClick = true;
     }
 
-    void TaskOnClick(int dID){
+    void TaskOnClick(int dID)
+    {
+        if (nodes[index].speakerID < 18 && images[nodes[index].speakerID])
+            images[nodes[index].speakerID].color = Color.grey;
         index = dID-1;
         UpdateMood(nodes[index].speakerID, nodes[index].mood);
         canClick = true;
