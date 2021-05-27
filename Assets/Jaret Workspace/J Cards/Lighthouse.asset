@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Lighthouse
   m_EditorClassIdentifier: 
   cardName: LightHouse
-  artwork: {fileID: 21300000, guid: ecc3972a562bf6b479707f63bccd9602, type: 3}
+  artwork: {fileID: 21300000, guid: 1a8dfc7f91fc1294ea264baface1895c, type: 3}
   UpgradedArtwork: {fileID: 0}
   directionOne: 0
   directionTwo: 0
   directionThree: 0
   isStorm: 0
+  isLighthouse: 1
+  isWind: 0
+  tutorialCorrect: 0
+  tutorial: 0

@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: UpRight
   m_EditorClassIdentifier: 
   cardName: UpRight
-  artwork: {fileID: 21300000, guid: 92f67f6b1315a3d4bbbce83ea4f731cd, type: 3}
+  artwork: {fileID: 21300000, guid: bdaf6808d2b19734d92bfa19c0494a2d, type: 3}
   UpgradedArtwork: {fileID: 0}
   directionOne: 1
   directionTwo: 2
   directionThree: 0
   isStorm: 0
+  isLighthouse: 0
+  isWind: 0
+  tutorialCorrect: 0
+  tutorial: 0

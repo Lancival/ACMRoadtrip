@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: Storm
   m_EditorClassIdentifier: 
   cardName: Storm
-  artwork: {fileID: 21300000, guid: b7c84a9714308cf41bc93dfb5d6f04f6, type: 3}
+  artwork: {fileID: 21300000, guid: 82af129473974d349ae0d7aab7c6fe4c, type: 3}
+  UpgradedArtwork: {fileID: 0}
   directionOne: 0
   directionTwo: 0
   directionThree: 0
   isStorm: 1
+  isLighthouse: 0
+  isWind: 0
+  tutorialCorrect: 0
+  tutorial: 0

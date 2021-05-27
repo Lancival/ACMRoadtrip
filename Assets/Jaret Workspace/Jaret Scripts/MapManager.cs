@@ -46,6 +46,7 @@ public class MapManager : MonoBehaviour
     public GameObject MovableStormPrefab;
     public GameObject HandPlacementPrefab;
     public GameObject cardButtonPrefab;
+    public GameObject clairvoyanceUIPrefab;
     
 
 
@@ -71,11 +72,13 @@ public class MapManager : MonoBehaviour
     private bool win = false;
     private bool cardPlayed = false;
     private bool notMyTurn = true;
+    private bool shield = false;
 
     private Vector2 targetPosition;
     private Vector3 worldTargetPosition;
     private JCard cardInPlay;
     private GameObject gameManager;
+    private GameObject cardOverlay;
 
 
 
@@ -193,6 +196,62 @@ public class MapManager : MonoBehaviour
         yield break;
     }
 
+    IEnumerator WindCurrent()
+    {
+        
+
+        yield return new WaitForSeconds(1);
+            
+            while (true)
+            {
+                
+                if (Input.GetMouseButtonDown(0))
+                {
+                    
+                    Vector2 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Vector3Int cellTargetPosition = map.WorldToCell(new Vector2(targetPosition.x + 0.1f, targetPosition.y + 0.1f));
+
+                    foreach (GameObject i in StormList)
+                    {
+                        Vector3Int stormPosition = map.WorldToCell(new Vector2(i.transform.position.x + 0.1f, i.transform.position.y + 0.1f));
+                        //Vector3 currentPosition = i.transform.position;
+                        if (stormPosition.y == cellTargetPosition.y)
+                        {
+                            Vector3 worldTarget = map.CellToWorld(new Vector3Int(stormPosition.x + 1, stormPosition.y, 0));
+                            while (Vector3.Distance(i.transform.position, worldTarget) > 0.05f)
+                            {
+                                i.transform.position = Vector3.Lerp(i.transform.position, worldTarget, smoothing * Time.deltaTime);
+                            yield return null;
+                            }
+                        }
+                    }
+
+                foreach (GameObject i in MovableStormList)
+                {
+                    Vector3Int stormMovPosition = map.WorldToCell(new Vector2(i.transform.position.x + 0.1f, i.transform.position.y + 0.1f));
+                    //Vector3 currentPosition = i.transform.position;
+                    if (stormMovPosition.y == cellTargetPosition.y)
+                    {
+                        Vector3 worldTarget = map.CellToWorld(new Vector3Int(stormMovPosition.x + 1, stormMovPosition.y, 0));
+                        while (Vector3.Distance(i.transform.position, worldTarget) > 0.05f)
+                        {
+                            i.transform.position = Vector3.Lerp(i.transform.position, worldTarget, smoothing * Time.deltaTime);
+                            yield return null;
+                        }
+                    }
+                }
+
+                yield break;
+                }
+                yield return null;
+            }
+        
+        
+        yield break;
+    }
+
+    
+
 
     IEnumerator MovePlayer()
     {
@@ -206,12 +265,67 @@ public class MapManager : MonoBehaviour
             ///////////////////////////////////////////////////////////////////////
             if (cardPlayed)
             {
+
+                if (cardInPlay.isShuffle)
+                {
+                    gameManager.GetComponent<JaretGameManager>().Shuffle();
+                    cardPlayed = false;
+                    yield break;
+                }
+
+                if (cardInPlay.isClairvoyant)
+                {
+                    cardOverlay = Instantiate(clairvoyanceUIPrefab);
+
+                    int length = gameManager.GetComponent<JaretGameManager>().DeckLength();
+                    for (int i = 0; i < length || i < 3; i++)
+                    {
+                        cardOverlay.transform.GetChild(i + 1).gameObject.GetComponent<Image>().sprite = gameManager.GetComponent<JaretGameManager>().TopCard(i);
+                    }
+                    
+
+                    cardPlayed = false;
+                    yield return new WaitForSeconds(1);
+                    while(true)
+                    {
+                        
+                        if (Input.GetMouseButtonDown(0))
+                        {
+                            
+                            Destroy(cardOverlay);
+                            yield break;
+                        }
+                        yield return null;
+                    }
+                }
+
                 if (cardInPlay.IsStorm())
                 {
                     Vector3 stormSpawnLocation = StormSpawn();
                     StormList.Add( Instantiate( StormPrefab, map.CellToWorld( Vector3Int.FloorToInt(stormSpawnLocation)), this.transform.rotation));
                     cardPlayed = false;
                     yield break;
+                }
+
+                if (cardInPlay.isLighthouse)
+                {
+                    shield = true;
+                    cardPlayed = false;
+                    yield break;
+                }
+
+                if (cardInPlay.isWind)
+                {
+                    cardOverlay = Instantiate(clairvoyanceUIPrefab);
+                    for (int i = 0; i < 3; i++)
+                    {
+                        Destroy(cardOverlay.transform.GetChild(i + 1).gameObject);
+                    }
+                    cardOverlay.transform.GetChild(0).GetComponent<Text>().text = "Click a tile to move Storms";
+                    Destroy(cardOverlay.transform.GetChild(0).transform.GetChild(0).gameObject);
+                    yield return StartCoroutine(WindCurrent());
+                    Destroy(cardOverlay);
+                    
                 }
 
                 worldTargetPosition = map.CellToWorld(  CalculateDirection(  cardInPlay.directionOne, map.WorldToCell(  new Vector2 (  Player.transform.position.x + 0.1f, Player.transform.position.y + 0.1f  )  )  )  );
@@ -237,6 +351,9 @@ public class MapManager : MonoBehaviour
                 }
 
 
+                
+
+
                 cardPlayed = false;
 
                 yield break;
@@ -246,42 +363,7 @@ public class MapManager : MonoBehaviour
 
             
 
-            ////////////////////////////////////////////////////////////////////////
-           /* if (Input.GetMouseButtonDown(0))
-            {
-                Vector2 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector3Int cellTargetPosition = map.WorldToCell(new Vector2 (targetPosition.x + 0.1f, targetPosition.y+0.1f));
-                Vector3Int cellCurrentPosition = map.WorldToCell(new Vector2 (Player.transform.position.x + 0.1f, Player.transform.position.y + 0.1f));
-                Vector3 worldTargetPositionUp = map.CellToWorld(new Vector3Int(cellCurrentPosition.x, cellTargetPosition.y, 0));
-                Vector3 worldTargetPositionRight = map.CellToWorld(new Vector3Int(cellTargetPosition.x, cellTargetPosition.y, 0));  // right one goes after up, so just use celltarget for both
-
-                
-
-                
-
-                while (Vector3.Distance(Player.transform.position, worldTargetPositionUp) > 0.05f)
-                {
-                    Player.transform.position = Vector3.Lerp(Player.transform.position, worldTargetPositionUp, (smoothing*1.5f)* Time.deltaTime);
-
-                    yield return null;
-                    //yield break;
-                }
-
-
-
-                while(Vector3.Distance(Player.transform.position, worldTargetPositionRight) > 0.05f)
-                {
-                    Player.transform.position = Vector3.Lerp(Player.transform.position, worldTargetPositionRight, (smoothing*1.5f) * Time.deltaTime);
-
-                    yield return null;
-                   // yield break;
-                }
-
-
-                cardPlayed = false;  // resets the trigger after turn is taken
-                yield break;
-            }
-            */
+            
             yield return null;
         }
 
@@ -411,6 +493,11 @@ public class MapManager : MonoBehaviour
 
     public void PlayerHit()
     {
+        if (shield)
+        {
+            shield = false;
+            return;
+        }
         death = true; 
     }
 
@@ -592,14 +679,7 @@ public class MapManager : MonoBehaviour
 
     }
 
-    public int movePlayerCard(int firstDir, int secondDir, int thirdDir = 0)
-    {
-        if (firstDir == 1 || firstDir == 3)
-        {
-            return 0;
-        }
-        return 1;
-    }
+    
 
     public void PlayCard(JCard card)
     {
@@ -610,7 +690,7 @@ public class MapManager : MonoBehaviour
         
     }
     
-    private Vector3Int CalculateDirection(int direction, Vector3Int startingPoint)
+    private Vector3Int CalculateDirection(int direction, Vector3Int startingPoint, bool upgrade = false)
     {
         Vector3Int endPoint = new Vector3Int(startingPoint.x, startingPoint.y, 0);
 
@@ -635,6 +715,12 @@ public class MapManager : MonoBehaviour
             case 4:                                /////////// left 
                 {
                     endPoint.x -= 2;
+                    break;
+                }
+            case 5:
+                {
+                    int i = Random.Range(0, 5);
+                    endPoint = CalculateDirection(i, endPoint);
                     break;
                 }
             default:                              //////////// No Movement
