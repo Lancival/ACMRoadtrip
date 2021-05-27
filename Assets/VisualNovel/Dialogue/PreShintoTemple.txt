@@ -1,5 +1,5 @@
 0;(I just want to feel whole again.);2;Sad
-1;: We only have two more days of our trip. Are you going to miss anything?;3,4;Happy
+1;We only have two more days of our trip. Are you going to miss anything?;3,4;Happy
 0;I like not knowing anyone here.;5
 0;I like that we got to talk again.;7
 0;I can be as ridiculous as I want to and I don't have to answer to a single person. Feels like I can be a new person.;6;Happy
