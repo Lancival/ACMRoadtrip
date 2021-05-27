@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MtFuji.unity
     guid: 810cbb254e55c4550ab94162a20846ab
+  - enabled: 1
+    path: Assets/Scenes/Sushi Shop.unity
+    guid: 2c3c532a8d8084740a5b127847512481
   m_configObjects: {}

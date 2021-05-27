@@ -7,19 +7,22 @@ public class CheckBranch : MonoBehaviour
 {
 
 	[SerializeField] private TextMeshProUGUI dialogue;		// Text of dialogue box to check
-	[SerializeField] private string target;					// Target line of dialogue to check for
+	[SerializeField] private string[] targets;				// Target lines of dialogue to check for
 	[SerializeField] private CharacterCardDisplay ccd;
-	[SerializeField] private TextAsset file;				// Replacement dialogue file
+	[SerializeField] private TextAsset[] files;				// Replacement dialogue files
 	[SerializeField] private int index;						// Index of conversation to replace
 
     // Update is called once per frame
     void Update()
     {
-        if (dialogue.text == target)
-        {
-        	ccd.SetAvailable(index);
-        	ccd.UpdateConvos(index, file);
-        	Destroy(this);
-        }
+    	for (int i = 0; i < targets.Length; i++)
+    	{
+	        if (dialogue.text == targets[i])
+	        {
+	        	ccd.SetAvailable(index);
+	        	ccd.UpdateConvos(index, files[i]);
+	        	Destroy(this);
+	        }
+    	}
     }
 }

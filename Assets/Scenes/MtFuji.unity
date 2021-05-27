@@ -1240,7 +1240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &602125965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2562,9 +2562,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 258373931}
-  target: Thank you for being so understanding.
+  targets:
+  - Thank you for being so understanding.
+  - Trent texted me, actually.
+  - I'm sorry for bringing him up in the first place on our girls trip. No more relationship
+    drama from now on, okay?
+  - Can you at least think about it?
   ccd: {fileID: 1725768983}
-  file: {fileID: 4900000, guid: 3ae90d344243b41cf97caadf3db75ece, type: 3}
+  files:
+  - {fileID: 4900000, guid: d3b789c10022b450aa845682d0c0f6ff, type: 3}
+  - {fileID: 4900000, guid: d3b789c10022b450aa845682d0c0f6ff, type: 3}
+  - {fileID: 4900000, guid: d3b789c10022b450aa845682d0c0f6ff, type: 3}
+  - {fileID: 4900000, guid: d3b789c10022b450aa845682d0c0f6ff, type: 3}
   index: 2
 --- !u!1 &2124706113
 GameObject:
