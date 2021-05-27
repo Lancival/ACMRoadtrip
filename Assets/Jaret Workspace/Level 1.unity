@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1401,6 +1401,7 @@ GameObject:
   - component: {fileID: 1833809964}
   - component: {fileID: 1833809963}
   - component: {fileID: 1833809962}
+  - component: {fileID: 1833809965}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1473,6 +1474,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1833809965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833809961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9930a1f97da0e49488aa8faaff3f07e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundImage: {fileID: 3619771779775443433}
+  mainCam: {fileID: 1833809963}
 --- !u!1001 &1952941627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1812,3 +1827,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b04af488466ab45dfaeea64e0c3cb69b, type: 3}
+--- !u!1 &3619771779775443433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3619771780009455141, guid: b04af488466ab45dfaeea64e0c3cb69b, type: 3}
+  m_PrefabInstance: {fileID: 3619771779775443432}
+  m_PrefabAsset: {fileID: 0}
