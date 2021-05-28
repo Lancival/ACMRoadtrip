@@ -6,7 +6,8 @@ public class JaretGameManager : MonoBehaviour
 {
 
 
-    private int Level = 1;
+    private int Level = 0;
+    [SerializeField]
     private bool[] levelPass = new bool[] { false, false, false, false, false, false };
 
     public List<JCard> StartingDeck;   // insert starting deck
@@ -26,6 +27,7 @@ public class JaretGameManager : MonoBehaviour
     [SerializeField]
     private List<JCard> Deck;
 
+    [SerializeField]
     private List<JCard> TutorialCorrectDeck;
 
     private List<JCard> ShuffleDeck;
@@ -58,39 +60,64 @@ public class JaretGameManager : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
         //Deck.Remove(Deck[8]);
+        //CreatePlayableDeck();
 
-        CreatePlayableDeck();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
 
         
-        
+
+
+
+    }
+
+    public void EmptyDiscard()
+    {
+        int length = DiscardDeck.Count;
+        for (int i = 0; i < length; i++)
+        {
+            DiscardDeck.Remove(DiscardDeck[0]);
+        }
         
     }
 
-    private void CreatePlayableDeck()
+    public void EmptyHand()
+    {
+        int length = Hand.Count;
+        for (int i = 0; i < length; i++)
+        {
+            Hand.Remove(Hand[0]);
+        }
+        
+    }
+
+    public void CreatePlayableDeck()
     {
 
-       /* if (Level == 1)
+        if (Level == 1)
         {
-            
-            int length = TutorialDeck.Count;
+            Debug.Log("Level 1");
+            int length = TutorialCorrectDeck.Count;
             for (int i = 0; i < length; i++)
             {
-                TutorialCorrectDeck[i].tutorial = true;
-                if (i == 1 || i==6 || i == 5)
-                {
-                    TutorialCorrectDeck[i].tutorialCorrect = true;
-                }
-                PlayableDeck.Add(TutorialCorrectDeck[i]);
+                PlayableDeck.Add(TutorialCorrectDeck[Random.Range(0, TutorialCorrectDeck.Count)]);
+
+                TutorialCorrectDeck.Remove(PlayableDeck[i]);
+
             }
+
+            foreach (JCard card in PlayableDeck)   // dont use equal sign, they are just pointing to the same thing.  This loop makes two separate decks that can be edited differently
+            {
+                TutorialCorrectDeck.Add(card);
+            }
+
         }
-        else*/
-       // {
+        else
+        {
+            Debug.Log("Level other");
             int length = Deck.Count;
             for (int i = 0; i < length; i++)
             {
@@ -105,7 +132,7 @@ public class JaretGameManager : MonoBehaviour
                 Deck.Add(card);
             }
             
-       // }
+        }
 
 
     }
@@ -159,6 +186,17 @@ public class JaretGameManager : MonoBehaviour
     public int GetLevel()
     {
         return Level;
+    }
+
+    public void NextLevel()
+    {
+        Level++;
+        Debug.Log(Level);
+    }
+
+    public void WinLevel()
+    {
+        levelPass[Level - 1] = true;
     }
 
     public void Shuffle()         // Shuffle Playable Deck

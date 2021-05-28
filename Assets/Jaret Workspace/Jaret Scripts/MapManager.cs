@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 
@@ -56,6 +57,8 @@ public class MapManager : MonoBehaviour
 
 
     public Text LevelText;
+
+    public string nextScene;
 
 
     public Vector3 playerSpawn;
@@ -136,10 +139,7 @@ public class MapManager : MonoBehaviour
         }
 
 
-        ////////////////////////////////////////////// Start Game
         
-
-            StartCoroutine(LevelOrder());
         
         
         
@@ -149,6 +149,16 @@ public class MapManager : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
+        gameManager.GetComponent<JaretGameManager>().NextLevel();
+        gameManager.GetComponent<JaretGameManager>().EmptyDiscard();
+        gameManager.GetComponent<JaretGameManager>().EmptyHand();
+        gameManager.GetComponent<JaretGameManager>().CreatePlayableDeck();
+        
+
+        ////////////////////////////////////////////// Start Game
+
+
+        StartCoroutine(LevelOrder());
     }
 
 
@@ -301,8 +311,9 @@ public class MapManager : MonoBehaviour
 
                 if (cardInPlay.IsStorm())
                 {
-                    Vector3 stormSpawnLocation = StormSpawn();
-                    StormList.Add( Instantiate( StormPrefab, map.CellToWorld( Vector3Int.FloorToInt(stormSpawnLocation)), this.transform.rotation));
+                    //Vector3 stormSpawnLocation = StormSpawn();
+                    //StormList.Add( Instantiate( StormPrefab, map.CellToWorld( Vector3Int.FloorToInt(stormSpawnLocation)), this.transform.rotation));
+                    StormSpawn();
                     cardPlayed = false;
                     yield break;
                 }
@@ -328,7 +339,7 @@ public class MapManager : MonoBehaviour
                     
                 }
 
-                worldTargetPosition = map.CellToWorld(  CalculateDirection(  cardInPlay.directionOne, map.WorldToCell(  new Vector2 (  Player.transform.position.x + 0.1f, Player.transform.position.y + 0.1f  )  )  )  );
+                worldTargetPosition = map.CellToWorld(  CalculateDirection(  cardInPlay.directionOne, map.WorldToCell(  new Vector2 (  Player.transform.position.x + 0.1f, Player.transform.position.y + 0.1f  )  ), cardInPlay.directionThree  )  );
 
                 while (Vector3.Distance(Player.transform.position, worldTargetPosition) > 0.05f)
                 {
@@ -418,11 +429,18 @@ public class MapManager : MonoBehaviour
         if (win)
         {
             LevelText.text = "You Win";
+            gameManager.GetComponent<JaretGameManager>().WinLevel();
+            yield return new WaitForSeconds(2);
+            if (nextScene != null)
+                SceneManager.LoadScene(nextScene);
             yield break;
         }
         if (death)
         {
             LevelText.text = "Game Over";
+            yield return new WaitForSeconds(2);
+            if (nextScene != null)
+                SceneManager.LoadScene(nextScene);
             yield break;
         }
         LevelText.text = "Turn " + turn.ToString();
@@ -604,7 +622,7 @@ public class MapManager : MonoBehaviour
         return 0;
     }
 
-    private bool collisionCheckStorm(Vector3 targetPos, GameObject myObject)
+    private bool collisionCheckStorm(Vector3 targetPos, GameObject myObject = null)
     {
         Vector3 testVector1 = new Vector3(targetPos.x + .2f, targetPos.y + .2f, targetPos.z);
         Vector3 testVector2;
@@ -690,7 +708,7 @@ public class MapManager : MonoBehaviour
         
     }
     
-    private Vector3Int CalculateDirection(int direction, Vector3Int startingPoint, bool upgrade = false)
+    private Vector3Int CalculateDirection(int direction, Vector3Int startingPoint, int upgrade = 0)
     {
         Vector3Int endPoint = new Vector3Int(startingPoint.x, startingPoint.y, 0);
 
@@ -699,22 +717,22 @@ public class MapManager : MonoBehaviour
         {
             case 1:                                //////////// up 
                 {
-                    endPoint.y += 2;
+                    endPoint.y += (2 + upgrade);
                     break;
                 }
             case 2:                                /////////// right 
                 {
-                    endPoint.x += 2;
+                    endPoint.x += (2 + upgrade);
                     break;
                 }
             case 3:                               //////////// down 
                 {
-                    endPoint.y -= 2;
+                    endPoint.y -= (2 + upgrade);
                     break;
                 }
             case 4:                                /////////// left 
                 {
-                    endPoint.x -= 2;
+                    endPoint.x -= (2 + upgrade);
                     break;
                 }
             case 5:
@@ -738,14 +756,52 @@ public class MapManager : MonoBehaviour
         return notMyTurn;
     }
 
-    private Vector3 StormSpawn()
+    private void StormSpawn()
     {
+        
         int xCoord = Random.Range(-1 * ((map.size.x/2) - 1), (map.size.x/2)-1);
         int yCoord = Random.Range(-1 * ((map.size.y / 2) - 1), (map.size.y / 2) - 1);
+        Vector3 temp = new Vector3(xCoord, yCoord, 0);
 
-        return new Vector3(xCoord, yCoord, 0);
+        GameObject tempStorm = Instantiate(StormPrefab, map.CellToWorld(Vector3Int.FloorToInt(temp)), this.transform.rotation);
+        StormList.Add(tempStorm);
+
+
+
+
+        //collisionCheckStorm(map.CellToWorld(Vector3Int.FloorToInt(temp)))
+        int limit = 0;
+        while (collisionCheckStorm(tempStorm.transform.position, tempStorm) || CollisionCheckPlayer(tempStorm.transform.position) )
+        {
+            //temp = StormSpawn();
+            limit++;
+            changeStormPosition(tempStorm);
+            if (limit > 6)
+                return;
+        }
+
+        
     }
 
+    private void changeStormPosition(GameObject storm)
+    {
+        int xCoord = Random.Range(-1 * ((map.size.x / 2) - 1), (map.size.x / 2) - 1);
+        int yCoord = Random.Range(-1 * ((map.size.y / 2) - 1), (map.size.y / 2) - 1);
+        Vector3 temp = new Vector3(xCoord, yCoord, 0);
+
+        storm.transform.position = temp;
+    }
+
+    private bool CollisionCheckPlayer(Vector3 targetPosition)
+    {
+        Vector3Int testVectorInt = map.WorldToCell(new Vector3(Player.transform.position.x + .2f, Player.transform.position.y + .2f, 0));
+
+        Vector3Int targetVectorInt = map.WorldToCell(new Vector3(targetPosition.x + .2f, targetPosition.y + .2f, 0));
+
+        if (testVectorInt == targetVectorInt)
+            return true;
+        return false;
+    }
     
 
 }

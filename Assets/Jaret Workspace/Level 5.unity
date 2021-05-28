@@ -455,6 +455,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 651718047}
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
+      propertyPath: nextScene
+      value: Level 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: playerSpawn.x
       value: -7
       objectReference: {fileID: 0}
