@@ -15,6 +15,8 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private TextAsset file;
     [SerializeField] private Image[] images;
 
+    [SerializeField] private Sprite[] boxes;
+
     private List<Dialogue> nodes; 
     private List<int> rCurr;
     private List<int> rNext;
@@ -192,6 +194,17 @@ public class DialogueDisplay : MonoBehaviour
 
         if (sID < 18 && images[sID])
             images[sID].color = Color.white;
+        
+        if (sID == 18)
+        {
+            nameBox.transform.parent.gameObject.SetActive(false);
+            nameBox.transform.parent.parent.GetComponent<Image>().sprite = boxes[1];
+        }
+        else
+        {
+            nameBox.transform.parent.gameObject.SetActive(true);
+            nameBox.transform.parent.parent.GetComponent<Image>().sprite = boxes[0];
+        }
     }
 
     // Print text letter by letter 
@@ -310,7 +323,7 @@ public class DialogueDisplay : MonoBehaviour
                     i.color = Color.grey;
                 }
             }
-            else
+            else if (node.speakerID != 18)
                 Debug.Log("Error: Attempted to display null image corresponding to speakerID: " + node.speakerID);
         }
     }

@@ -274,6 +274,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  boxes:
+  - {fileID: 21300000, guid: fe986ef27c74a419bb87dbc56a0bd6b2, type: 3}
+  - {fileID: 21300000, guid: 27f51750376164d2088abde2b86fd74b, type: 3}
 --- !u!114 &9047626451787861069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,13 +559,13 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 0
-    m_Bottom: 0
+    m_Bottom: 15
   m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -599,7 +602,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0475, y: 0.0275}
-  m_AnchorMax: {x: 0.947, y: 0.4925}
+  m_AnchorMax: {x: 0.947, y: 0.4875}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -639,8 +642,8 @@ MonoBehaviour:
     asdjaasjdk sajkd askjdhas jkdhaskdja skdjas jasd as dajksd asd asjkd asdkas jkdhas
     kdjasdaskjd sjdhs jkdasjd asjkdas jd alsdjas dskahd askdjh '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
-  m_sharedMaterial: {fileID: -3582602626707611156, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d20b6c6c493e49f1b37eb559d085ddf, type: 2}
+  m_sharedMaterial: {fileID: 5926540319441565338, guid: 3d20b6c6c493e49f1b37eb559d085ddf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -867,8 +870,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
-  m_sharedMaterial: {fileID: -3582602626707611156, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d20b6c6c493e49f1b37eb559d085ddf, type: 2}
+  m_sharedMaterial: {fileID: 5926540319441565338, guid: 3d20b6c6c493e49f1b37eb559d085ddf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

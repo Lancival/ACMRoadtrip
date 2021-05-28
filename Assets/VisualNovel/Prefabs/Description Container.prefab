@@ -221,8 +221,8 @@ MonoBehaviour:
   m_text: The bright flowers sprawl for dozens of feet in front of me, seemingly
     neverending. All of these couples trying to enjoy the scenery...Who am I kidding?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
-  m_sharedMaterial: {fileID: -3582602626707611156, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d20b6c6c493e49f1b37eb559d085ddf, type: 2}
+  m_sharedMaterial: {fileID: 5926540319441565338, guid: 3d20b6c6c493e49f1b37eb559d085ddf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -418,8 +418,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Location
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
-  m_sharedMaterial: {fileID: -3582602626707611156, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d20b6c6c493e49f1b37eb559d085ddf, type: 2}
+  m_sharedMaterial: {fileID: 5926540319441565338, guid: 3d20b6c6c493e49f1b37eb559d085ddf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
