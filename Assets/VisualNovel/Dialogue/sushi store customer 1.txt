@@ -5,7 +5,7 @@
 1;And I can assist, I think.;6;Happy
 14;Wow, both of you speak perfect English. In the US, we don't spend that much effort learning languages.;7
 1;We are American.;8
-14;That explains your accent. How long ago did you move to Japan;9
+14;That explains your accent. How long ago did you move to Japan?;9
 1;We don't live in Japan.;10
 14;I thought you worked here.;11,12
 0;Tell her the truth.;13

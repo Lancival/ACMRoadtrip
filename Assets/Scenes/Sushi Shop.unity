@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 385149484}
   - component: {fileID: 385149483}
   m_Layer: 5
-  m_Name: Patron
+  m_Name: Customer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 396163806}
   - component: {fileID: 396163805}
   m_Layer: 5
-  m_Name: Patron
+  m_Name: Customer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
