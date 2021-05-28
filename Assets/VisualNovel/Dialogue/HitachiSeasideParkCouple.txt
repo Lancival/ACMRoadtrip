@@ -44,8 +44,8 @@
 5;How fun!;45
 4;We're here to celebrate our second year anniversary.;46
 0;(My three year anniversary with Trent would have passed during this trip.);47
-0;(Better start prepping my single—life anniversary.);48
-0;(Would it be appropriate to throw a wedding to announce my lifelong single—ness?);49
+0;(Better start prepping my single–life anniversary.);48
+0;(Would it be appropriate to throw a wedding to announce my lifelong single–ness?);49
 5;Anyway, we gotta go. Thanks for the picture!;-1
 0;(My eyes well up at what could have been, and I look away to distract myself.);51
 5;Sorry to hear that.;52

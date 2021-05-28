@@ -29,9 +29,9 @@
 0;Seriously? You could've told me how you felt before flying thousands of miles here.;30
 1;I wanted to go back to us being best friends, but all you've done is sulk about Trent. I get that it's hard, but you haven't even considered how I feel.;31
 0;I can't help that I'm sad over my breakup.;32
-1;I don't want to exist solely to be the replacement to your ex—boyfriend.;33
+1;I don't want to exist solely to be the replacement to your ex–boyfriend.;33
 0;At least Trent is honest with how he feels about me.;34
-1;So now I'm on the same level as your shitty ex—boyfriend.;35,36
+1;So now I'm on the same level as your shitty ex–boyfriend.;35,36
 0;You're the one who said it, not me.;37
 1;What made you even come to this conclusion?;40
 1;So it is how you feel.;38

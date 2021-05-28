@@ -59,7 +59,7 @@
 0;(Where did she go?);-1
 16;Are there any downsides to forgiving yourself?;61
 0;I don't feel like I deserve it.;62;Sad
-16;Loving yourself is not a matter of deserving it or not. You don't want to rely on someone else for self—acceptance.;63
+16;Loving yourself is not a matter of deserving it or not. You don't want to rely on someone else for self–acceptance.;63
 0;What should I do then?;64
 16;Tell your shadow, the part of yourself that picks at your stomach in the mirror, that believes you cannot do better than your ex, that she cannot win today.;65
 16;Sometimes, you will fail that battle. But it's about the trying.;66

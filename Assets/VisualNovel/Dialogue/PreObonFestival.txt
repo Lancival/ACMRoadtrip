@@ -30,7 +30,7 @@
 1;And he said you were cute!;31
 0;You don't even know him?;32
 1;We got dinner. Platonic, obviously.;33
-0;"Obviously" —— you don't even like men.;34;HappyMakeover
+0;"Obviously" — you don't even like men.;34;HappyMakeover
 1;He was really nice! But that's all I can say.;35
 0;And you've been keeping this from me?;36
 1;I tried to tell you, but you spent the first half of the trip moping about Trent, so I figured it was bad timing.;37

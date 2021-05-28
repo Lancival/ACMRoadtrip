@@ -216,13 +216,13 @@ public class DialogueDisplay : MonoBehaviour
 
         doneTyping = false;
 
+        if (stopTyping)
+            stopTyping = false;
+
         for (int i = 0; i < text.Length; i++)
         {
             if (stopTyping)
-            {
-                stopTyping = false;
                 break;
-            }
 
             // if within <>, submit all the consecutive <>'s plus next letter
             if (text[i] == '<')

@@ -22,7 +22,7 @@
 0;Who's going to want me?;25
 1;I get that breakups are bad. Flaming piles of garbage bad. But we're in Japan! By the end of this trip, you'll be like "Trent, who?";24
 0;You're right. I'm just having trouble moving on.;26;Happy
-1;The opinion of a random boy is not worth you sacrificing your self—worth.;24
+1;The opinion of a random boy is not worth you sacrificing your self–worth.;24
 1;I'm sorry the timing was so rough.;27;Sad
 0;I feel like we were together for so long that part of myself became him. I don't know who I am outside of us.;28;Sad
 1;Then reinvent yourself. Who knows? Maybe you'll become like me.;29;Happy
@@ -36,5 +36,5 @@
 1;—which is now a thing of the past, right?;37
 0;Right...;38
 1;You look tired. Are you having that nightmare again?;39
-0;I swear it happens every night. I'm on this ship and I feel like I have to reach the island —— there's something important there, but I'm not sure what. The storms get me eventually.;40;Sad
+0;I swear it happens every night. I'm on this ship and I feel like I have to reach the island — there's something important there, but I'm not sure what. The storms get me eventually.;40;Sad
 1;Maybe you're just stressed. Better than dreaming about this than Trent, right?;-1

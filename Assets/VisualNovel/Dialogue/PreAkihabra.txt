@@ -12,7 +12,7 @@
 0;I didn't realize how dependent I was on him to feel beautiful.;13;Sad
 1;You've been beautiful this whole time. His lack of validation doesn't change that.;17
 1;Trent is probably back home sulking because he realized he missed out on a bad bitch girlfriend.;15
-0;I don't feel like a bad bitch. I don't think bad bitches sulk over their ex—boyfriend.;16
+0;I don't feel like a bad bitch. I don't think bad bitches sulk over their ex–boyfriend.;16
 1;Men do not define whether or not we are bad bitches.;17
 0;I used to be so spontaneous before Trent. I did summer bucket lists and woke up early just to see the sunrise. I didn't even realize that I lost myself.;18
 1;You can still be all of those things.;19
@@ -36,4 +36,4 @@
 1;I guess.;37
 1;We're here.;38
 0;We're at a mall.;39
-1;That's right —— I'm giving you a Japanese street style makeover.;-1;Happy
+1;That's right — I'm giving you a Japanese street style makeover.;-1;Happy

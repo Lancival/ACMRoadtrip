@@ -26,7 +26,7 @@
 6;Together, let's wish for a tasy meal. Repeat after me: oishiku nare, moe moe kyun!;27
 18;(The maid holds up a heart with her hands.);28
 1;What does that mean?;29
-0;It's from the anime K—On. It's a spell to make the food taste better.;30
+0;It's from the anime K–On. It's a spell to make the food taste better.;30
 18;(The maid hands us two dishes of omurice, both with a cat drawn on it.);31
 1;Thank you.;32
 6;Ready?;33
@@ -42,4 +42,4 @@
 1;Let me know if you want to talk about it, okay?;43
 0;Thanks for being my best friend.;44;Happy
 1;Always.;-1
-1;Uh—huh, sure.;-1
+1;Uh–huh, sure.;-1
