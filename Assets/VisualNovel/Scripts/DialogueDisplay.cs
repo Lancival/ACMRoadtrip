@@ -69,9 +69,9 @@ public class DialogueDisplay : MonoBehaviour
         UpdateMood(nodes[index].speakerID, nodes[index].mood);
         StartCoroutine(PrintText(nodes[index].content));
 
-        if (nodes[index].Responses().Count > 1)
+        /*if (nodes[index].Responses().Count > 1)
             for (int i = 0; i < nodes[index].Responses().Count; i++)
-                Button(nodes[nodes[index].Responses()[i] - 1].content, nodes[nodes[index].Responses()[i] - 1].dialogueID);
+                Button(nodes[nodes[index].Responses()[i] - 1].content, nodes[nodes[index].Responses()[i] - 1].dialogueID);*/
     }
 
     // Update is called once per frame
@@ -89,7 +89,7 @@ public class DialogueDisplay : MonoBehaviour
                     Debug.Log("stop typing");
                     StartCoroutine(DelayClick());
                 }
-                else if (index == 0 && nodes[index].Responses().Count > 1)
+                else if (nodes[index].Responses().Count > 1)
                     canClick = false;
                 else if (index >= 0) 
                 {
@@ -250,6 +250,14 @@ public class DialogueDisplay : MonoBehaviour
         doneTyping = true; // should it be before or after fade
         //Debug.Log("done typing");
         indicator.GetComponent<Fade>().FadeIn();
+
+        rCurr = nodes[index].Responses();
+        if (rCurr.Count > 1)
+        {
+            canClick = false;
+            for (int i = 0; i < rCurr.Count; i++)
+                Button(nodes[rCurr[i] - 1].content, nodes[rCurr[i] - 1].dialogueID);
+        }
     }
 
     // Instantiate a button as the child of the Options Container
