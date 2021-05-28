@@ -12,7 +12,7 @@
 1;I see you staring at him.;13
 0;(I must have been dazing off when I was thinking about Trent.);14
 0;I wasn't staring at him.;15;Mad
-0;Do you think he's cute?;16
+1;Do you think he's cute?;16
 0;I don't know.;17
 1;I dare you to ask him out.;18
 0;I don't even know him.;19
