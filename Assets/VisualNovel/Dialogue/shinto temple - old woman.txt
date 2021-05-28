@@ -14,7 +14,7 @@
 16;You must take accountability of your hurt to understand the friendships you already have in your life.;15
 0;Seriously, who are you?;16
 16;You're here for good fortune, no?;17
-0;I mean, yeah, but-;18
+0;I mean, yeah, but—;18
 16;I'm here to give you some perspective, dear.;19
 0;...Okay.;20
 16;You want to be loved and appreciated, but you already are. You must allow yourself to feel your reality.;21
@@ -24,7 +24,7 @@
 0;But am I worthy of moving on?;32
 0;I spend all of this energy staring at myself in the mirror, looking at all I've accomplished, and always feeling helpless. Believing in myself means the possibility of disappointing myself.;26
 16;You're in charge of the narrative that failure means disappointing yourself.;27
-0;But-;28
+0;But—;28
 16;You said you seek friendship, but you don't need to worry. Summer is already here for you. You will soon be there for yourself.;29
 0;How do you even know about my life?;30
 18;(The woman vanishes.);31
@@ -59,7 +59,7 @@
 0;(Where did she go?);-1
 16;Are there any downsides to forgiving yourself?;61
 0;I don't feel like I deserve it.;62;Sad
-16;Loving yourself is not a matter of deserving it or not. You don't want to rely on someone else for self-acceptance.;63
+16;Loving yourself is not a matter of deserving it or not. You don't want to rely on someone else for self—acceptance.;63
 0;What should I do then?;64
 16;Tell your shadow, the part of yourself that picks at your stomach in the mirror, that believes you cannot do better than your ex, that she cannot win today.;65
 16;Sometimes, you will fail that battle. But it's about the trying.;66
@@ -90,6 +90,6 @@
 16;You can never come back to that version, but that's okay. You know better than to give all of yourself to someone now.;91
 0;I want to be the best version of myself I can be.;92
 16;What does that mean for you? Do you want to change or accept yourself?;93
-0;Hey, wait -- how do you even know this about my life?;94
+0;Hey, wait — how do you even know this about my life?;94
 18;(The woman vanishes.);95
 0;(Where did she go?);-1

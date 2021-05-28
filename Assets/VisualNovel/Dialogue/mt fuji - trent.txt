@@ -27,7 +27,7 @@
 0;Trent texted me, actually.;28
 1;When? What did he say?;29
 0;Just now. I think he wants to get back together.;30
-1;That's good, right;31;Happy
+1;That's good, right?;31;Happy
 0;I'm starting to think I'm better off without him.;32
 1;Really?;33
 0;I don't want boys ruining our girls trip any longer. I'm sorry for how much I talked about him. I know it must've dragged the mood down.;34

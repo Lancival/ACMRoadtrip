@@ -5,7 +5,7 @@
 0;Apologies for that. We hired an American server for our international customers.;6;Happy
 15;I was so confused.;7
 0;Here is our menu.;8
-15;Thanks;9
+15;Thanks.;9
 1;You literally saved my life.;10
 0;What are friends for, right?;-1
 15;Do you know how to speak Japanese?;12
