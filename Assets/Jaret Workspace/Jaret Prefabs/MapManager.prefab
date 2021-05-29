@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6833302671875896039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6833302671875896037}
+  - component: {fileID: 6833302671875896036}
+  m_Layer: 0
+  m_Name: MapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6833302671875896037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6833302671875896039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.4651823, y: -0.98134816, z: -1.1682762}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6833302671875896036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6833302671875896039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1952a92ac8ebd4e884c8341b2e6b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 0}
+  tileDatas:
+  - {fileID: 11400000, guid: a0450c34091dcb1499cc77ee905e816d, type: 2}
+  - {fileID: 11400000, guid: c7925c67e51a5d142989336a1a51da8d, type: 2}
+  - {fileID: 11400000, guid: 928dfa05d0317ba4a8d20762bbcbbb13, type: 2}
+  - {fileID: 11400000, guid: 957f23251d45d094b82554cd50f0d3a7, type: 2}
+  - {fileID: 11400000, guid: 60ad9e79ccff7cc47aebdd6796738f20, type: 2}
+  - {fileID: 11400000, guid: 0d5db61bf1ec6ca4d890185a4c251db8, type: 2}
+  smoothing: 2
+  StormPrefab: {fileID: 6769382106439000103, guid: 223af3def20b5174d8fa0e66b28db9d1, type: 3}
+  PlayerPrefab: {fileID: 5309523533292387105, guid: f1a05b5c6a2cd5b428322b9e995baa8f, type: 3}
+  RockPrefab: {fileID: 4447812701179705011, guid: 0d8f707d4a9c6814b9d6985ced6b3a20, type: 3}
+  MovableStormPrefab: {fileID: 6769382106439000103, guid: 009a403b6ae98d0489a636867bb92cdf, type: 3}
+  HandPlacementPrefab: {fileID: 1931708449750744503, guid: 0f8757b32a6519844ba7344cec88d13d, type: 3}
+  cardButtonPrefab: {fileID: 5307744269583609350, guid: aced39ba3e8219649ae19320e9aaadfa, type: 3}
+  clairvoyanceUIPrefab: {fileID: 8193894020699729466, guid: 2ef68e8339779ad41a271b59a2056257, type: 3}
+  LevelText: {fileID: 0}
+  playerSpawn: {x: -3, y: -3, z: 0}
+  StormPosition:
+  - {x: 1, y: 2, z: 0}
+  - {x: 2, y: 2, z: 0}
+  MovableStormPosition:
+  - {x: 1, y: 0, z: 0}
+  - {x: 2, y: 0, z: 0}
+  RockPosition:
+  - {x: 0, y: 2, z: 0}
+  - {x: 1, y: 1, z: 0}
+  - {x: 1, y: -1, z: 0}
+  - {x: 2, y: -1, z: 0}
+  stormBeginTurn: 1
+  stormMovInterval: 1
+  turnLimit: 10

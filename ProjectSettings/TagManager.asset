@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Storm
+  - Rock
+  - Island
+  - GameManager
   layers:
   - Default
   - TransparentFX
@@ -12,9 +16,9 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
+  - Storm
+  - Rock
+  - Island
   - 
   - 
   - 
@@ -40,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: 1
+    uniqueID: 2013356643
     locked: 0
