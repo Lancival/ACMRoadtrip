@@ -7,7 +7,7 @@
 1;Yes, which means you need to stop moaning about your ex.;8
 0;This is the first day of the trip where I haven't cried about him, thankyouverymuch.;9
 1;It is only 3pm, but in fact I have noticed.;10,11
-0;Maybe I should move on;12
+0;Maybe I should move on.;12
 0;My past will always be a part of me.;20
 0;Trent probably isn't even thinking about me. There's nothing I can do at this point to change that.;13
 1;I know it must hurt to say that.;14

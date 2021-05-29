@@ -18,7 +18,7 @@
 1;Look, I was too hard on you. I'm sorry.;19
 0;I'm sorry too. I know I went MIA when I started dating Trent, and you don't deserve to hear me talk about him all of the time.;20
 1;I guess I've been frustrated about seeing our entire friend group have their futures figured out. I have no idea what I'm going to do.;21
-0;I don't anyone knows what they're doing. If they do, then they're pretending.;22
+0;I don't think anyone knows what they're doing. If they do, then they're pretending.;22
 1;I don't want us to fight.;23
 0;I don't either. You're my best friend.;24;Happy
 1;I'm sorry too about how negative I've been about Trent. I was invalidating your feelings.;25,26
