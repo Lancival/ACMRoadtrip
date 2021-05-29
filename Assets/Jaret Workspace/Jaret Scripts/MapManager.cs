@@ -131,7 +131,7 @@ public class MapManager : MonoBehaviour
         /////////////////////////////////////////////////////////// Create Hand Object
         ///
 
-        handPlacement = Instantiate(HandPlacementPrefab);
+        handPlacement = Instantiate(HandPlacementPrefab, new Vector3(0, -1 * map.size.y/5, 0), this.transform.rotation);
 
         for (int i = 0; i < handPlacement.transform.childCount; i++)
         {
@@ -785,6 +785,7 @@ public class MapManager : MonoBehaviour
 
     private void changeStormPosition(GameObject storm)
     {
+        
         int xCoord = Random.Range(-1 * ((map.size.x / 2) - 1), (map.size.x / 2) - 1);
         int yCoord = Random.Range(-1 * ((map.size.y / 2) - 1), (map.size.y / 2) - 1);
         Vector3 temp = new Vector3(xCoord, yCoord, 0);
