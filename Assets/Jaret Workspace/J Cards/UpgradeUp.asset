@@ -25,3 +25,4 @@ MonoBehaviour:
   isClairvoyant: 0
   tutorialCorrect: 0
   tutorial: 0
+  cardInstructions: Move Up 3

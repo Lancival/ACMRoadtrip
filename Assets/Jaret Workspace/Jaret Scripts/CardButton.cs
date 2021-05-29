@@ -12,7 +12,8 @@ public class CardButton : MonoBehaviour
     
     private JCard currentCard;
     private JCard tempCard;
-    
+
+    private bool mouseHover = false;
     
     void Start()
     {
@@ -20,6 +21,14 @@ public class CardButton : MonoBehaviour
         mapManager = GameObject.Find("MapManager");
 
         spriteRenderer.sprite = null;
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(1) && mouseHover)
+        {
+            RightClick();
+        }
     }
     
     void OnMouseDown()
@@ -59,4 +68,17 @@ public class CardButton : MonoBehaviour
         Debug.Log(currentCard.artwork);
     }
 
+    private void RightClick()
+    {
+        mapManager.GetComponent<MapManager>().DisplayCardInstructions(currentCard.cardInstructions);
+    }
+
+    private void OnMouseEnter()
+    {
+        mouseHover = true;
+    }
+    private void OnMouseExit()
+    {
+        mouseHover = false;
+    }
 }
