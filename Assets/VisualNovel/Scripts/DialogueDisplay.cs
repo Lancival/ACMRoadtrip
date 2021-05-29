@@ -146,11 +146,16 @@ public class DialogueDisplay : MonoBehaviour
                 }
             }
             // Skip to character selection
-            if (Input.GetKeyDown("t") && screen != null)
+            if (Input.GetKeyDown("t"))
             {
-                HideImages();
-                screen.HideDialogue();
-                screen.ShowSelection();
+                if (screen != null)
+                {
+                    HideImages();
+                    screen.HideDialogue();
+                    screen.ShowSelection();
+                }
+                else
+                    loader.LoadNextScene();
             }
         }
         else 
