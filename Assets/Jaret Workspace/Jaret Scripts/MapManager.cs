@@ -82,6 +82,7 @@ public class MapManager : MonoBehaviour
     private JCard cardInPlay;
     private GameObject gameManager;
     private GameObject cardOverlay;
+    private GameObject transitionOverlay;
 
 
 
@@ -148,6 +149,7 @@ public class MapManager : MonoBehaviour
 
     void Start()
     {
+        transitionOverlay = GameObject.Find("Transition Canvas");
         gameManager = GameObject.Find("GameManager");
         gameManager.GetComponent<JaretGameManager>().NextLevel();
         gameManager.GetComponent<JaretGameManager>().EmptyDiscard();
@@ -430,17 +432,23 @@ public class MapManager : MonoBehaviour
         {
             LevelText.text = "You Win";
             gameManager.GetComponent<JaretGameManager>().WinLevel();
-            yield return new WaitForSeconds(2);
-            if (nextScene != null)
+            yield return new WaitForSeconds(1);
+            transitionOverlay.transform.GetChild(0).GetComponent<SceneLoader>().LoadNextScene();
+           /* if (nextScene != null)
+            {
+
                 SceneManager.LoadScene(nextScene);
+            }*/
+               
+
             yield break;
         }
         if (death)
         {
             LevelText.text = "Game Over";
-            yield return new WaitForSeconds(2);
-            if (nextScene != null)
-                SceneManager.LoadScene(nextScene);
+            yield return new WaitForSeconds(1);
+            transitionOverlay.transform.GetChild(0).GetComponent<SceneLoader>().LoadNextScene();
+
             yield break;
         }
         LevelText.text = "Turn " + turn.ToString();
