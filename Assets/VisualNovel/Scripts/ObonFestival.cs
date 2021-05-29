@@ -16,7 +16,7 @@ public class ObonFestival : MonoBehaviour
 	[SerializeField] private Image background;
 	[SerializeField] private Transform images;
 
-    private int puzzles = 0;
+    [SerializeField] private int puzzles = 0;
 
     // Start is called before the first frame update
     void Start()
