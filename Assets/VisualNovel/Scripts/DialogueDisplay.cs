@@ -148,6 +148,7 @@ public class DialogueDisplay : MonoBehaviour
             // Skip to character selection
             if (Input.GetKeyDown("t") && screen != null)
             {
+                HideImages();
                 screen.HideDialogue();
                 screen.ShowSelection();
             }
