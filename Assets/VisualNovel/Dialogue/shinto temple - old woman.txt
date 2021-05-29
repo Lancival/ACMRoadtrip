@@ -56,7 +56,7 @@
 16;How are you so sure you will?;57
 0;How do you even know about my life?;58
 18;(The woman vanishes.);59
-0;(Where did she go?);-1
+0;(Where is she?);-1
 16;Are there any downsides to forgiving yourself?;61
 0;I don't feel like I deserve it.;62;Sad
 16;Loving yourself is not a matter of deserving it or not. You don't want to rely on someone else for self–acceptance.;63
@@ -65,7 +65,7 @@
 16;Sometimes, you will fail that battle. But it's about the trying.;66
 0;How do you even know about my life?;67
 18;(The woman vanishes.);68
-0;(Where did she go?);-1
+0;(Where is she?);-1
 16;You're never going to become a whole new person.;70
 16;Growing is about acknowledging your past, even the ugly parts, taking in the lessons you've learned, appreciating the small moments of joy, and moving forward.;71
 16;Growing is about accepting that your past is a part of you.;72
@@ -84,7 +84,7 @@
 0;I never thought of it that way.;85
 0;How do you even know about my life?;86
 18;(The woman vanishes.);87
-0;(Where did she go?);-1
+0;(Who is she?);-1
 16;I cannot answer that for you, but I will ask this: Is allowing your ex to define how you feel about yourself serving you?;89
 0;No, but...I miss the version of who I used to be before I started dating him.;90;Sad
 16;You can never come back to that version, but that's okay. You know better than to give all of yourself to someone now.;91
@@ -92,4 +92,4 @@
 16;What does that mean for you? Do you want to change or accept yourself?;93
 0;Hey, wait — how do you even know this about my life?;94
 18;(The woman vanishes.);95
-0;(Where did she go?);-1
+0;(Who is she?);-1

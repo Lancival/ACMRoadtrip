@@ -1758,14 +1758,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 291033786}
   targets:
-  - You must take accountability of your hurt to understand the friendships you already
-    have in your life.
-  - Loneliness is an inherent part of being human, but you don't have to let it take
-    you over. You have you tell yourself that you are worthy of love and support.
-  - You're never going to become a whole new person. Growing is about acknowledging
-    your past, even the ugly parts, taking in the lessons you've learned, appreciating
-    the small moments of joy, and moving forward. Growing is about accepting that
-    your past is a part of you.
+  - (Where did she go?)
+  - (Where is she?)
+  - (Who is she?)
   cards:
   - {fileID: 11400000, guid: 0ac7e11c0851e9c40b2c90f17fae3a5d, type: 2}
   - {fileID: 11400000, guid: 609a41f6641885640a5323be54a30c0e, type: 2}

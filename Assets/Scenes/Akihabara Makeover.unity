@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1114873285}
   targets:
-  - Hey, can you pick out an outfit for me?
+  - I'll take everything you picked out.
   cards:
   - {fileID: 11400000, guid: d63a648cde8d35d4c9198becf7da0f8c, type: 2}
 --- !u!114 &751220126
@@ -1111,8 +1111,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1114873285}
   targets:
-  - Right?
-  - I look like a clown.
+  - (Maybe this is for the best.)
+  - We'll buy this.
   cards:
   - {fileID: 11400000, guid: 9e9b2adbc35d2d54dba346d8522c2fa0, type: 2}
   - {fileID: 11400000, guid: 29ed0723f9814fc49b761db9b0ce5a1e, type: 2}

@@ -1538,11 +1538,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 258373931}
   targets:
-  - Trent texted me, actually.
-  - I'm sorry for bringing him up in the first place on our girls trip. No more relationship
-    drama from now on, okay?
-  - Can you at least think about it?
-  - Thank you for being so understanding.
+  - I'm so proud of you.
+  - You got it.
+  - Okay...Goodbye.
+  - Okay.
   cards:
   - {fileID: 11400000, guid: 5c8e5f52a168b1f4ca67edb4f4d8df72, type: 2}
   - {fileID: 11400000, guid: 5c8e5f52a168b1f4ca67edb4f4d8df72, type: 2}
@@ -1562,8 +1561,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 258373931}
   targets:
-  - Hey, Summer, can you take a picture of me over here?
-  - Where do you go to school?
+  - (whispers) Thanks for saving me.
+  - I should probably get going. My...friend is looking for me.
   cards:
   - {fileID: 11400000, guid: 6dc6597e1f70ae749bf2ddb8d936f5de, type: 2}
   - {fileID: 11400000, guid: 1e474a25c69fe954ebc28ce5277f16ca, type: 2}

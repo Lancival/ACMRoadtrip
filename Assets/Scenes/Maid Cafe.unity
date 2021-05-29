@@ -2197,7 +2197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 560483157}
   targets:
-  - Let me know if you want to talk about it, okay?
+  - Always.
   - Uh-huh, sure.
   cards:
   - {fileID: 11400000, guid: 0ac7e11c0851e9c40b2c90f17fae3a5d, type: 2}
@@ -2236,8 +2236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 560483157}
   targets:
-  - You've chosen our photo package! Please make your way to our picture booth and
-    we will take a polaroid.
+  - It's all yours.
   cards:
   - {fileID: 11400000, guid: 273c66d142c983a4c93a61ccfb70a92f, type: 2}
 --- !u!1 &1729329168

@@ -1,6 +1,6 @@
 1;Our trip is almost over. What was your favorite part?;2,3,4;HappyMakeover
 0;Watching you try to serve Japanese customers at that sushi place.;5
-0;Buying outfits together in Akihabara.;9
+0;Buying outfits together in Akihabra.;9
 0;Eating at the maid restaurant.;7
 1;Oh come on, your favorite part was seeing me suffer?;6
 0;Well...;10;HappyMakeover

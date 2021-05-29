@@ -1778,8 +1778,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1654848328}
   targets:
-  - Apologies for that. We hired an American server for our international customers.
-  - We just got hired today, so Japan is still new to us. Here is your table.
+  - What are friends for, right?
+  - I hate you.
   cards:
   - {fileID: 11400000, guid: a5e22e8fbd6bcda4199df93772765224, type: 2}
   - {fileID: 11400000, guid: 357e90a74103518428de74a398451f3f, type: 2}
@@ -1797,8 +1797,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1654848328}
   targets:
-  - Do you happen to speak English?
+  - What are you two doing? Scaring away customers?
+  - And here I thought you were against free labor.
   cards:
+  - {fileID: 11400000, guid: d92fadfacf22e85469a6a42fe97c8f8e, type: 2}
   - {fileID: 11400000, guid: d92fadfacf22e85469a6a42fe97c8f8e, type: 2}
 --- !u!224 &1103763035
 RectTransform:
