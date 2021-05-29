@@ -1696,6 +1696,63 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &945283995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 945283998}
+  - component: {fileID: 945283997}
+  m_Layer: 0
+  m_Name: CardAdder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &945283997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945283995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d987e842d8143ec8ba0640eff342bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
+  targets:
+  - You must take accountability of your hurt to understand the friendships you already
+    have in your life.
+  - Loneliness is an inherent part of being human, but you don't have to let it take
+    you over. You have you tell yourself that you are worthy of love and support.
+  - You're never going to become a whole new person. Growing is about acknowledging
+    your past, even the ugly parts, taking in the lessons you've learned, appreciating
+    the small moments of joy, and moving forward. Growing is about accepting that
+    your past is a part of you.
+  cards:
+  - {fileID: 11400000, guid: 0ac7e11c0851e9c40b2c90f17fae3a5d, type: 2}
+  - {fileID: 11400000, guid: 609a41f6641885640a5323be54a30c0e, type: 2}
+  - {fileID: 11400000, guid: 9e9b2adbc35d2d54dba346d8522c2fa0, type: 2}
+--- !u!4 &945283998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945283995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1248487272
 GameObject:
   m_ObjectHideFlags: 0

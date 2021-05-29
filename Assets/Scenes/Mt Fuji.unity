@@ -1505,6 +1505,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &852712750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852712753}
+  - component: {fileID: 852712752}
+  - component: {fileID: 852712751}
+  m_Layer: 0
+  m_Name: CardAdder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &852712751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852712750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d987e842d8143ec8ba0640eff342bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 258373931}
+  targets:
+  - Trent texted me, actually.
+  - I'm sorry for bringing him up in the first place on our girls trip. No more relationship
+    drama from now on, okay?
+  - Can you at least think about it?
+  - Thank you for being so understanding.
+  cards:
+  - {fileID: 11400000, guid: 5c8e5f52a168b1f4ca67edb4f4d8df72, type: 2}
+  - {fileID: 11400000, guid: 5c8e5f52a168b1f4ca67edb4f4d8df72, type: 2}
+  - {fileID: 11400000, guid: 5c8e5f52a168b1f4ca67edb4f4d8df72, type: 2}
+  - {fileID: 11400000, guid: 29ed0723f9814fc49b761db9b0ce5a1e, type: 2}
+--- !u!114 &852712752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852712750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d987e842d8143ec8ba0640eff342bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 258373931}
+  targets:
+  - Hey, Summer, can you take a picture of me over here?
+  - Where do you go to school?
+  cards:
+  - {fileID: 11400000, guid: 6dc6597e1f70ae749bf2ddb8d936f5de, type: 2}
+  - {fileID: 11400000, guid: 1e474a25c69fe954ebc28ce5277f16ca, type: 2}
+--- !u!4 &852712753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852712750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &995049337
 GameObject:
   m_ObjectHideFlags: 0
