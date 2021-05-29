@@ -3477,6 +3477,10 @@ PrefabInstance:
       value: Level 5
       objectReference: {fileID: 0}
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
+      propertyPath: turnLimit
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: LevelTextPro
       value: 
       objectReference: {fileID: 1425734794}
