@@ -236,5 +236,14 @@ public class JaretGameManager : MonoBehaviour
         return PlayableDeck.Count;
     }
 
+    public int PuzzlesWon()
+    {
+        int won = 0;
+        foreach (bool wonLevel in levelPass)
+            if (wonLevel)
+                won++;
+        return won;
+    }
+
 
 }

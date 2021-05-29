@@ -7,7 +7,6 @@ using TMPro;
 public class ObonFestival : MonoBehaviour
 {
 
-	[SerializeField] private int puzzles;
 	[SerializeField] private TextMeshProUGUI descriptionBox;
 	[SerializeField] private string description;
 	[SerializeField] private CharacterCardDisplay ccd;
@@ -17,9 +16,17 @@ public class ObonFestival : MonoBehaviour
 	[SerializeField] private Image background;
 	[SerializeField] private Transform images;
 
+    private int puzzles = 0;
+
     // Start is called before the first frame update
     void Start()
     {
+        GameObject manager = GameObject.Find("GameManager");
+        if (manager)
+            puzzles = manager.GetComponent<JaretGameManager>().PuzzlesWon();
+        else
+            Debug.Log("Error: Unable to find GameManager.");
+
     	if (puzzles <= 3)
     	{
     		ccd.UpdateConvos(0, dialogue);
