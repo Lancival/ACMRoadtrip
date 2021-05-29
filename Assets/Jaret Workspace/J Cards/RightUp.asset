@@ -21,5 +21,8 @@ MonoBehaviour:
   isStorm: 0
   isLighthouse: 0
   isWind: 0
+  isShuffle: 0
+  isClairvoyant: 0
   tutorialCorrect: 0
   tutorial: 0
+  cardInstructions: Move Right 2, then Up 2

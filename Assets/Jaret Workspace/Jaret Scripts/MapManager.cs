@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 
@@ -48,6 +49,7 @@ public class MapManager : MonoBehaviour
     public GameObject HandPlacementPrefab;
     public GameObject cardButtonPrefab;
     public GameObject clairvoyanceUIPrefab;
+    public GameObject InstructionsUIPrefab;
     
 
 
@@ -57,6 +59,7 @@ public class MapManager : MonoBehaviour
 
 
     public Text LevelText;
+    public TextMeshProUGUI LevelTextPro;
 
     public string nextScene;
 
@@ -83,6 +86,10 @@ public class MapManager : MonoBehaviour
     private GameObject gameManager;
     private GameObject cardOverlay;
     private GameObject transitionOverlay;
+
+    private GameObject cardInstructionsOverlay;
+    private string cardInstructions;
+    private bool isCardInstructions = false;
 
 
 
@@ -132,7 +139,7 @@ public class MapManager : MonoBehaviour
         /////////////////////////////////////////////////////////// Create Hand Object
         ///
 
-        handPlacement = Instantiate(HandPlacementPrefab, new Vector3(0, -1 * map.size.y/5, 0), this.transform.rotation);
+        handPlacement = Instantiate(HandPlacementPrefab, new Vector3(0, -1 * map.size.y/3, 0), this.transform.rotation);
 
         for (int i = 0; i < handPlacement.transform.childCount; i++)
         {
@@ -177,6 +184,8 @@ public class MapManager : MonoBehaviour
 
 
         }*/
+
+        
     }
 
     IEnumerator LevelOrder()
@@ -274,6 +283,12 @@ public class MapManager : MonoBehaviour
 
         while(true)
         {
+            if (Input.GetMouseButtonDown(0) && isCardInstructions)
+            {
+                Destroy(cardInstructionsOverlay);
+                isCardInstructions = false;
+            }
+
             ///////////////////////////////////////////////////////////////////////
             if (cardPlayed)
             {
@@ -290,8 +305,9 @@ public class MapManager : MonoBehaviour
                     cardOverlay = Instantiate(clairvoyanceUIPrefab);
 
                     int length = gameManager.GetComponent<JaretGameManager>().DeckLength();
-                    for (int i = 0; i < length || i < 3; i++)
+                    for (int i = 0; i < length && i < 3; i++)
                     {
+                        
                         cardOverlay.transform.GetChild(i + 1).gameObject.GetComponent<Image>().sprite = gameManager.GetComponent<JaretGameManager>().TopCard(i);
                     }
                     
@@ -334,7 +350,7 @@ public class MapManager : MonoBehaviour
                     {
                         Destroy(cardOverlay.transform.GetChild(i + 1).gameObject);
                     }
-                    cardOverlay.transform.GetChild(0).GetComponent<Text>().text = "Click a tile to move Storms";
+                    cardOverlay.transform.GetChild(0).GetComponent<TMP_Text>().text = "Click a tile to move Storms";
                     Destroy(cardOverlay.transform.GetChild(0).transform.GetChild(0).gameObject);
                     yield return StartCoroutine(WindCurrent());
                     Destroy(cardOverlay);
@@ -419,7 +435,7 @@ public class MapManager : MonoBehaviour
 
         while (Vector3.Distance(storm.transform.position, targetPos) > 0.05f)
         {
-            storm.transform.position = Vector3.Lerp(storm.transform.position, targetPos, smoothing * Time.deltaTime);
+            storm.transform.position = Vector3.Lerp(storm.transform.position, targetPos, 1.5f * smoothing * Time.deltaTime);
             yield return null;
         }
 
@@ -430,7 +446,7 @@ public class MapManager : MonoBehaviour
     {
         if (win)
         {
-            LevelText.text = "You Win";
+            LevelTextPro.text = "You Win";
             gameManager.GetComponent<JaretGameManager>().WinLevel();
             yield return new WaitForSeconds(1);
             transitionOverlay.transform.GetChild(0).GetComponent<SceneLoader>().LoadNextScene();
@@ -445,13 +461,13 @@ public class MapManager : MonoBehaviour
         }
         if (death)
         {
-            LevelText.text = "Game Over";
+            LevelTextPro.text = "Game Over";
             yield return new WaitForSeconds(1);
             transitionOverlay.transform.GetChild(0).GetComponent<SceneLoader>().LoadNextScene();
 
             yield break;
         }
-        LevelText.text = "Turn " + turn.ToString();
+        LevelTextPro.text = "Turn " + turn.ToString();
 
         yield break;
     }
@@ -812,5 +828,17 @@ public class MapManager : MonoBehaviour
         return false;
     }
     
+    public void DisplayCardInstructions(string _cardInstructions)
+    {
+        cardInstructions = _cardInstructions;
+        
+        if (!isCardInstructions)
+        {
+            cardInstructionsOverlay = Instantiate(InstructionsUIPrefab);
+            isCardInstructions = true;
+        }
+        
+        cardInstructionsOverlay.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text = cardInstructions;
 
+    }
 }

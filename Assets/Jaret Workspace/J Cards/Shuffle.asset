@@ -22,5 +22,7 @@ MonoBehaviour:
   isLighthouse: 0
   isWind: 0
   isShuffle: 1
+  isClairvoyant: 0
   tutorialCorrect: 0
   tutorial: 0
+  cardInstructions: Shuffle the remaining cards in the deck

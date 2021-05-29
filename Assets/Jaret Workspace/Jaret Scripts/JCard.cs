@@ -25,6 +25,8 @@ public class JCard : ScriptableObject
     public bool tutorialCorrect = false;
     public bool tutorial = false;
 
+    public string cardInstructions;
+
     public void SetThirdDirection(int thirdDirection)
     {
         directionThree = thirdDirection;

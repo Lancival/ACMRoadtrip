@@ -25,3 +25,4 @@ MonoBehaviour:
   isClairvoyant: 1
   tutorialCorrect: 0
   tutorial: 0
+  cardInstructions: Displays the next three cards in the deck
