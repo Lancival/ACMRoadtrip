@@ -361,28 +361,67 @@ public class MapManager : MonoBehaviour
 
                 worldTargetPosition = map.CellToWorld(  CalculateDirection(  cardInPlay.directionOne, map.WorldToCell(  new Vector2 (  Player.transform.position.x + 0.1f, Player.transform.position.y + 0.1f  )  ), cardInPlay.directionThree  )  );
 
-                while (Vector3.Distance(Player.transform.position, worldTargetPosition) > 0.05f)
+                if (!onMapCheck(worldTargetPosition))
                 {
-                    Player.transform.position = Vector3.Lerp(Player.transform.position, worldTargetPosition, (smoothing * 1.5f) * Time.deltaTime);
+                    worldTargetPosition = map.CellToWorld(CalculateDirection(cardInPlay.directionOne, map.WorldToCell(new Vector2(Player.transform.position.x + 0.1f, Player.transform.position.y + 0.1f)), -1));
+                    if (onMapCheck(worldTargetPosition))
+                    {
+                        while (Vector3.Distance(Player.transform.position, worldTargetPosition) > 0.05f)
+                        {
+                            Player.transform.position = Vector3.Lerp(Player.transform.position, worldTargetPosition, (smoothing * 1.5f) * Time.deltaTime);
 
-                    
-                    cardPlayed = false;
-                    yield return null;
+
+                            cardPlayed = false;
+                            yield return null;
+                        }
+                    }
                 }
+                else
+                {
+                    while (Vector3.Distance(Player.transform.position, worldTargetPosition) > 0.05f)
+                    {
+                        Player.transform.position = Vector3.Lerp(Player.transform.position, worldTargetPosition, (smoothing * 1.5f) * Time.deltaTime);
+
+
+                        cardPlayed = false;
+                        yield return null;
+                    }
+                }
+
+                
 
 
                 worldTargetPosition = map.CellToWorld(CalculateDirection(cardInPlay.directionTwo, map.WorldToCell(new Vector2(Player.transform.position.x + 0.1f, Player.transform.position.y + 0.1f))));
 
-                while (Vector3.Distance(Player.transform.position, worldTargetPosition) > 0.05f)
+                if (!onMapCheck(worldTargetPosition))
                 {
-                    Player.transform.position = Vector3.Lerp(Player.transform.position, worldTargetPosition, (smoothing * 1.5f) * Time.deltaTime);
+                    worldTargetPosition = map.CellToWorld(CalculateDirection(cardInPlay.directionTwo, map.WorldToCell(new Vector2(Player.transform.position.x + 0.1f, Player.transform.position.y + 0.1f)), -1));
+                    if (onMapCheck(worldTargetPosition))
+                    {
+                        while (Vector3.Distance(Player.transform.position, worldTargetPosition) > 0.05f)
+                        {
+                            Player.transform.position = Vector3.Lerp(Player.transform.position, worldTargetPosition, (smoothing * 1.5f) * Time.deltaTime);
 
-                    cardPlayed = false;
-                    yield return null;
+
+                            cardPlayed = false;
+                            yield return null;
+                        }
+                    }
+                }
+                else
+                {
+                    while (Vector3.Distance(Player.transform.position, worldTargetPosition) > 0.05f)
+                    {
+                        Player.transform.position = Vector3.Lerp(Player.transform.position, worldTargetPosition, (smoothing * 1.5f) * Time.deltaTime);
+
+
+                        cardPlayed = false;
+                        yield return null;
+                    }
                 }
 
 
-                
+
 
 
                 cardPlayed = false;
