@@ -156,8 +156,17 @@ public class MapManager : MonoBehaviour
 
     void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+
         transitionOverlay = GameObject.Find("Transition Canvas");
         gameManager = GameObject.Find("GameManager");
+        if (currentScene.name == "Level 1")
+        {
+            gameManager.GetComponent<JaretGameManager>().ResetGame();
+        }
+
+
+        
         gameManager.GetComponent<JaretGameManager>().NextLevel();
         gameManager.GetComponent<JaretGameManager>().EmptyDiscard();
         gameManager.GetComponent<JaretGameManager>().EmptyHand();

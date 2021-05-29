@@ -74,6 +74,36 @@ public class JaretGameManager : MonoBehaviour
 
     }
 
+    public void ResetGame()
+    {
+        if (Level == 0)
+        {
+            return;
+        }
+        int length = Deck.Count;       // empty Deck
+        for (int i = 0; i < length; i++)
+        {
+            Deck.Remove(Deck[0]);
+        }
+        int Tutoriallength = TutorialCorrectDeck.Count;
+        for (int i = 0; i < Tutoriallength; i++)
+        {
+            TutorialCorrectDeck.Remove(TutorialCorrectDeck[0]);
+        }
+        foreach (JCard card in StartingDeck)
+        {
+            Deck.Add(Object.Instantiate(card));
+        }
+
+        foreach (JCard card in TutorialDeck)
+        {
+            TutorialCorrectDeck.Add(Object.Instantiate(card));
+        }
+
+        Level = 0;
+
+    }
+
     public void EmptyDiscard()
     {
         int length = DiscardDeck.Count;
