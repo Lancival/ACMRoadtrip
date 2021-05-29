@@ -358,6 +358,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 566578037229039800, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
   m_PrefabInstance: {fileID: 154719331}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &154719334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6313175012397122882, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
+  m_PrefabInstance: {fileID: 154719331}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &154719338 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5174582889719580199, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
@@ -2231,6 +2242,60 @@ MonoBehaviour:
   dialogueBox: {fileID: 154719333}
   descriptionContainer: {fileID: 1117856170}
   characterContainer: {fileID: 1141214309}
+--- !u!1 &1741904268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1741904269}
+  - component: {fileID: 1741904270}
+  m_Layer: 0
+  m_Name: CardAdder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1741904269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741904268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1741904270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741904268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d987e842d8143ec8ba0640eff342bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 154719334}
+  targets:
+  - Summer, come over here. They offered to take our photo.
+  - How fun!
+  - That's okay. Thanks, you guys.
+  - Sorry to hear that.
+  cards:
+  - {fileID: 11400000, guid: 357e90a74103518428de74a398451f3f, type: 2}
+  - {fileID: 11400000, guid: a5e22e8fbd6bcda4199df93772765224, type: 2}
+  - {fileID: 11400000, guid: 6dc6597e1f70ae749bf2ddb8d936f5de, type: 2}
+  - {fileID: 11400000, guid: 6dc6597e1f70ae749bf2ddb8d936f5de, type: 2}
 --- !u!1 &1844572609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4196481141631180635, guid: c1e3826848d934ecf971ae705292db83, type: 3}
