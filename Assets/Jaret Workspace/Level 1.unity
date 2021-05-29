@@ -3206,7 +3206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221721767424038315, guid: 1c30655cfb835384eb3a2477dc51ada8, type: 3}
       propertyPath: StartingDeck.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3221721767424038315, guid: 1c30655cfb835384eb3a2477dc51ada8, type: 3}
       propertyPath: TutorialDeck.Array.size
@@ -3216,6 +3216,14 @@ PrefabInstance:
       propertyPath: StartingDeck.Array.data[4]
       value: 
       objectReference: {fileID: 11400000, guid: 6dc6597e1f70ae749bf2ddb8d936f5de, type: 2}
+    - target: {fileID: 3221721767424038315, guid: 1c30655cfb835384eb3a2477dc51ada8, type: 3}
+      propertyPath: StartingDeck.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: a5e22e8fbd6bcda4199df93772765224, type: 2}
+    - target: {fileID: 3221721767424038315, guid: 1c30655cfb835384eb3a2477dc51ada8, type: 3}
+      propertyPath: StartingDeck.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 357e90a74103518428de74a398451f3f, type: 2}
     - target: {fileID: 3221721767424038315, guid: 1c30655cfb835384eb3a2477dc51ada8, type: 3}
       propertyPath: TutorialDeck.Array.data[0]
       value: 

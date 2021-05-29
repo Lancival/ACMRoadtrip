@@ -220,10 +220,14 @@ public class JaretGameManager : MonoBehaviour
             PlayableDeck.Remove(ShuffleDeck[i]);
 
         }
-        foreach (JCard card in ShuffleDeck)   // dont use equal sign, they are just pointing to the same thing.  This loop makes two separate decks that can be edited differently
+        if (ShuffleDeck.Count != 0)
         {
-            PlayableDeck.Add(card);
+            foreach (JCard card in ShuffleDeck)   // dont use equal sign, they are just pointing to the same thing.  This loop makes two separate decks that can be edited differently
+            {
+                PlayableDeck.Add(card);
+            }
         }
+        
     }
 
     public Sprite TopCard(int cardPosition)

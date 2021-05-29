@@ -1323,7 +1323,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1895,6 +1895,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3221721767424038315, guid: 1c30655cfb835384eb3a2477dc51ada8, type: 3}
+      propertyPath: TutorialDeck.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221721767424038315, guid: 1c30655cfb835384eb3a2477dc51ada8, type: 3}
       propertyPath: StartingDeck.Array.data[4]
       value: 
       objectReference: {fileID: 11400000, guid: 1e474a25c69fe954ebc28ce5277f16ca, type: 2}
@@ -1910,6 +1914,10 @@ PrefabInstance:
       propertyPath: StartingDeck.Array.data[7]
       value: 
       objectReference: {fileID: 11400000, guid: 29ed0723f9814fc49b761db9b0ce5a1e, type: 2}
+    - target: {fileID: 3221721767424038315, guid: 1c30655cfb835384eb3a2477dc51ada8, type: 3}
+      propertyPath: TutorialDeck.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: d92fadfacf22e85469a6a42fe97c8f8e, type: 2}
     - target: {fileID: 3221721767424038315, guid: 1c30655cfb835384eb3a2477dc51ada8, type: 3}
       propertyPath: TutorialDeck.Array.data[6]
       value: 

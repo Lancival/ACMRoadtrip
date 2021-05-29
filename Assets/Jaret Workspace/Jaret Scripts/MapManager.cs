@@ -295,6 +295,7 @@ public class MapManager : MonoBehaviour
 
                 if (cardInPlay.isShuffle)
                 {
+                    Debug.Log("Shuffle");
                     gameManager.GetComponent<JaretGameManager>().Shuffle();
                     cardPlayed = false;
                     yield break;
