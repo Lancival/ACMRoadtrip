@@ -572,9 +572,10 @@ public class MapManager : MonoBehaviour
             shield = false;
             return;
         }
-        Player.GetComponent<PuzzleObject>().SetBrokenSprite();
+        
         if (!win)
         {
+            Player.GetComponent<PuzzleObject>().SetBrokenSprite();
             death = true;
         }
         
