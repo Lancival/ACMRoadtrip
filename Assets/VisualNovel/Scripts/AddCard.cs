@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class AddCard : MonoBehaviour
@@ -36,6 +37,8 @@ public class AddCard : MonoBehaviour
 	        if (dialogue.text == targets[i])
 	        {
 	        	manager.AddCard(cards[i]);
+	        	transform.GetChild(0).GetComponent<Fade>().FadeIn();
+	        	transform.GetChild(0).GetComponent<Image>().sprite = cards[i].artwork;
 	        	Destroy(this);
 	        }
     	}
