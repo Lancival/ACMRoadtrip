@@ -7,6 +7,10 @@ public class PuzzleObject : MonoBehaviour
 
     private GameObject mapManager;
 
+    public Sprite shieldShip;
+    public Sprite brokenShip;
+    public Sprite normShip;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,15 +36,36 @@ public class PuzzleObject : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Hit2");
-        if (other.gameObject.tag == "Storm" || other.gameObject.tag == "Rock")
+        if (other.gameObject.tag == "Storm")
         {
-            mapManager.GetComponent<MapManager>().PlayerHit();
+            
+            mapManager.GetComponent<MapManager>().PlayerHit(true);
+        }
+
+        if (other.gameObject.tag == "Rock")
+        {
+
+            mapManager.GetComponent<MapManager>().PlayerHit(false);
         }
 
         if (other.gameObject.tag == "Island")
         {
+            
             mapManager.GetComponent<MapManager>().PlayerWin();
         }
+    }
+
+    public void SetShieldSprite()
+    {
+        this.GetComponent<SpriteRenderer>().sprite = shieldShip;
+    }
+    public void SetNormSprite()
+    {
+        this.GetComponent<SpriteRenderer>().sprite = normShip;
+    }
+    public void SetBrokenSprite()
+    {
+        this.GetComponent<SpriteRenderer>().sprite = brokenShip;
     }
 
     // public void OnCollisionEnter2D(Collision2D other)

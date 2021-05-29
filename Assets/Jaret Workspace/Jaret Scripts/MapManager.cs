@@ -340,6 +340,7 @@ public class MapManager : MonoBehaviour
                 if (cardInPlay.isLighthouse)
                 {
                     shield = true;
+                    Player.GetComponent<PuzzleObject>().SetShieldSprite();
                     cardPlayed = false;
                     yield break;
                 }
@@ -477,7 +478,7 @@ public class MapManager : MonoBehaviour
     {
         yield return StartCoroutine(MoveStorms());
         
-        Vector3Int gridTargetPosition = map.WorldToCell(new Vector3(Player.transform.position.x+.1f, Player.transform.position.y+.1f,Player.transform.position.z));  // this is to fix rounding errors
+        //Vector3Int gridTargetPosition = map.WorldToCell(new Vector3(Player.transform.position.x+.1f, Player.transform.position.y+.1f,Player.transform.position.z));  // this is to fix rounding errors
 
         /*if (map.CellToWorld(gridTargetPosition) != Player.transform.position)
         {
@@ -486,44 +487,17 @@ public class MapManager : MonoBehaviour
             Debug.Log(map.CellToWorld(gridTargetPosition));
             Debug.Log(Player.transform.position);
         }*/
-        Vector3 TargetPosition;
+        Vector2 TargetPosition;
         
-        int temp = oceanCurrentDir(Player.transform.position);
+        TargetPosition = oceanCurrentDir(Player.transform.position);
         
-        switch(oceanCurrentDir(Player.transform.position))
-        {
-            case 1:                                //////////// up Current
-                {
-                    gridTargetPosition.y++;
-                    break;
-                }
-            case 2:                                /////////// right Current
-                {
-                    gridTargetPosition.x++;
-                    break;
-                }
-            case 3:                               //////////// down Current
-                {
-                    gridTargetPosition.y--;
-                    break;
-                }
-            case 4:                                /////////// left Current
-                {
-                    gridTargetPosition.x--;
-                    break;
-                }
-            default:                              //////////// Not on Current
-                {
-                    //Debug.Log("default");
-                    yield break;
-                }
-        }
         
-        TargetPosition = map.CellToWorld(gridTargetPosition);
+        
+        
 
-        while(Vector3.Distance(Player.transform.position, TargetPosition) > 0.05f)
+        while(Vector3.Distance(Player.transform.position, new Vector3(TargetPosition.x, TargetPosition.y, 0)) > 0.05f)
         {
-            Player.transform.position = Vector3.Lerp(Player.transform.position, TargetPosition, smoothing * Time.deltaTime);
+            Player.transform.position = Vector3.Lerp(Player.transform.position, new Vector3(TargetPosition.x, TargetPosition.y, 0), smoothing * Time.deltaTime);
 
             yield return null;
         }
@@ -534,13 +508,15 @@ public class MapManager : MonoBehaviour
 
 
 
-    public void PlayerHit()
+    public void PlayerHit(bool isStorm)
     {
-        if (shield)
+        if (shield && isStorm)
         {
+            Player.GetComponent<PuzzleObject>().SetNormSprite();
             shield = false;
             return;
         }
+        Player.GetComponent<PuzzleObject>().SetBrokenSprite();
         death = true; 
     }
 
@@ -628,7 +604,7 @@ public class MapManager : MonoBehaviour
     }
 
 
-    private int oceanCurrentDir(Vector2 objectPosition)
+    private Vector2 oceanCurrentDir(Vector2 objectPosition)
     {
         Vector2 testVector = new Vector2(objectPosition.x + .2f, objectPosition.y + .2f);
         Vector3Int gridPosition = map.WorldToCell(testVector);
@@ -636,15 +612,58 @@ public class MapManager : MonoBehaviour
         
         if (clickedTile == null)
         {
-            //Debug.Log("null tile");
-            return 0;
+            
+            return objectPosition;
         }
+
         if (dataFromTiles[clickedTile].name == "Current")
         {
-            return dataFromTiles[clickedTile].dirInt;
+            switch (dataFromTiles[clickedTile].dirInt)
+            {
+                case 1:                                //////////// up Current
+                    {
+                        gridPosition.y++;
+                        break;
+                    }
+                case 2:                                /////////// right Current
+                    {
+                        gridPosition.x++;
+                        break;
+                    }
+                case 3:                               //////////// down Current
+                    {
+                        gridPosition.y--;
+                        break;
+                    }
+                case 4:                                /////////// left Current
+                    {
+                        gridPosition.x--;
+                        break;
+                    }
+                default:                              //////////// Not on Current
+                    {
+                        //Debug.Log("default");
+                        break;
+                    }
+            }
         }
-        //Debug.Log(dataFromTiles[clickedTile].name);
-        return 0;
+
+        clickedTile = map.GetTile(gridPosition);
+        
+        if (dataFromTiles[clickedTile].name == "Current")
+        {
+            return oceanCurrentDir(map.CellToWorld(gridPosition));
+            //return dataFromTiles[clickedTile].dirInt;
+        }
+        
+
+
+
+
+
+
+
+        return map.CellToWorld(gridPosition);
     }
 
     private bool collisionCheckStorm(Vector3 targetPos, GameObject myObject = null)
