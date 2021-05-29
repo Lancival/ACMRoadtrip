@@ -1189,7 +1189,7 @@ GameObject:
   - component: {fileID: 404329251}
   - component: {fileID: 404329250}
   m_Layer: 0
-  m_Name: UI Design
+  m_Name: UI Design and Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: UI Design
+  m_text: UI Design and Art
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
   m_sharedMaterial: {fileID: -3582602626707611156, guid: 85ccfba227f984dff84e934bf2b98f45, type: 2}
