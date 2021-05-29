@@ -160,10 +160,7 @@ public class MapManager : MonoBehaviour
 
         transitionOverlay = GameObject.Find("Transition Canvas");
         gameManager = GameObject.Find("GameManager");
-        if (currentScene.name == "Level 1")
-        {
-            gameManager.GetComponent<JaretGameManager>().ResetGame();
-        }
+        
 
 
         
@@ -576,12 +573,20 @@ public class MapManager : MonoBehaviour
             return;
         }
         Player.GetComponent<PuzzleObject>().SetBrokenSprite();
-        death = true; 
+        if (!win)
+        {
+            death = true;
+        }
+        
     }
 
     public void PlayerWin()
     {
-        win = true;
+        if (!death)
+        {
+            win = true;
+        }   
+        
     }
 
 
