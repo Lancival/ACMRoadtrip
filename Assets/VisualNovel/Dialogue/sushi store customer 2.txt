@@ -13,7 +13,7 @@
 15;How can you serve at this restaurant without knowing Japanese? ;14
 18;(Summer aggressively points at an empty table.);15
 1;Here is the menu.;16
-15;Is this an English only restaurant?;16
+15;Is this an English only restaurant?;17
 1;Uh...enjoy.;18
 0;I savored every moment of that.;19
 1;You couldn't have stepped in?;20

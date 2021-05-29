@@ -18,7 +18,7 @@
 0;I don't even know him.;19
 1;This is your opportunity to then.;20,21
 0;Ask him out.;22
-0;Stay seated;72
+0;Stay seated.;72
 0;This is so embarrassing.;23
 1;So you'll do it?;24
 0;...New breakup, new me, I guess.;25
