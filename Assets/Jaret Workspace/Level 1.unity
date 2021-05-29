@@ -2327,8 +2327,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '    Reach the Island without sailing into the storms! Right Click a card
-    to view what it does!'
+  m_text: '    Reach the Island without sailing into the storms! Left Click a card
+    to move your ship. Right Click a card to view what it does!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d20b6c6c493e49f1b37eb559d085ddf, type: 2}
   m_sharedMaterial: {fileID: 5926540319441565338, guid: 3d20b6c6c493e49f1b37eb559d085ddf, type: 2}
@@ -3228,6 +3228,10 @@ PrefabInstance:
       propertyPath: StartingDeck.Array.data[6]
       value: 
       objectReference: {fileID: 11400000, guid: 357e90a74103518428de74a398451f3f, type: 2}
+    - target: {fileID: 3221721767424038315, guid: 1c30655cfb835384eb3a2477dc51ada8, type: 3}
+      propertyPath: StartingDeck.Array.data[7]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3221721767424038315, guid: 1c30655cfb835384eb3a2477dc51ada8, type: 3}
       propertyPath: TutorialDeck.Array.data[0]
       value: 

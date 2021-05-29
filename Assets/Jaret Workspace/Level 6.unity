@@ -3502,7 +3502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: StormPosition.Array.size
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: RockPosition.Array.data[0].x
@@ -3638,11 +3638,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: StormPosition.Array.data[5].x
-      value: -3
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: StormPosition.Array.data[5].y
-      value: -1
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 6833302671875896036, guid: 47cfcac2093d3794e869e3206b571c47, type: 3}
       propertyPath: StormPosition.Array.data[6].x
