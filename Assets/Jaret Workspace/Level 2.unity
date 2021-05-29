@@ -1643,7 +1643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3966529438673238822, guid: e9b1b5003620443b1af2b4466fbe7c30, type: 3}
       propertyPath: nextScene
-      value: Level 3
+      value: Pre-Maid Cafe
       objectReference: {fileID: 0}
     - target: {fileID: 3966529439441461357, guid: e9b1b5003620443b1af2b4466fbe7c30, type: 3}
       propertyPath: m_Pivot.x
@@ -1940,10 +1940,10 @@ AudioSource:
   m_GameObject: {fileID: 2053875721}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8243006314501192280, guid: 7a3382881f96f475a8e83b9c56370223, type: 2}
   m_audioClip: {fileID: 8300000, guid: f2c2efbdcb97c6d4f83eff3532047000, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.77
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
