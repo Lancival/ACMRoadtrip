@@ -1,0 +1,5 @@
+13;What the hell are you two doing? Get out of here!;2
+1;Er...what is he saying?;3
+0;I think we're being fired.;4
+1;We've been working for 15 minutes.;5
+13;You two are causing a ruckus. Leave now!;-1

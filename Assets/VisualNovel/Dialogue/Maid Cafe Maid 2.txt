@@ -1,0 +1,13 @@
+6;You've chosen our photo package! Please make your way to our picture booth and we will take a polaroid.;2
+7;Hello! Please pick what headband you want.;3
+1;I'm going with the bunny ears...Misaki?;4;Happy
+0;Er, I'll take the mouse ears one.;5;Happy
+7;You two are very cute.;6
+1;Us? Lil' ol' us? Cute?;7
+0;(Nothing I can do will stop this girl from embarrassing us.);8
+7;Ready?;9
+0;Yep!;10
+18;(The girl snaps a picture of us and starts drawing hearts on our polaroid.);11
+7;Here you go.;12
+1;I call dibs on the photo.;13
+0;It's all yours.;-1

@@ -1,0 +1,2 @@
+1;I'm getting hungry. Want to grab sushi?;2;Happy
+0;Yeah, let's do it.;-1;Happy

@@ -1,0 +1,136 @@
+1;Pinch me. We're about to be in Tokyo.;2;Happy
+0;Everything looks so different from when I was a kid. The city lights are everywhere.;3;Happy
+1;Look at my outfit. Do I look like I fit in?;4
+0;I'm pretty sure everyone can tell we're Americans.;5
+1;What's the giveaway?;6
+0;First of all, we're speaking English.;7
+1;...Right.;8
+0;(Trent would've brought his skateboard here. He'd love to go around and whisk past the shops.);9;Sad
+0;(No, he was the one who backed out. He did this to himself.);10
+1;You should ask that boy out.;11
+0;Huh?;12
+1;I see you staring at him.;13
+0;(I must have been dazing off when I was thinking about Trent.);14
+0;I wasn't staring at him.;15;Mad
+1;Do you think he's cute?;16
+0;I don't know.;17
+1;I dare you to ask him out.;18
+0;I don't even know him.;19
+1;This is your opportunity to then.;20,21
+0;Ask him out.;22
+0;Stay seated;72
+0;This is so embarrassing.;23
+1;So you'll do it?;24
+0;...New breakup, new me, I guess.;25
+1;Oh my god. I can't wait to witness this.;26
+0;(Here goes nothing.);27
+0;Hello.;28;Happy
+2;Hello. Do you need me to move seats?;29
+0;Um, no. I noticed you and you seem...cool.;30
+2;Thank you.;31
+0;Do you want to go on a date?;32
+0;(This is the most awkward encounter I've ever had.);33;Mad
+0;(If there were a time the train should crash, now is as good as it's going to get.);34
+0;(He's blushing! Oh my god, he's thinking about it.);35;Happy
+2;I have a girlfriend.;36
+0;(I can never show my face again.);37;Sad
+0;Forget I even asked. Have a good day.;38
+0;(I regret my existence.);39
+1;So? How did it go?;40,41
+0;He gave me his number.;42
+0;It was a disaster.;45
+1;Seriously?;43
+0;Yeah, he also asked for my hand in marriage.;44;Mad
+1;Oh.;46;Sad
+1;Personally, I found him ugly.;46
+0;He has a girlfriend.;47
+1;It's okay! He's one fish in the sea. A stupid, useless fish at that!;48
+0;(Everyone in this train is looking at us.);49
+0;I'm never making a move again.;50;Sad
+1;So he had a girlfriend. That was kind of thrilling, right?;51,52;Happy
+0;It was...;53
+0;I'm destined for singledom.;57
+1;I told you! Now imagine the thrill when they say yes.;54
+0;I'm imagining, but I'm coming up with a blank here.;55
+1;Imagine harder.;56
+0;It's hard to when...Trent.;59
+1;If everyone in the world had to vote someone in their life who was destined to be single, you'd get zero votes.;58
+0;I bet I'm who Trent would vote for.;59
+1;Look, I get it. You remember how heartbroken I was when Rachel and I broke up. But once I was finally able to accept that I was still okay was when everything started falling into place.;60
+0;Like what?;61
+1;I realized I had the opportunity to be whoever I wanted to be. I could be spontaneous, say yes to everything.;62
+0;Some people never fall in love. What if Trent was my one shot at something real, and now I've lost it?;63
+1;A guy who breaks up with you over text is not your soulmate. I am the prime example that you can still be happy without your ex.;64,65
+0;How did you get over that initial hurdle?;66
+0;Why haven't you found someone new?;70
+1;I thought that us breaking up was a reflection of my own flaws as a person and not the flaws of our compatibility.;67
+1;She was an overachiever, and you know me. I'm not exactly a "school" person. That was a huge contention between us, and I was fixated that I wasn't smart enough.;68
+0;He used to talk about how lucky he was to be with me.;69
+1;Anyone would still be lucky. Don't forget that, okay?;-1
+1;I had to do a lot of growth after our relationship. She was an overachiever, and you know me. I'm not exactly a "school" person.;71
+1;That was a huge contention between us, and I was fixated that I wasn't smart enough for a long time. I'm still working on it.;-1;Sad
+0;I can't.;73
+1;You know, I got it. You stay here.;74;Happy
+18;(Summer gets up from her seat and approaches the guy.);75
+0;What are you doing?;76;Mad
+0;(I can't watch.);77
+0;(I have to watch.);78
+0;(Why is she pointing at me?);79
+18;(Summer smiles at him for a few minutes, then walks back);80
+1;Damn.;81
+0;Well? What happened?;82
+1;It's okay. He wasn't even that cute.;83;Mad
+0;What did you do?;84
+1;I did what any good best friend does. I wing–womaned you.;85,86
+0;You're the worst.;87
+0;Thank you?;88
+1;Hey! This could've been your true love.;89;Happy
+1;Don't thank me. It didn't work out.;89
+0;What happened?;90
+1;I went over to him and asked if he thought you were cute. But then he said he had a girlfriend...;91;Sad
+0;WHAT?;92
+1;Right? I wish boys had signs on them like, I–am–taken, I–am–single, I–am–gay, so we know. Damn shame.;93
+0;Not that, I mean why did you do that?;94
+1;It's not healthy to hold on. You don't actually have to date anyone here, but you can look.;95
+0;How did you even ask him? You don't speak the language.;96
+1;Google Translate, silly. Don't worry, I told him you could speak Japanese.;97;Happy
+0;I can't show my face on this train again.;98
+1;We have to take the train every day on this trip.;99
+0;So you finally looked at the itinerary?;100
+1;Stop trying to change the subject. Next time, you're going up to the person.;101,102
+0;That's way too embarrassing.;103
+0;...Maybe.;107
+1;Name one embararssing thing about it.;104
+0;It was embarrassing when you did it.;105
+1;Dating is an inherently embarrassing process.;106
+0;I don't want to think about anyone else when...Trent.;59;Sad
+0;But only if you promise to stop being my wing–woman.;108;Happy
+1;Deal.;109
+0;It's just hard right now when...Trent.;59
+1;Tokyo, I am inside you.;60;Happy
+18; (Summer slowly spins in a circle and giggles.);61
+0;Summer...?;62;Happy
+1;I'm having a moment. Let me have this.;63
+0;...;64
+1;Come on, can't you be a little excited?;65,66
+0;I'll be excited once we find somewhere to eat.;67
+0;TOKYO! I AM. INSIDE. YOU.;68
+1;Let's explore and we can pick a place that sounds interesting. It'll be an adventure.;69
+1;That's more like it.;69
+0;I'm obsessed your pink hair. Did you dye it for the trip?;70
+1;Er, no. I've had it for a while.;71
+0;Why didn't you tell me you were going to dye it?;72
+1;I did but you didn't respond. You were on a date with Trent.;73
+0;Oh, sorry.;74;Sad
+1;Oh my god. Is that..?;75
+0;What are you looking at?;76
+1;I found the perfect place for us to eat, but you're going to hate it.;77
+0;I'm starving. I could eat anywhere.;78
+1;There's a maid cafe down the street.;79
+0;No.;80
+1;Yes.;81
+0;Only weird, single men go to those.;82;Mad
+1;And soon, us.;83
+0;That doesn't comfort me.;84
+1;Please, for me?;85
+0;Fine, but you're paying.;-1;Mad

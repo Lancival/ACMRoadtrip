@@ -1,0 +1,28 @@
+1;Hey, can you pick out an outfit for me?;2;Happy
+9;Sure, what kind of style do you want?;3
+1;Whatever you think I'll look the hottest in.;4
+0;Not sure if flirting with the store employee is your best bet, Summer.;5;Happy
+1;We're in Japan, let me dream.;6
+0;Isn't this supposed to be a single girl's trip?;7
+1;Yes, which means you need to stop moaning about your ex.;8
+0;This is the first day of the trip where I haven't cried about him, thankyouverymuch.;9
+1;It is only 3pm, but in fact I have noticed.;10,11
+0;Maybe I should move on.;12
+0;My past will always be a part of me.;20
+0;Trent probably isn't even thinking about me. There's nothing I can do at this point to change that.;13
+1;I know it must hurt to say that.;14
+0;I'm okay, actually.;15
+9;I'm back with the outfit. Do you want to try it on?;16
+18;(Summer goes into the changing room and comes out.);17
+1;So...how do I look?;18;HappyMakeover
+0;I am obsessed;19
+1;I'll take everything you picked out.;-1
+0;I can't simply forget Trent, but he's no longer a part of my future.;21
+1;I know it must hurt to say that.;22
+1;I'm okay, actually.;23
+9;I'm back with the outfit.;24
+1;Let me try this on.;25
+18;(Summer changes and walks out.);26
+1;So...how do I look?;27;HappyMakeover
+0;I am obsessed.;28
+1;I'll take everything you picked out.;-1

@@ -1,0 +1,33 @@
+17;Takoyaki?;2
+18;(Summer takes out her wallet and hands the paper plate to me.);3
+17;Here you go.;4
+1;I'm in takoyaki heaven.;5;HappyMakeover
+0;Let me try one.;6;HappyMakeover
+0;(I remember coming here as a kid with my grandparents. I didn't understand the festival's significance at the time - to honor your ancestors - but coming here now makes me long for Japan.);7
+0;(I can't let Trent haunt me today. Our memories together will always be painful, but hating myself is exhausting. I have to escape my past.);8
+0;My breakup is not my fault.;9
+1;It was never your fault.;10
+0;I always knew it, but I never felt it until now.;11
+1;I'm happy you're finally realizing the truth.;12
+0;I'm sure there'll be times where I miss him, but I want to find my own happiness, one that's not tied to anyone. This trip made me realize that...;13
+0;Things don't feel quite right yet, but it's the trying, I think. That I'm trying to accept myself and the good that comes. I mean, why should I let my brain attack me?;14
+1;I'm sure you'll figure it out, Misaki. You're one of the most resilient people I know.;15,16
+0;I wish I agreed with you.;17
+0;I'm going to channel that energy.;23
+0;I feel like all I do is complain.;18
+1;Yeah, but you went on this trip even though Trent wasn't going to come. You could've canceled. ;19
+0;I haven't come here since I was a kid. I still want some things for myself, you know?;20
+1;Honestly? Fuck Trent.;21,22
+0;Fuck Trent.;28
+0;Thank you Trent.;31
+1;That's my best friend.;24
+0;Do you think things are going to get better?;25
+1;I don't know, but you'll never find out unless you're here to see, right?;26
+0;I guess we'll just have to see where life takes me.;27
+1;Honestly? Fuck Trent. You're going to live a better life without him.;21,22
+0;I'm going to live my life to the fullest. Starting with...;29,30
+0;Kiss Summer.;32
+0;Hug Summer.;33
+0;Thank you Trent for letting me see that I deserve more. And for letting me see...;29,30
+0;..what's right in front of me.;-1
+0;...what a good friend I have.;-1

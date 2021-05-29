@@ -1,0 +1,40 @@
+0;Sorry this was so last minute. I really thought Trent was going to come.;2;Sad
+1;Don't even think about him. This is a girl's trip now.;3,4;Happy
+0;You're right. I haven't visited Japan since I was a kid. This is supposed to be fun.;5;Happy
+0;...Do you think he's thinking about me?;11
+1;Maybe you'll find a hot Japanese man.;6
+0;I thought you said this was a no boys trip.;7
+1;I can make an exception.;8
+0;I have subpar Japanese skills.;9
+1;A lot of them know English! Even better, they can learn it for you.;10
+0;Have you looked over the itinerary?;16
+1;You're the best he's ever going to get, so I hope so.;12
+0;That's not true.;13;Sad
+1;You're pretty and smart and he's...?;14
+0;Whatever. I'm going to focus on the trip.;15;Happy
+1;That's the spirit.;10
+1;I don't do those.;17
+0;We're on a tight schedule if we want to make it to the Obon festival on time.;18
+1;We'll be fine. It's almost the end of summer break — this is our time to be spontaneous.;19
+0;Yeah, and I'm ending it single.;20;Sad
+1;Meaning you can find a new, sexier, better person.;21,22
+0;I can't stop thinking about Trent.;23
+0;Who's going to want me?;25
+1;I get that breakups are bad. Flaming piles of garbage bad. But we're in Japan! By the end of this trip, you'll be like "Trent, who?";24
+0;You're right. I'm just having trouble moving on.;26;Happy
+1;The opinion of a random boy is not worth you sacrificing your self–worth.;24
+1;I'm sorry the timing was so rough.;27;Sad
+0;I feel like we were together for so long that part of myself became him. I don't know who I am outside of us.;28;Sad
+1;Then reinvent yourself. Who knows? Maybe you'll become like me.;29;Happy
+0;...I really don't see that happening.;30
+1;Just kidding. You don't want to be like me.;31
+0;What do you mean?;32
+1;I'm the pretty one and you're the smart one. We can't both be pretty, and I'm not about to be smart.;33
+0;You're ridiculous.;34;Happy
+1;I'm just happy we get to spend this time together. We haven't talked in a long time.;35
+0;Ugh, don't remind me. I was too obsessed over Trent.;36
+1;—which is now a thing of the past, right?;37
+0;Right...;38
+1;You look tired. Are you having that nightmare again?;39
+0;I swear it happens every night. I'm on this ship and I feel like I have to reach the island — there's something important there, but I'm not sure what. The storms get me eventually.;40;Sad
+1;Maybe you're just stressed. Better than dreaming about this than Trent, right?;-1
