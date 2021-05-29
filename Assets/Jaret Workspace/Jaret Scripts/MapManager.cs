@@ -499,6 +499,11 @@ public class MapManager : MonoBehaviour
             LevelTextPro.text = "You Win";
             gameManager.GetComponent<JaretGameManager>().WinLevel();
             yield return new WaitForSeconds(1);
+            Scene currentScene = SceneManager.GetActiveScene();
+            if (currentScene.name == "Level 6")
+            {
+                Destroy(gameManager);
+            }
             transitionOverlay.transform.GetChild(0).GetComponent<SceneLoader>().LoadNextScene();
            /* if (nextScene != null)
             {
@@ -513,6 +518,12 @@ public class MapManager : MonoBehaviour
         {
             LevelTextPro.text = "Game Over";
             yield return new WaitForSeconds(1);
+
+            Scene currentScene = SceneManager.GetActiveScene();
+            if (currentScene.name == "Level 6")
+            {
+                Destroy(gameManager);
+            }
             transitionOverlay.transform.GetChild(0).GetComponent<SceneLoader>().LoadNextScene();
 
             yield break;
