@@ -1209,6 +1209,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 566578037229039800, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
   m_PrefabInstance: {fileID: 291033782}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &291033786 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6313175012397122882, guid: b5b89265b490e4543b2766bb49775f61, type: 3}
+  m_PrefabInstance: {fileID: 291033782}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &355492276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1725,7 +1736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d987e842d8143ec8ba0640eff342bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 291033786}
   targets:
   - You must take accountability of your hurt to understand the friendships you already
     have in your life.
