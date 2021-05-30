@@ -194,7 +194,11 @@ public class MapManager : MonoBehaviour
 
 
         }*/
-
+        if (Input.GetKeyDown("t"))
+        {
+            gameManager.GetComponent<JaretGameManager>().WinLevel();
+            transitionOverlay.transform.GetChild(0).GetComponent<SceneLoader>().LoadNextScene();
+        }
         
     }
 
