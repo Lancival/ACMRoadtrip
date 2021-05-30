@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JaretGameManager : MonoBehaviour
 {
@@ -89,7 +90,7 @@ public class JaretGameManager : MonoBehaviour
     {
         if (currentScene.name == "Title Screen")
         {
-            Destroy(gameManager);
+            Destroy(this.gameObject);
         }
     }
 
