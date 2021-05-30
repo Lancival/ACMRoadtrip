@@ -5,6 +5,7 @@ using UnityEngine;
 public class JaretGameManager : MonoBehaviour
 {
 
+    private static JaretGameManager _instance;
 
     private int Level = 0;
     [SerializeField]
@@ -41,6 +42,16 @@ public class JaretGameManager : MonoBehaviour
 
     void Awake()
     {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+
+
         DiscardDeck = new List<JCard>();
         TutorialCorrectDeck = new List<JCard>();
         PlayableDeck = new List<JCard>();

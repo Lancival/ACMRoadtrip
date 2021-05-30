@@ -160,10 +160,14 @@ public class MapManager : MonoBehaviour
 
         transitionOverlay = GameObject.Find("Transition Canvas");
         gameManager = GameObject.Find("GameManager");
-        
-
 
         
+            if (currentScene.name == "Level 1")
+            {
+                gameManager.GetComponent<JaretGameManager>().ResetGame();
+            }
+
+
         gameManager.GetComponent<JaretGameManager>().NextLevel();
         gameManager.GetComponent<JaretGameManager>().EmptyDiscard();
         gameManager.GetComponent<JaretGameManager>().EmptyHand();
@@ -497,10 +501,10 @@ public class MapManager : MonoBehaviour
             gameManager.GetComponent<JaretGameManager>().WinLevel();
             yield return new WaitForSeconds(1);
             Scene currentScene = SceneManager.GetActiveScene();
-            if (currentScene.name == "Level 6")
+            /*if (currentScene.name == "Level 6")
             {
                 Destroy(gameManager);
-            }
+            }*/
             transitionOverlay.transform.GetChild(0).GetComponent<SceneLoader>().LoadNextScene();
            /* if (nextScene != null)
             {
@@ -516,11 +520,11 @@ public class MapManager : MonoBehaviour
             LevelTextPro.text = "Game Over";
             yield return new WaitForSeconds(1);
 
-            Scene currentScene = SceneManager.GetActiveScene();
+            /*Scene currentScene = SceneManager.GetActiveScene();
             if (currentScene.name == "Level 6")
             {
                 Destroy(gameManager);
-            }
+            }*/
             transitionOverlay.transform.GetChild(0).GetComponent<SceneLoader>().LoadNextScene();
 
             yield break;
